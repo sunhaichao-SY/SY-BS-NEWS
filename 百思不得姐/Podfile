@@ -1,0 +1,11 @@
+platform :ios, ‘8.0’
+use_frameworks!
+
+target ‘百思不得姐——框架完成’ do
+    pod 'AFNetworking'
+    pod 'SDWebImage'
+    pod 'MJExtension'
+    pod 'SVProgressHUD'
+end
+
+

@@ -1,0 +1,45 @@
+//
+//  PrefixHeader.pch
+//  百思不得姐——框架完成
+//
+//  Created by 码农界四爷__King on 16/5/16.
+//  Copyright © 2016年 码农界四爷__King. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+#ifdef __OBJC__
+
+#import "UIView+SYCategory.h"
+#import "UITabBarItem+SYCategory.h"
+
+#ifdef DEBUG
+#define SYLog(...) NSLog(__VA_ARGS__)
+#else
+#define SYLog(...)
+#endif
+
+
+#define SYLogFunc SYLog(@"%s", __func__);
+
+
+#define SYScreenH [UIScreen mainScreen].bounds.size.height
+#define SYScreenW [UIScreen mainScreen].bounds.size.width
+
+#define iPhone6P (SYScreenH == 736)
+#define iPhone6 (SYScreenH == 667)
+#define iPhone5 (SYScreenH == 568)
+#define iPhone4 (SYScreenH == 480)
+
+
+
+#define SYColorA(r, g, b, a) [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:(a)/255.0]
+#define SYColor(r, g, b) SYColorA((r), (g), (b), 255)
+#define SYRandomColor SYColor(arc4random_uniform(255), arc4random_uniform(255), arc4random_uniform(255))
+#define SYrayColor(v) SYColor((v), (v), (v))
+#define SYCommonBgColor SYrayColor(240)
+
+#endif
+
+#endif /* PrefixHeader_pch */
