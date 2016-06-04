@@ -154,6 +154,11 @@ static NSString *const ID = @"cell";
 
 }
 
+//开始拖动的时候调用这个方法 取消键盘弹出
+- (void)scrollViewWillBeginDragging:(UIScrollView *)scrollView
+{
+    [self.view endEditing:YES];
+}
 
 //设置每个组的头部标题的颜色和样式，但是设置完之后必须设置头部View的高度，否则显示不出来，但是这样设置之后滚动TableView的时候Section会停留，若想静止必须设置TableView的样式为Group
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
