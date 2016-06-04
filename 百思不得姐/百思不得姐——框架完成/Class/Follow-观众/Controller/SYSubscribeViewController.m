@@ -49,6 +49,7 @@ static NSString *const ID = @"cell";
     [SVProgressHUD setDefaultMaskType:SVProgressHUDMaskTypeBlack];
     [SVProgressHUD setDefaultStyle:SVProgressHUDStyleDark];
     [SVProgressHUD showWithStatus:@"正在加载数据。。。"];
+
 //    UIView *view = [[UIView alloc]initWithFrame:[UIScreen mainScreen].bounds];
 //    view.backgroundColor = [UIColor redColor];
 //    [self.view addSubview:view];

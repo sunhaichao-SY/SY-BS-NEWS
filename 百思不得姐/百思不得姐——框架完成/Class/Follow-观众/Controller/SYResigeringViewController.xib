@@ -9,7 +9,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SYResigeringViewController">
             <connections>
-                <outlet property="leftLayout" destination="qQd-Ws-pQ0" id="iiN-xj-Dd6"/>
+                <outlet property="leftLayout" destination="qQd-Ws-pQ0" id="iL0-CP-9xi"/>
                 <outlet property="view" destination="eOr-eo-g84" id="kJZ-J3-jB1"/>
             </connections>
         </placeholder>
@@ -146,7 +146,7 @@
                     </constraints>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WbC-aA-c1C" userLabel="登录">
-                    <rect key="frame" x="600" y="140" width="600" height="220"/>
+                    <rect key="frame" x="-600" y="140" width="600" height="220"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Txz-6U-1Ba">
                             <rect key="frame" x="140" y="0.0" width="320" height="100"/>
@@ -304,8 +304,8 @@
                 <constraint firstItem="WbC-aA-c1C" firstAttribute="top" secondItem="CRo-Cn-RVI" secondAttribute="bottom" constant="80" id="hTa-pq-Zre"/>
                 <constraint firstAttribute="bottom" secondItem="yrl-cf-tOO" secondAttribute="bottom" constant="20" id="hyH-Ap-F8i"/>
                 <constraint firstItem="WbC-aA-c1C" firstAttribute="width" secondItem="eOr-eo-g84" secondAttribute="width" id="jMF-iz-XoT"/>
-                <constraint firstItem="WbC-aA-c1C" firstAttribute="leading" secondItem="waG-zk-y93" secondAttribute="trailing" id="qGQ-Lc-86p"/>
-                <constraint firstItem="waG-zk-y93" firstAttribute="leading" secondItem="eOr-eo-g84" secondAttribute="leading" id="qQd-Ws-pQ0"/>
+                <constraint firstItem="WbC-aA-c1C" firstAttribute="trailing" secondItem="waG-zk-y93" secondAttribute="leading" id="qGQ-Lc-86p"/>
+                <constraint firstItem="waG-zk-y93" firstAttribute="trailing" secondItem="eOr-eo-g84" secondAttribute="trailing" id="qQd-Ws-pQ0"/>
             </constraints>
             <point key="canvasLocation" x="300" y="287"/>
         </view>

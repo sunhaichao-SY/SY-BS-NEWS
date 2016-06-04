@@ -12,7 +12,7 @@
 #import "SYMeItem.h"
 #import <MJExtension/MJExtension.h>
 #import "SYMeCell.h"
-
+#import "SYLoginRegisterViewController.h"
 
 static NSInteger const cols = 4;
 static CGFloat const margin = 1;
@@ -103,6 +103,11 @@ static NSString *const ID = @"cell";
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    
+    if (indexPath.row == 0) {
+        SYLoginRegisterViewController *login = [[SYLoginRegisterViewController alloc]init];
+        [self presentViewController:login animated:YES completion:nil];
+    }
 }
 
 //设置Navigation的样式
