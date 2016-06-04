@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		13762BF2FB51E40939D9F6F2 /* Pods____________.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 134D482550200A3F03CD223B /* Pods____________.framework */; };
+		4E2790FA1D02F31A00886ECA /* SYMeViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4E2790F91D02F31A00886ECA /* SYMeViewController.storyboard */; };
 		4E3A5A251D015F0600B0ED38 /* SYAttentionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E3A5A231D015F0600B0ED38 /* SYAttentionViewController.m */; };
 		4E3A5A261D015F0600B0ED38 /* SYAttentionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4E3A5A241D015F0600B0ED38 /* SYAttentionViewController.xib */; };
 		4E4695281CFDACE3002CFAB7 /* SYPublishViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E4695251CFDACE3002CFAB7 /* SYPublishViewController.m */; };
@@ -22,6 +23,7 @@
 		4E46953B1CFDBDCF002CFAB7 /* LaunchImage@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4E4695341CFDBDCF002CFAB7 /* LaunchImage@2x.png */; };
 		4E46953E1CFDD5B1002CFAB7 /* SYADItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E46953D1CFDD5B1002CFAB7 /* SYADItem.m */; };
 		4E4C014F1CF14708003A509A /* SYLoginRegisterTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E4C014E1CF14708003A509A /* SYLoginRegisterTextField.m */; };
+		4E7269711D030FD40085A409 /* SYMeItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E7269701D030FD40085A409 /* SYMeItem.m */; };
 		4E9C50C61CE9F5A6004505C3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4E9C50C51CE9F5A6004505C3 /* Assets.xcassets */; };
 		4E9C50C91CE9F5A6004505C3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4E9C50C71CE9F5A6004505C3 /* LaunchScreen.storyboard */; };
 		4E9C50D41CE9F5A6004505C3 /* ___________Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E9C50D31CE9F5A6004505C3 /* ___________Tests.m */; };
@@ -48,6 +50,8 @@
 		4EA435B11D020B3700EB1403 /* SYRecommendViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EA435B01D020B3700EB1403 /* SYRecommendViewController.m */; };
 		4EA435B51D020B6500EB1403 /* SYRecommendItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EA435B41D020B6500EB1403 /* SYRecommendItem.m */; };
 		4EA435BC1D020BEA00EB1403 /* SYSettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EA435B91D020BEA00EB1403 /* SYSettingViewController.m */; };
+		4EA725251D0322530044E472 /* SYMeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EA725231D0322530044E472 /* SYMeCell.m */; };
+		4EA725261D0322530044E472 /* SYMeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4EA725241D0322530044E472 /* SYMeCell.xib */; };
 		4EC1926F1CFCB09900E55614 /* Demo.gif in Resources */ = {isa = PBXBuildFile; fileRef = 4EC1926E1CFCB09900E55614 /* Demo.gif */; };
 		4EECE3221D01C96C00C492C0 /* SYSubscribeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EECE3211D01C96C00C492C0 /* SYSubscribeViewController.m */; };
 /* End PBXBuildFile section */
@@ -71,6 +75,7 @@
 
 /* Begin PBXFileReference section */
 		134D482550200A3F03CD223B /* Pods____________.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = "Pods____________.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4E2790F91D02F31A00886ECA /* SYMeViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SYMeViewController.storyboard; sourceTree = "<group>"; };
 		4E3A5A221D015F0600B0ED38 /* SYAttentionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SYAttentionViewController.h; sourceTree = "<group>"; };
 		4E3A5A231D015F0600B0ED38 /* SYAttentionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SYAttentionViewController.m; sourceTree = "<group>"; };
 		4E3A5A241D015F0600B0ED38 /* SYAttentionViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SYAttentionViewController.xib; sourceTree = "<group>"; };
@@ -90,6 +95,8 @@
 		4E46953D1CFDD5B1002CFAB7 /* SYADItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SYADItem.m; sourceTree = "<group>"; };
 		4E4C014D1CF14708003A509A /* SYLoginRegisterTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SYLoginRegisterTextField.h; sourceTree = "<group>"; };
 		4E4C014E1CF14708003A509A /* SYLoginRegisterTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SYLoginRegisterTextField.m; sourceTree = "<group>"; };
+		4E72696F1D030FD40085A409 /* SYMeItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SYMeItem.h; path = "百思不得姐——框架完成/Class/Me-我/Controller/SYMeItem.h"; sourceTree = SOURCE_ROOT; };
+		4E7269701D030FD40085A409 /* SYMeItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SYMeItem.m; path = "百思不得姐——框架完成/Class/Me-我/Controller/SYMeItem.m"; sourceTree = SOURCE_ROOT; };
 		4E9C50B61CE9F5A6004505C3 /* 百思不得姐——框架完成.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "百思不得姐——框架完成.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4E9C50C51CE9F5A6004505C3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4E9C50C81CE9F5A6004505C3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -139,6 +146,9 @@
 		4EA435B41D020B6500EB1403 /* SYRecommendItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SYRecommendItem.m; sourceTree = "<group>"; };
 		4EA435B81D020BEA00EB1403 /* SYSettingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SYSettingViewController.h; sourceTree = "<group>"; };
 		4EA435B91D020BEA00EB1403 /* SYSettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SYSettingViewController.m; sourceTree = "<group>"; };
+		4EA725221D0322530044E472 /* SYMeCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SYMeCell.h; path = "百思不得姐——框架完成/Class/Me-我/Controller/SYMeCell.h"; sourceTree = SOURCE_ROOT; };
+		4EA725231D0322530044E472 /* SYMeCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SYMeCell.m; path = "百思不得姐——框架完成/Class/Me-我/Controller/SYMeCell.m"; sourceTree = SOURCE_ROOT; };
+		4EA725241D0322530044E472 /* SYMeCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = SYMeCell.xib; path = "百思不得姐——框架完成/Class/Me-我/Controller/SYMeCell.xib"; sourceTree = SOURCE_ROOT; };
 		4EC1926E1CFCB09900E55614 /* Demo.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = Demo.gif; sourceTree = "<group>"; };
 		4EECE3201D01C96C00C492C0 /* SYSubscribeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SYSubscribeViewController.h; sourceTree = "<group>"; };
 		4EECE3211D01C96C00C492C0 /* SYSubscribeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SYSubscribeViewController.m; sourceTree = "<group>"; };
@@ -465,6 +475,7 @@
 			children = (
 				4E9C51191CE9FEC2004505C3 /* SYMeViewController.h */,
 				4E9C511A1CE9FEC2004505C3 /* SYMeViewController.m */,
+				4E2790F91D02F31A00886ECA /* SYMeViewController.storyboard */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -472,6 +483,8 @@
 		4E9C50FB1CE9FC60004505C3 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				4E72696F1D030FD40085A409 /* SYMeItem.h */,
+				4E7269701D030FD40085A409 /* SYMeItem.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -479,6 +492,9 @@
 		4E9C50FC1CE9FC60004505C3 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				4EA725221D0322530044E472 /* SYMeCell.h */,
+				4EA725231D0322530044E472 /* SYMeCell.m */,
+				4EA725241D0322530044E472 /* SYMeCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -736,8 +752,10 @@
 				4EA435A11D02021F00EB1403 /* SYResigeringViewController.xib in Resources */,
 				4EA435A61D020A2C00EB1403 /* SYRecommendCell.xib in Resources */,
 				4E4695371CFDBDCF002CFAB7 /* LaunchImage-700@2x.png in Resources */,
+				4E2790FA1D02F31A00886ECA /* SYMeViewController.storyboard in Resources */,
 				4EC1926F1CFCB09900E55614 /* Demo.gif in Resources */,
 				4E4695361CFDBDCF002CFAB7 /* LaunchImage-700-568h@2x.png in Resources */,
+				4EA725261D0322530044E472 /* SYMeCell.xib in Resources */,
 				4E4695381CFDBDCF002CFAB7 /* LaunchImage-800-667h@2x.png in Resources */,
 				4E3A5A261D015F0600B0ED38 /* SYAttentionViewController.xib in Resources */,
 			);
@@ -815,6 +833,7 @@
 				4E9C511E1CE9FECB004505C3 /* SYNewViewController.m in Sources */,
 				4E46953E1CFDD5B1002CFAB7 /* SYADItem.m in Sources */,
 				4EA435A51D020A2C00EB1403 /* SYRecommendCell.m in Sources */,
+				4EA725251D0322530044E472 /* SYMeCell.m in Sources */,
 				4EA435AD1D020AD600EB1403 /* SYLoginRegisterViewController.m in Sources */,
 				4E9C510B1CE9FC60004505C3 /* main.m in Sources */,
 				4E9C51361CEA178A004505C3 /* UITabBarItem+SYCategory.m in Sources */,
@@ -823,6 +842,7 @@
 				4E9C51181CE9FEB4004505C3 /* SYFollowViewController.m in Sources */,
 				4E3A5A251D015F0600B0ED38 /* SYAttentionViewController.m in Sources */,
 				4EA435B11D020B3700EB1403 /* SYRecommendViewController.m in Sources */,
+				4E7269711D030FD40085A409 /* SYMeItem.m in Sources */,
 				4EA435A91D020AAB00EB1403 /* SYQuickLoginButton.m in Sources */,
 				4E4C014F1CF14708003A509A /* SYLoginRegisterTextField.m in Sources */,
 				4E9C51321CEA0AC5004505C3 /* UIView+SYCategory.m in Sources */,

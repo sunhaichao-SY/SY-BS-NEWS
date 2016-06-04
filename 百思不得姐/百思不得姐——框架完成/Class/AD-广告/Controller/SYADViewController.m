@@ -83,7 +83,7 @@ static NSString *const SYCode2 = @"phcqnauGuHYkFMRquANhmgN_IauBThfqmgKsUARhIWdGU
 //        NSLog(@"%@",responseObject);
         
         //在开发中，一般先把请求数据写进Plist中，方便查看
-        [responseObject writeToFile:@"/Users/sunhaichao/Desktop/AD.plist" atomically:nil];
+//        [responseObject writeToFile:@"/Users/sunhaichao/Desktop/AD.plist" atomically:nil];
         
         //获取广告字典
         NSDictionary *adDic = [responseObject[@"ad"] firstObject];
@@ -97,7 +97,6 @@ static NSString *const SYCode2 = @"phcqnauGuHYkFMRquANhmgN_IauBThfqmgKsUARhIWdGU
         UIImageView *adImageView = [[UIImageView alloc]init];
         [self.containView addSubview:adImageView];
         //设置广告显示在控制器中的尺寸，广告的图片宽度等于屏幕的宽度，高度根据一定的比例进行缩放个扩大
-        /*
         CGFloat w = SYScreenW;
         CGFloat h;
         
@@ -107,8 +106,8 @@ static NSString *const SYCode2 = @"phcqnauGuHYkFMRquANhmgN_IauBThfqmgKsUARhIWdGU
         if (h > SYScreenH * 0.7) {
             h = SYScreenH * 0.85;
         }
-        */
-        adImageView.frame = CGRectMake(0, 0, SYScreenW, SYScreenH);
+       
+        adImageView.frame = CGRectMake(0, 0, w, h);
         
         //设置广告图片
         [adImageView sd_setImageWithURL:[NSURL URLWithString:item.w_picurl]];

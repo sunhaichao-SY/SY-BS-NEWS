@@ -27,7 +27,7 @@
 + (void)initialize
 {
     //设置NavigationBar的背景图片，必须使用UIBarMetricsDefault
-    UINavigationBar *bar =[UINavigationBar appearance];
+    UINavigationBar *bar =[UINavigationBar appearanceWhenContainedIn:self, nil];
     [bar setBackgroundImage:[UIImage imageNamed:@"navigationbarBackgroundWhite"] forBarMetrics:UIBarMetricsDefault];
     
 }

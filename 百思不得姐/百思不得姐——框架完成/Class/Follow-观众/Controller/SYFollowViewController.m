@@ -28,7 +28,6 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.automaticallyAdjustsScrollViewInsets = NO;
     //设置背景颜色
     self.view.backgroundColor = SYCommonBgColor;
     
@@ -84,7 +83,7 @@
     
     NSInteger index = [btn.superview.subviews indexOfObject:btn];
     self.showingVc = self.childViewControllers[index];
-    self.showingVc.view.frame = CGRectMake(0, 64, SYScreenW, SYScreenH - 64);
+    self.showingVc.view.frame = CGRectMake(0, 0, SYScreenW, SYScreenH);
     [self.view addSubview:self.showingVc.view];
 }
 

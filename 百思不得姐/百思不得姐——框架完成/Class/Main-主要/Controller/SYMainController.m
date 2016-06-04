@@ -55,7 +55,9 @@
     [self addOneChildViewController:[[SYFollowViewController alloc]init] title:@"关注" image:@"tabBar_friendTrends_icon" selected:@"tabBar_friendTrends_click_icon"];
     
     //我
-    [self addOneChildViewController:[[SYMeViewController alloc]init] title:@"我" image:@"tabBar_me_icon" selected:@"tabBar_me_click_icon"];
+    UIStoryboard *sb = [UIStoryboard storyboardWithName:@"SYMeViewController" bundle:nil];
+    SYMeViewController *me = [sb instantiateInitialViewController];
+    [self addOneChildViewController:me title:@"我" image:@"tabBar_me_icon" selected:@"tabBar_me_click_icon"];
     
 }
 

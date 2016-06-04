@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface SYMeViewController : UIViewController
+@interface SYMeViewController : UITableViewController
 
 @end

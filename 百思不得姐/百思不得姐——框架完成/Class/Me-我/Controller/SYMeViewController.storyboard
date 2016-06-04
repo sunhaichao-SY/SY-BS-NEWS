@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="ir0-mU-9qq">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <scenes>
+        <!--Me View Controller-->
+        <scene sceneID="025-ns-Ywb">
+            <objects>
+                <tableViewController id="ir0-mU-9qq" customClass="SYMeViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" id="Pkh-PP-MC7">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <sections>
+                            <tableViewSection id="iwq-Ji-5Ye">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="USr-nL-ysg" imageView="VCf-dK-s94" style="IBUITableViewCellStyleDefault" id="mBB-Of-5N2">
+                                        <rect key="frame" x="0.0" y="35" width="600" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="mBB-Of-5N2" id="LrO-dP-2bj">
+                                            <rect key="frame" x="0.0" y="0.0" width="567" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="登录/注册" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="USr-nL-ysg">
+                                                    <rect key="frame" x="70" y="0.0" width="495" height="43.5"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="default_header_image_big" id="VCf-dK-s94">
+                                                    <rect key="frame" x="15" y="1" width="40" height="40"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                </imageView>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                            <tableViewSection id="I4D-H5-AIh">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="vQt-oa-a3e" imageView="AsY-e7-BfL" style="IBUITableViewCellStyleDefault" id="5q9-47-AAU">
+                                        <rect key="frame" x="0.0" y="115" width="600" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="5q9-47-AAU" id="6FE-b2-SrF">
+                                            <rect key="frame" x="0.0" y="0.0" width="567" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="我的身份" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="vQt-oa-a3e">
+                                                    <rect key="frame" x="56" y="0.0" width="509" height="43.5"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="memberStatus" id="AsY-e7-BfL">
+                                                    <rect key="frame" x="15" y="10" width="26" height="23"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                </imageView>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                            <tableViewSection id="KER-c5-UPx">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="u4q-86-Dai">
+                                        <rect key="frame" x="0.0" y="195" width="600" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="u4q-86-Dai" id="g4z-ei-8c3">
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view alpha="0.34999999999999998" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9W2-A2-rGq">
+                                                    <rect key="frame" x="283" y="0.0" width="1" height="43.5"/>
+                                                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="1" id="R8q-mI-PJC"/>
+                                                    </constraints>
+                                                </view>
+                                                <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FKj-Iz-7TP">
+                                                    <rect key="frame" x="284" y="0.0" width="283" height="43"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                    <state key="normal" title="#自拍#">
+                                                        <color key="titleColor" red="0.1215686275" green="0.12941176469999999" blue="0.14117647059999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                    </state>
+                                                    <state key="highlighted" title="#自拍#">
+                                                        <color key="titleColor" red="1" green="0.1129726829" blue="0.13034261599999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                    </state>
+                                                </button>
+                                                <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RkF-hi-2PL">
+                                                    <rect key="frame" x="0.0" y="0.0" width="283" height="43.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                    <state key="normal" title="#百思红人#">
+                                                        <color key="titleColor" red="0.1215686275" green="0.12941176469999999" blue="0.14117647059999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                    </state>
+                                                    <state key="highlighted" title="#百思红人#">
+                                                        <color key="titleColor" red="1" green="0.1129726829" blue="0.13034261599999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                    </state>
+                                                </button>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="9W2-A2-rGq" firstAttribute="centerY" secondItem="g4z-ei-8c3" secondAttribute="centerY" id="7SA-JF-MZt"/>
+                                                <constraint firstAttribute="trailing" secondItem="FKj-Iz-7TP" secondAttribute="trailing" id="E5V-ew-4is"/>
+                                                <constraint firstAttribute="bottom" secondItem="RkF-hi-2PL" secondAttribute="bottom" id="JRb-B4-cSo"/>
+                                                <constraint firstItem="9W2-A2-rGq" firstAttribute="centerX" secondItem="g4z-ei-8c3" secondAttribute="centerX" id="Ksz-SV-Luz"/>
+                                                <constraint firstAttribute="bottom" secondItem="9W2-A2-rGq" secondAttribute="bottom" id="Uik-un-jOC"/>
+                                                <constraint firstItem="FKj-Iz-7TP" firstAttribute="leading" secondItem="9W2-A2-rGq" secondAttribute="trailing" id="WBU-vG-qQK"/>
+                                                <constraint firstItem="9W2-A2-rGq" firstAttribute="top" secondItem="g4z-ei-8c3" secondAttribute="top" id="Xtk-kM-Ct4"/>
+                                                <constraint firstItem="FKj-Iz-7TP" firstAttribute="top" secondItem="g4z-ei-8c3" secondAttribute="top" id="b85-Ar-XBU"/>
+                                                <constraint firstItem="RkF-hi-2PL" firstAttribute="leading" secondItem="g4z-ei-8c3" secondAttribute="leading" id="dfl-Sv-DGf"/>
+                                                <constraint firstAttribute="bottom" secondItem="FKj-Iz-7TP" secondAttribute="bottom" id="rFc-bP-dAk"/>
+                                                <constraint firstItem="RkF-hi-2PL" firstAttribute="top" secondItem="g4z-ei-8c3" secondAttribute="top" id="yI1-5c-5WZ"/>
+                                                <constraint firstItem="9W2-A2-rGq" firstAttribute="leading" secondItem="RkF-hi-2PL" secondAttribute="trailing" id="zsl-eB-cc5"/>
+                                            </constraints>
+                                            <variation key="default">
+                                                <mask key="constraints">
+                                                    <exclude reference="7SA-JF-MZt"/>
+                                                </mask>
+                                            </variation>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                        </sections>
+                        <connections>
+                            <outlet property="dataSource" destination="ir0-mU-9qq" id="4rm-wo-6Kn"/>
+                            <outlet property="delegate" destination="ir0-mU-9qq" id="gkv-DP-cGZ"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Lb6-4P-KKV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="249" y="317"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="default_header_image_big" width="40" height="40"/>
+        <image name="memberStatus" width="26" height="23"/>
+    </resources>
+</document>
