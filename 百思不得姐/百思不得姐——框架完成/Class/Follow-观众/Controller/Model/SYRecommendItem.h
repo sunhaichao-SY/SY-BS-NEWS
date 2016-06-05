@@ -22,5 +22,5 @@
 @property (nonatomic,strong) NSString *theme_name;
 
 //总帖数
-@property (nonatomic,strong) NSString *theme_id;
+@property (nonatomic,strong) NSString *post_num;
 @end

@@ -80,21 +80,21 @@ static NSString *const ID = @"cell";
     _mgr = mgr;
     
     //拼接请求参数
-    NSMutableDictionary *parameters = [NSMutableDictionary dictionary];
-    parameters[@"a"] = @"tag_recommend";
-    parameters[@"action"] = @"sub";
-    parameters[@"c"] = @"topic";
-    
+//    NSMutableDictionary *parameters = [NSMutableDictionary dictionary];
+//    parameters[@"a"] = @"tag_recommend";
+//    parameters[@"action"] = @"sub";
+//    parameters[@"c"] = @"topic";
+    //@"http://api.budejie.com/api/api_open.php"
     //发送请求
-    [mgr GET:@"http://api.budejie.com/api/api_open.php" parameters:parameters progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-        //        NSLog(@"responseObject ==  %@",responseObject);
+    [mgr GET:@"http://d.api.budejie.com/tag/subscribe/bs0315-iphone-4.2.json?appname=bs0315&asid=4D9488FE-E59B-41A2-9323-AC3934759456&client=iphone&device=ios%20device&from=ios&jbk=0&mac=&market=&openudid=e3ddce7325bff40f8bb8b2851653e15c03c366c2&udid=&ver=4.2" parameters:nil progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+                NSLog(@"responseObject ==  %@",responseObject);
         //        [responseObject writeToFile:@"/Users/sunhaichao/Desktop/AD.plist" atomically:YES];
         
         //当请求完成后，隐藏指示器
         [SVProgressHUD dismiss];
         
         //将模型保存到数组中
-        _recommendItem = [SYRecommendItem mj_objectArrayWithKeyValuesArray:responseObject];
+        _recommendItem = [SYRecommendItem mj_objectArrayWithKeyValuesArray:responseObject[@"rec_tags"]];
         
         [self.tableView reloadData];
         

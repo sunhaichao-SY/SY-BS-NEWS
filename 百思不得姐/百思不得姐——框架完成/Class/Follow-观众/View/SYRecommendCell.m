@@ -40,9 +40,13 @@
 {
     [super awakeFromNib];
     
-    //修改头像形状，由方形转变成圆形
-    _iconView.layer.cornerRadius = _iconView.sy_width / 2;
-    _iconView.layer.masksToBounds = YES;
+    //目前最新的头像形状
+    _iconView.layer.cornerRadius = 10;
+     _iconView.layer.masksToBounds = YES;
+    
+//    //修改头像形状，由方形转变成圆形
+//    _iconView.layer.cornerRadius = _iconView.sy_width / 2;
+//    _iconView.layer.masksToBounds = YES;
     
     //完成自定义Cell倒圆角效果
 //    self.layer.cornerRadius = 5;
@@ -86,7 +90,7 @@
     }
     
     //总帖数
-    _lableView.text = recommendItem.theme_id;
+    _lableView.text = recommendItem.post_num;
     
 }
 

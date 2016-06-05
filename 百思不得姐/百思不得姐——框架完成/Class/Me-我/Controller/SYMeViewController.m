@@ -50,7 +50,7 @@ static NSString *const ID = @"cell";
     
     
     [manager GET:@"http://d.api.budejie.com/op/square/bs0315-iphone-4.2/0-100.json" parameters:nil progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id _Nullable responseObject) {
-        NSLog(@"%@",responseObject);
+//        NSLog(@"%@",responseObject);
 #warning 打印不出来plist
         [responseObject writeToFile:@"/Users/sunhaichao/Desktop/AD.plist" atomically:YES];
         

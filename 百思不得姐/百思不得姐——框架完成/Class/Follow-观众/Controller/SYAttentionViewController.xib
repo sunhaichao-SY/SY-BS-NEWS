@@ -17,21 +17,21 @@
             <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="快快登录吧，关注百思最in牛人" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CJR-7Y-Bzu">
-                    <rect key="frame" x="161" y="80" width="276" height="24"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="快快登录吧，关注百思最in牛人" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CJR-7Y-Bzu">
+                    <rect key="frame" x="162" y="140" width="276" height="24"/>
                     <fontDescription key="fontDescription" type="system" pointSize="20"/>
                     <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Snip20160604_1" translatesAutoresizingMaskIntoConstraints="NO" id="UwT-9V-0Gn">
-                    <rect key="frame" x="200" y="160" width="200" height="200"/>
+                    <rect key="frame" x="200" y="200" width="200" height="200"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="200" id="5iM-h6-afK"/>
                         <constraint firstAttribute="width" constant="200" id="NTf-Pg-7q3"/>
                     </constraints>
                 </imageView>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gR5-pp-Bik">
-                    <rect key="frame" x="0.0" y="420" width="600" height="44"/>
+                    <rect key="frame" x="0.0" y="460" width="600" height="44"/>
                     <subviews>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Sc-aH-4ik">
                             <rect key="frame" x="80" y="4" width="200" height="35"/>
@@ -95,10 +95,10 @@
                 <constraint firstItem="0vd-qD-Hbh" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" multiplier="1/3" id="93U-Sj-N1g"/>
                 <constraint firstItem="CJR-7Y-Bzu" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="9kP-kg-GWi"/>
                 <constraint firstItem="UwT-9V-0Gn" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="I0r-g0-z53"/>
-                <constraint firstItem="UwT-9V-0Gn" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" constant="-40" id="KLs-Kg-db2"/>
+                <constraint firstItem="UwT-9V-0Gn" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="KLs-Kg-db2"/>
                 <constraint firstItem="gR5-pp-Bik" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="Xx4-Gl-WnT"/>
                 <constraint firstItem="6Sc-aH-4ik" firstAttribute="width" secondItem="UwT-9V-0Gn" secondAttribute="width" multiplier="5/6" id="aJT-ob-ulS"/>
-                <constraint firstItem="CJR-7Y-Bzu" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="80" id="epb-Q7-ZNQ"/>
+                <constraint firstItem="CJR-7Y-Bzu" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="140" id="epb-Q7-ZNQ"/>
                 <constraint firstItem="0vd-qD-Hbh" firstAttribute="leading" secondItem="UwT-9V-0Gn" secondAttribute="leading" multiplier="5/3" id="kdU-DT-QpM"/>
                 <constraint firstItem="gR5-pp-Bik" firstAttribute="top" secondItem="UwT-9V-0Gn" secondAttribute="bottom" constant="60" id="pEi-h5-joa"/>
                 <constraint firstItem="UwT-9V-0Gn" firstAttribute="top" secondItem="CJR-7Y-Bzu" secondAttribute="bottom" constant="80" id="qaM-W5-IgG"/>
