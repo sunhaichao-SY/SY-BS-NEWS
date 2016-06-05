@@ -74,7 +74,7 @@
     //因为所有的数据都是从网上下载下来，所以头像的数据要使用SDWedImage来加载
     
     //头像
-    [_iconView sd_setImageWithURL:[NSURL URLWithString:recommendItem.image_list] placeholderImage:[UIImage imageNamed:@"defaultUserIcon"]];
+    [_iconView sd_setImageWithURL:[NSURL URLWithString:recommendItem.image_list] placeholderImage:[UIImage imageNamed:@"defaultTagIcon~iphone"]];
     _nameView.text = recommendItem.theme_name;
     
     //名字
@@ -94,9 +94,4 @@
     
 }
 
-#warning 什么意思
-- (void)setSelected:(BOOL)selected animated:(BOOL)animated
-{
-    [super setSelected:selected animated:animated];
-}
 @end

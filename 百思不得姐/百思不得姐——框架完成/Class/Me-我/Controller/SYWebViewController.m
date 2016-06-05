@@ -19,7 +19,11 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+    
+    //导航条右边按钮
     self.navigationItem.rightBarButtonItem = [UIBarButtonItem itemWithImage:@"comment_nav_item_share_icon" hightImage:@"comment_nav_item_share_icon_click" target:self action:@selector(share)];
+    
+    //创建一个WKWebView
     WKWebView *webView = [[WKWebView alloc]initWithFrame:CGRectMake(0, 64, SYScreenW, SYScreenH)];
     self.webView.scrollView.contentInset = UIEdgeInsetsMake(-64, 0, 0, 0);
 

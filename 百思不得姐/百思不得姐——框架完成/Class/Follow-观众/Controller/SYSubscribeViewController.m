@@ -95,7 +95,7 @@ static NSString *const ID = @"cell";
         
         //将模型保存到数组中
         _recommendItem = [SYRecommendItem mj_objectArrayWithKeyValuesArray:responseObject[@"rec_tags"]];
-        
+        //必须刷新一下页面才会显示数据
         [self.tableView reloadData];
         
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
@@ -147,6 +147,7 @@ static NSString *const ID = @"cell";
 }
 
 
+//点击tableView的时候会调用
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     [self.view endEditing:YES];
@@ -180,6 +181,8 @@ static NSString *const ID = @"cell";
 {
     return 30;
 }
+
+
 
 - (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section
 {

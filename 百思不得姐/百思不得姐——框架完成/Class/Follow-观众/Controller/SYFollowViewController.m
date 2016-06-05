@@ -19,7 +19,9 @@
 //定义属性
 @property (nonatomic,strong) UIButton *subscribeBtn;
 @property (nonatomic,strong) UIButton *attentionBtn;
+//当前显示窗口
 @property (nonatomic,weak) UIViewController *showingVc;
+//下划线
 @property (nonatomic,weak) UIView *underLine;
 
 @end
@@ -40,7 +42,7 @@
     
     [self addChildViewController:[[SYSubscribeViewController alloc]init]];
     [self addChildViewController:[[SYAttentionViewController alloc]init]];
-    
+    //默认显示第一个按钮
     [self subscribeBtn:self.subscribeBtn];
 }
 
@@ -87,7 +89,7 @@
     
 }
 
-//点击关注按钮
+//点击按钮
 - (void)subscribeBtn:(UIButton *)btn
 {
     [self.showingVc.view removeFromSuperview];

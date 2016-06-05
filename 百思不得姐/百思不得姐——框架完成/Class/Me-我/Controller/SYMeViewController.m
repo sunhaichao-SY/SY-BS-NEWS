@@ -15,6 +15,7 @@
 #import "SYLoginRegisterViewController.h"
 #import "SYWebViewController.h"
 #import "SYLoginRegisterViewController.h"
+
 static NSInteger const cols = 4;
 static CGFloat const margin = 1;
 static NSString *const ID = @"cell";
@@ -30,6 +31,7 @@ static NSString *const ID = @"cell";
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
     //设置Navigation的样式
     [self setupNavigation];
 
@@ -38,20 +40,19 @@ static NSString *const ID = @"cell";
     
     //设置底部View
     [self setupFootView];
+    
     //加载数据
     [self loadData];
 
 }
 //http://d.api.budejie.com/op/square/bs0315-iphone-4.2/0-100.json
+//加载数据
 - (void)loadData
 {
     AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
 
-//    NSMutableDictionary *parameters = [NSMutableDictionary dictionary];
-    
-    
     [manager GET:@"http://d.api.budejie.com/op/square/bs0315-iphone-4.2/0-100.json" parameters:nil progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id _Nullable responseObject) {
-//        NSLog(@"%@",responseObject);
+
 #warning 打印不出来plist
         [responseObject writeToFile:@"/Users/sunhaichao/Desktop/AD.plist" atomically:YES];
         
@@ -68,8 +69,11 @@ static NSString *const ID = @"cell";
         [self resolveData];
         
         [self.collectionView reloadData];
+        
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        
         NSLog(@"%@",error);
+        
     }];
     
 }
@@ -98,25 +102,24 @@ static NSString *const ID = @"cell";
 - (void)moonItemClick:(UIButton *)btn
 {
     btn.selected = !btn.selected;
-    SYLogFunc
+    
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
-#warning 点击选中会产生错乱
+    
     if (indexPath.section == 0) {
         SYLoginRegisterViewController *login = [[SYLoginRegisterViewController alloc]init];
         [self presentViewController:login animated:YES completion:nil];
         
     }
-    NSLog(@"%ld",indexPath.row);
+   
 }
 
 //设置Navigation的样式
 - (void)setupNavigation
 {
-    
     //设置背景颜色
     self.view.backgroundColor = SYCommonBgColor;
     //设置navigationItem.title的标题
@@ -158,6 +161,7 @@ static NSString *const ID = @"cell";
     
     collectionView.delegate = self;
     collectionView.dataSource = self;
+    
     [collectionView registerNib:[UINib nibWithNibName:@"SYMeCell" bundle:nil] forCellWithReuseIdentifier:ID];
     
     self.tableView.tableFooterView = collectionView;
@@ -181,6 +185,8 @@ static NSString *const ID = @"cell";
 }
 
 #pragma mark - UICollectionViewDelegate
+
+//点击选中某一个Item
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
 {
     SYMeItem *item = _squareItems[indexPath.row];

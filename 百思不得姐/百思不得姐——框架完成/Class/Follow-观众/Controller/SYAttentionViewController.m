@@ -14,15 +14,20 @@
 @end
 
 @implementation SYAttentionViewController
+
+
+//弹出登录页面
 - (IBAction)loginBtn:(id)sender {
     SYLoginRegisterViewController *login = [[SYLoginRegisterViewController alloc]init];
     [self.navigationController presentViewController:login animated:YES completion:nil];
 }
 
+
+//弹出注册页面
 - (IBAction)registerBtn:(id)sender {
    
     SYResigeringViewController *resiger = [[SYResigeringViewController alloc]init];
-    [self.navigationController presentViewController:resiger animated:YES completion:NO];
+    [self.navigationController presentViewController:resiger animated:YES completion:nil];
     
 }
 
