@@ -103,7 +103,7 @@ static NSString *const ID = @"cell";
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
-    
+#warning 点击选中会产生错乱
     if (indexPath.row == 0) {
         SYLoginRegisterViewController *login = [[SYLoginRegisterViewController alloc]init];
         [self presentViewController:login animated:YES completion:nil];

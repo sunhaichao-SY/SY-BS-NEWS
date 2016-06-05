@@ -20,6 +20,7 @@
 @property (nonatomic,strong) UIButton *subscribeBtn;
 @property (nonatomic,strong) UIButton *attentionBtn;
 @property (nonatomic,weak) UIViewController *showingVc;
+@property (nonatomic,weak) UIView *underLine;
 
 @end
 
@@ -46,24 +47,33 @@
 //设置navigationItem.title的标题
 - (void)setupNavigationItemTitle
 {
-    UIView *titleBtnView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, 150, 30)];
+    UIView *titleBtnView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, 180, 30)];
     
     UIButton *subscribeBtn =[UIButton buttonWithType:UIButtonTypeCustom];
     subscribeBtn.frame = CGRectMake(0, 0, titleBtnView.sy_width * 0.5 , titleBtnView.sy_height);
     [subscribeBtn setTitle:@"订阅" forState:UIControlStateNormal];
     [subscribeBtn setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
-    [subscribeBtn setFont:[UIFont systemFontOfSize:18]];
+    subscribeBtn.titleLabel.font = [UIFont systemFontOfSize:18];
     [subscribeBtn addTarget:self action:@selector(subscribeBtn:) forControlEvents:UIControlEventTouchUpInside];
+    [subscribeBtn.titleLabel sizeToFit];
+    CGFloat w = subscribeBtn.titleLabel.frame.size.width;
+    CGFloat h = subscribeBtn.sy_height;
     [titleBtnView addSubview:subscribeBtn];
     
+    //底部滚动线条
+    UIView *underLine = [[UIView alloc]init];
+    underLine.backgroundColor = [UIColor redColor];
+    underLine.frame = CGRectMake(0, h, w, 3);
+    [subscribeBtn.titleLabel addSubview:underLine];
+    _underLine = underLine;
     
     UIButton *attentionBtn = [UIButton buttonWithType:UIButtonTypeCustom];
     attentionBtn.frame = CGRectMake(titleBtnView.sy_width * 0.5, 0, titleBtnView.sy_width * 0.5 , titleBtnView.sy_height);
     [attentionBtn setTitle:@"关注" forState:UIControlStateNormal];
     [attentionBtn setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
-    [attentionBtn setFont:[UIFont systemFontOfSize:18]];
+    attentionBtn.titleLabel.font = [UIFont systemFontOfSize:18];
+    [attentionBtn.titleLabel sizeToFit];
     [attentionBtn addTarget:self action:@selector(subscribeBtn:) forControlEvents:UIControlEventTouchUpInside];
-    
     [titleBtnView addSubview:attentionBtn];
     
     self.navigationItem.titleView = titleBtnView;
@@ -74,6 +84,7 @@
 {
     SYRecommendViewController *recommend = [[SYRecommendViewController alloc]init];
     [self.navigationController pushViewController:recommend animated:YES];
+    
 }
 
 //点击关注按钮
@@ -85,7 +96,13 @@
     self.showingVc = self.childViewControllers[index];
     self.showingVc.view.frame = CGRectMake(0, 0, SYScreenW, SYScreenH);
     [self.view addSubview:self.showingVc.view];
+    
+    //点击按钮底部线条进行滚动
+    [UIView animateWithDuration:0.25 animations:^{
+        _underLine.sy_x = btn.sy_x;
+    }];
 }
+
 
 @end
 

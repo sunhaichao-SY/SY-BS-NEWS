@@ -87,7 +87,7 @@ static NSString *const ID = @"cell";
     //@"http://api.budejie.com/api/api_open.php"
     //发送请求
     [mgr GET:@"http://d.api.budejie.com/tag/subscribe/bs0315-iphone-4.2.json?appname=bs0315&asid=4D9488FE-E59B-41A2-9323-AC3934759456&client=iphone&device=ios%20device&from=ios&jbk=0&mac=&market=&openudid=e3ddce7325bff40f8bb8b2851653e15c03c366c2&udid=&ver=4.2" parameters:nil progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-                NSLog(@"responseObject ==  %@",responseObject);
+//                NSLog(@"responseObject ==  %@",responseObject);
         //        [responseObject writeToFile:@"/Users/sunhaichao/Desktop/AD.plist" atomically:YES];
         
         //当请求完成后，隐藏指示器
@@ -166,12 +166,12 @@ static NSString *const ID = @"cell";
     UIView* myView = [[UIView alloc] init];
     myView.backgroundColor = [UIColor whiteColor];
     UILabel *titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(10, 0, SYScreenW, 30)];
-    titleLabel.font = [UIFont systemFontOfSize:16];
+    titleLabel.font = [UIFont systemFontOfSize:18];
     titleLabel.textAlignment = NSTextAlignmentLeft;
-    titleLabel.textColor= SYCommonBgColor;
-    titleLabel.textColor = [UIColor colorWithRed:80/255.0 green:80/255.0 blue:80/255.0 alpha:1];
+//    titleLabel.textColor= SYCommonBgColor;
+    titleLabel.textColor = [UIColor colorWithRed:140/255.0 green:140/255.0 blue:140/255.0 alpha:1];
     
-    titleLabel.text= @"四爷之推荐关注";
+    titleLabel.text= @"四爷之推荐标签";
     [myView addSubview:titleLabel];
     return myView;
 }

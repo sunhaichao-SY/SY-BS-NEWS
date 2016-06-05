@@ -307,7 +307,7 @@
                 <constraint firstItem="FvS-bj-jV6" firstAttribute="top" secondItem="NLy-EC-sgv" secondAttribute="top" id="xkz-bp-igp"/>
                 <constraint firstItem="LAd-fT-Wt3" firstAttribute="bottom" secondItem="mf7-Vd-cCa" secondAttribute="bottomMargin" constant="30" id="zLM-eY-iaX"/>
             </constraints>
-            <point key="canvasLocation" x="176" y="463"/>
+            <point key="canvasLocation" x="142" y="456"/>
         </view>
     </objects>
     <resources>
