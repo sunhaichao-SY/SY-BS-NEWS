@@ -22,7 +22,7 @@
     //标题
     self.navigationItem.title = @"推荐关注";
     self.view.backgroundColor = [UIColor redColor];
-    self.navigationItem.rightBarButtonItem = [UIBarButtonItem itemWithImage:@"nav_search_icon~iphone" selImage:@"nav_search_icon_click~iphone" target:self action:@selector(searchBtn)];
+    self.navigationItem.rightBarButtonItem = [UIBarButtonItem itemWithImage:@"nav_search_icon~iphone" hightImage:@"nav_search_icon_click~iphone" target:self action:@selector(searchBtn)];
     
 }
 

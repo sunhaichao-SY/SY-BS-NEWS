@@ -13,7 +13,8 @@
 #import <MJExtension/MJExtension.h>
 #import "SYMeCell.h"
 #import "SYLoginRegisterViewController.h"
-
+#import "SYWebViewController.h"
+#import "SYLoginRegisterViewController.h"
 static NSInteger const cols = 4;
 static CGFloat const margin = 1;
 static NSString *const ID = @"cell";
@@ -104,10 +105,12 @@ static NSString *const ID = @"cell";
 {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
 #warning 点击选中会产生错乱
-    if (indexPath.row == 0) {
+    if (indexPath.section == 0) {
         SYLoginRegisterViewController *login = [[SYLoginRegisterViewController alloc]init];
         [self presentViewController:login animated:YES completion:nil];
+        
     }
+    NSLog(@"%ld",indexPath.row);
 }
 
 //设置Navigation的样式
@@ -176,6 +179,36 @@ static NSString *const ID = @"cell";
     
     return cell;
 }
+
+#pragma mark - UICollectionViewDelegate
+- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
+{
+    SYMeItem *item = _squareItems[indexPath.row];
+    //如果前缀不是http 则取消
+    if([item.url hasPrefix:@"http"]){
+        SYWebViewController *webVc = [[SYWebViewController alloc]init];
+        webVc.url = [NSURL URLWithString:item.url];
+        webVc.navigationItem.title = item.name;
+        [self.navigationController pushViewController:webVc animated:YES];
+    }else if ([item.url hasSuffix:@"Check"])
+    {
+        SYLoginRegisterViewController *login = [[SYLoginRegisterViewController alloc]init];
+        [self presentViewController:login animated:YES completion:nil];
+    }else if ([item.url hasSuffix:@"@dest=2"])
+    {
+        SYLoginRegisterViewController *login = [[SYLoginRegisterViewController alloc]init];
+        [self presentViewController:login animated:YES completion:nil];
+    }else if ([item.url hasSuffix:@"SearchUser"])
+    {
+        SYLoginRegisterViewController *login = [[SYLoginRegisterViewController alloc]init];
+        [self presentViewController:login animated:YES completion:nil];
+    }else
+    {
+        return;
+    }
+    
+}
+
 @end
 
 

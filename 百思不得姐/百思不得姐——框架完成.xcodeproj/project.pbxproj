@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		13762BF2FB51E40939D9F6F2 /* Pods____________.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 134D482550200A3F03CD223B /* Pods____________.framework */; };
 		4E2790FA1D02F31A00886ECA /* SYMeViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4E2790F91D02F31A00886ECA /* SYMeViewController.storyboard */; };
+		4E33F4C61D046FC300988945 /* SYWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E33F4C41D046FC300988945 /* SYWebViewController.m */; };
+		4E33F4C71D046FC300988945 /* SYWebViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4E33F4C51D046FC300988945 /* SYWebViewController.xib */; };
+		4E33F4C91D04729200988945 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E33F4C81D04729200988945 /* WebKit.framework */; };
 		4E3A5A251D015F0600B0ED38 /* SYAttentionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E3A5A231D015F0600B0ED38 /* SYAttentionViewController.m */; };
 		4E3A5A261D015F0600B0ED38 /* SYAttentionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4E3A5A241D015F0600B0ED38 /* SYAttentionViewController.xib */; };
 		4E4695281CFDACE3002CFAB7 /* SYPublishViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E4695251CFDACE3002CFAB7 /* SYPublishViewController.m */; };
@@ -76,6 +79,10 @@
 /* Begin PBXFileReference section */
 		134D482550200A3F03CD223B /* Pods____________.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = "Pods____________.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4E2790F91D02F31A00886ECA /* SYMeViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SYMeViewController.storyboard; sourceTree = "<group>"; };
+		4E33F4C31D046FC300988945 /* SYWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SYWebViewController.h; sourceTree = "<group>"; };
+		4E33F4C41D046FC300988945 /* SYWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SYWebViewController.m; sourceTree = "<group>"; };
+		4E33F4C51D046FC300988945 /* SYWebViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SYWebViewController.xib; sourceTree = "<group>"; };
+		4E33F4C81D04729200988945 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 		4E3A5A221D015F0600B0ED38 /* SYAttentionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SYAttentionViewController.h; sourceTree = "<group>"; };
 		4E3A5A231D015F0600B0ED38 /* SYAttentionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SYAttentionViewController.m; sourceTree = "<group>"; };
 		4E3A5A241D015F0600B0ED38 /* SYAttentionViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SYAttentionViewController.xib; sourceTree = "<group>"; };
@@ -161,6 +168,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4E33F4C91D04729200988945 /* WebKit.framework in Frameworks */,
 				13762BF2FB51E40939D9F6F2 /* Pods____________.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -185,9 +193,25 @@
 		13EACCF83EEF4BE117E44CA2 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				4E33F4C81D04729200988945 /* WebKit.framework */,
 				134D482550200A3F03CD223B /* Pods____________.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		4E33F4C11D0466AC00988945 /* Tool-业务类 */ = {
+			isa = PBXGroup;
+			children = (
+				4E33F4C21D0466AC00988945 /* File */,
+			);
+			path = "Tool-业务类";
+			sourceTree = "<group>";
+		};
+		4E33F4C21D0466AC00988945 /* File */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = File;
 			sourceTree = "<group>";
 		};
 		4E4695191CFDAC10002CFAB7 /* AD-广告 */ = {
@@ -329,6 +353,7 @@
 		4E9C50EC1CE9FC60004505C3 /* Class */ = {
 			isa = PBXGroup;
 			children = (
+				4E33F4C11D0466AC00988945 /* Tool-业务类 */,
 				4E4695191CFDAC10002CFAB7 /* AD-广告 */,
 				4E9C50ED1CE9FC60004505C3 /* Essence-精华 */,
 				4E9C50F11CE9FC60004505C3 /* Follow-关注 */,
@@ -476,6 +501,9 @@
 				4E9C51191CE9FEC2004505C3 /* SYMeViewController.h */,
 				4E9C511A1CE9FEC2004505C3 /* SYMeViewController.m */,
 				4E2790F91D02F31A00886ECA /* SYMeViewController.storyboard */,
+				4E33F4C31D046FC300988945 /* SYWebViewController.h */,
+				4E33F4C41D046FC300988945 /* SYWebViewController.m */,
+				4E33F4C51D046FC300988945 /* SYWebViewController.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -754,6 +782,7 @@
 				4E4695371CFDBDCF002CFAB7 /* LaunchImage-700@2x.png in Resources */,
 				4E2790FA1D02F31A00886ECA /* SYMeViewController.storyboard in Resources */,
 				4EC1926F1CFCB09900E55614 /* Demo.gif in Resources */,
+				4E33F4C71D046FC300988945 /* SYWebViewController.xib in Resources */,
 				4E4695361CFDBDCF002CFAB7 /* LaunchImage-700-568h@2x.png in Resources */,
 				4EA725261D0322530044E472 /* SYMeCell.xib in Resources */,
 				4E4695381CFDBDCF002CFAB7 /* LaunchImage-800-667h@2x.png in Resources */,
@@ -840,6 +869,7 @@
 				4E4695281CFDACE3002CFAB7 /* SYPublishViewController.m in Sources */,
 				4E9C51211CEA052C004505C3 /* SYNavigationViewController.m in Sources */,
 				4E9C51181CE9FEB4004505C3 /* SYFollowViewController.m in Sources */,
+				4E33F4C61D046FC300988945 /* SYWebViewController.m in Sources */,
 				4E3A5A251D015F0600B0ED38 /* SYAttentionViewController.m in Sources */,
 				4EA435B11D020B3700EB1403 /* SYRecommendViewController.m in Sources */,
 				4E7269711D030FD40085A409 /* SYMeItem.m in Sources */,

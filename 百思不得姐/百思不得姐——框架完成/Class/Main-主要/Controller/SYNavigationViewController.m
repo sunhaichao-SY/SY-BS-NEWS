@@ -36,7 +36,6 @@
     
 //让控制器作为NavigationBar的手势处理代理对象
     id target = self.interactivePopGestureRecognizer.delegate;
-    NSLog(@"%@",target);
     UIPanGestureRecognizer *pan = [[UIPanGestureRecognizer alloc]initWithTarget:target action:@selector(handleNavigationTransition:)];
     [self.view addGestureRecognizer:pan];
     pan.delegate = self;
