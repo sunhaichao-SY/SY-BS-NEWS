@@ -33,6 +33,8 @@
     //添加所有的子控制器
     [self addAllChildViewController];
     
+    self.topTitleBtn = 6;
+    
 }
 
 //设置导航栏的内容

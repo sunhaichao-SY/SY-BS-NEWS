@@ -4,7 +4,7 @@
 //
 //  Created by 码农界四爷__King on 16/6/6.
 //  Copyright © 2016年 码农界四爷__King. All rights reserved.
-//
+//  精华和最新控制器的基类，只要继承这个类就会有相同的效果
 
 #import "SYBaseViewController.h"
 
@@ -160,7 +160,7 @@ static NSString *const ID = @"cell";
 - (void)setupAllTitle
 {
     NSInteger count = self.childViewControllers.count;
-    CGFloat btnW = SYScreenW / 6;
+    CGFloat btnW = SYScreenW / _topTitleBtn;
     CGFloat btnX;
     CGFloat btnH = _topView.sy_height;
     
@@ -175,7 +175,7 @@ static NSString *const ID = @"cell";
         [titleBtn setTitleColor:[UIColor redColor] forState:UIControlStateSelected];
         
         titleBtn.titleLabel.font = [UIFont systemFontOfSize:14];
-        
+        [titleBtn.titleLabel setBackgroundColor:SYRandomColor];
         btnX = i * btnW;
         titleBtn.frame = CGRectMake(btnX, 0, btnW, btnH);
         
@@ -192,7 +192,7 @@ static NSString *const ID = @"cell";
             underLine.sy_x = 20;
             underLine.sy_height = h;
             [titleBtn.titleLabel sizeToFit];
-            underLine.sy_width = titleBtn.titleLabel.sy_width + 5;
+            underLine.sy_width = titleBtn.titleLabel.sy_width * 1.3;
             underLine.sy_y = y;
             underLine.backgroundColor = [UIColor redColor];
             
@@ -287,9 +287,9 @@ static NSString *const ID = @"cell";
     [rightBtn setTitleColor:colorR forState:UIControlStateNormal];
     
     //    按钮底部小条的滚动
-    [UIView animateWithDuration:0.25 animations:^{
-        _underLine.sy_centerX = scrollView.contentOffset.x / 6;
-    }];
+
+//        _underLine.sy_centerX = scrollView.contentOffset.x * (SYScreenW / _topTitleBtn);
+   
 }
 @end
 

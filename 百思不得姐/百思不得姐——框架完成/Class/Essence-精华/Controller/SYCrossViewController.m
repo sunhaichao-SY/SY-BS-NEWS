@@ -26,6 +26,8 @@
     [self setupNavigationItem];
  
     [self addCrossViewController];
+    
+    self.topTitleBtn = 5;
 }
 
 //设置导航栏样式
