@@ -58,6 +58,7 @@
     subscribeBtn.titleLabel.font = [UIFont systemFontOfSize:18];
     [subscribeBtn addTarget:self action:@selector(subscribeBtn:) forControlEvents:UIControlEventTouchUpInside];
     [subscribeBtn.titleLabel sizeToFit];
+   
     CGFloat w = subscribeBtn.titleLabel.frame.size.width;
     CGFloat h = subscribeBtn.sy_height;
     [titleBtnView addSubview:subscribeBtn];
