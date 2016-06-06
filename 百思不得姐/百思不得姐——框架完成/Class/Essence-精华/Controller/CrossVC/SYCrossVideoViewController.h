@@ -1,5 +1,5 @@
 //
-//  SYCrossViewController.h
+//  SYCrossVideoViewController.h
 //  百思不得姐——框架完成
 //
 //  Created by 码农界四爷__King on 16/6/6.
@@ -7,8 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "SYBaseViewController.h"
 
-@interface SYCrossViewController:SYBaseViewController
+@interface SYCrossVideoViewController : UITableViewController
 
 @end
