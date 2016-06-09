@@ -6,6 +6,7 @@ target ‘百思不得姐——框架完成’ do
     pod 'SDWebImage'
     pod 'MJExtension'
     pod 'SVProgressHUD'
+    pod 'MJRefresh'
 end
 
 

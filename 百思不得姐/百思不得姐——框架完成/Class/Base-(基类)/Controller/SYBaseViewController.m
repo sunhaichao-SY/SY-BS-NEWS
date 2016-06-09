@@ -175,7 +175,7 @@ static NSString *const ID = @"cell";
         [titleBtn setTitleColor:[UIColor redColor] forState:UIControlStateSelected];
         
         titleBtn.titleLabel.font = [UIFont systemFontOfSize:14];
-        [titleBtn.titleLabel setBackgroundColor:SYRandomColor];
+    
         btnX = i * btnW;
         titleBtn.frame = CGRectMake(btnX, 0, btnW, btnH);
         
@@ -237,6 +237,11 @@ static NSString *const ID = @"cell";
     titleBtn.transform = CGAffineTransformMakeScale(1.3, 1.3);
     
     _selectButton = titleBtn;
+    
+    [UIView animateWithDuration:0.25 animations:^{
+        _underLine.sy_centerX = titleBtn.sy_centerX;
+    }];
+    
 }
 
 //点击标题
@@ -248,10 +253,7 @@ static NSString *const ID = @"cell";
     CGFloat offsetX = i * SYScreenW;
     _collection.contentOffset = CGPointMake(offsetX, 0);
     
-    [UIView animateWithDuration:0.25 animations:^{
-        _underLine.sy_centerX = titleBtn.sy_centerX;
-    }];
-    
+   
 }
 
 //正在滚动的时候调用用来改变文字颜色和大小

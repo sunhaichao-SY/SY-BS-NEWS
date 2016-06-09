@@ -85,6 +85,7 @@ static NSString *const ID = @"cell";
 //    parameters[@"action"] = @"sub";
 //    parameters[@"c"] = @"topic";
     //@"http://api.budejie.com/api/api_open.php"
+    
     //发送请求
     [mgr GET:@"http://d.api.budejie.com/tag/subscribe/bs0315-iphone-4.2.json?appname=bs0315&asid=4D9488FE-E59B-41A2-9323-AC3934759456&client=iphone&device=ios%20device&from=ios&jbk=0&mac=&market=&openudid=e3ddce7325bff40f8bb8b2851653e15c03c366c2&udid=&ver=4.2" parameters:nil progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
 //                NSLog(@"responseObject ==  %@",responseObject);

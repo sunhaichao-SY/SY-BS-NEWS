@@ -31,9 +31,6 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    //设置背景颜色
-    self.view.backgroundColor = SYCommonBgColor;
-    
     //设置navigationItem.title的标题
     [self setupNavigationItemTitle];
     

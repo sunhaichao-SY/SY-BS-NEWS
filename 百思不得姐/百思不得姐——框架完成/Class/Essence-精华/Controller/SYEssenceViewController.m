@@ -7,14 +7,7 @@
 //
 
 #import "SYEssenceViewController.h"
-#import "SYAllViewController.h"
-#import "SYVideoTableViewController.h"
-#import "SYPictureTableViewController.h"
-#import "SYTextTableViewController.h"
-#import "SYStarTableViewController.h"
-#import "SYGirlTableViewController.h"
-#import "SYGameTableViewController.h"
-#import "SYSoundTableViewController.h"
+#import "SYEssenceBaseViewController.h"
 #import "SYStarViewController.h"
 #import "SYCrossViewController.h"
 
@@ -56,42 +49,42 @@
 {
     
     //全部
-    SYAllViewController *allVc = [[SYAllViewController alloc]init];
+    SYEssenceBaseViewController *allVc = [[SYEssenceBaseViewController alloc]init];
     allVc.title = @"全部";
     [self addChildViewController:allVc];
     
     //视频
-    SYVideoTableViewController *videoVc = [[SYVideoTableViewController alloc]init];
+    SYEssenceBaseViewController *videoVc = [[SYEssenceBaseViewController alloc]init];
     videoVc.title = @"视频";
     [self addChildViewController:videoVc];
     
     //图片
-    SYPictureTableViewController *pictureVc = [[SYPictureTableViewController alloc]init];
+    SYEssenceBaseViewController *pictureVc = [[SYEssenceBaseViewController alloc]init];
     pictureVc.title = @"图片";
     [self addChildViewController:pictureVc];
     
     //段子
-    SYTextTableViewController *textVc = [[SYTextTableViewController alloc]init];
+    SYEssenceBaseViewController *textVc = [[SYEssenceBaseViewController alloc]init];
     textVc.title = @"段子";
     [self addChildViewController:textVc];
     
     //网红
-    SYStarTableViewController *starVc = [[SYStarTableViewController alloc]init];
+    SYEssenceBaseViewController *starVc = [[SYEssenceBaseViewController alloc]init];
     starVc.title = @"网红";
     [self addChildViewController:starVc];
     
     //美女
-    SYGirlTableViewController *girlVc = [[SYGirlTableViewController alloc]init];
+    SYEssenceBaseViewController *girlVc = [[SYEssenceBaseViewController alloc]init];
     girlVc.title = @"美女";
     [self addChildViewController:girlVc];
     
     //游戏
-    SYGameTableViewController *gameVc = [[SYGameTableViewController alloc]init];
+    SYEssenceBaseViewController *gameVc = [[SYEssenceBaseViewController alloc]init];
     gameVc.title = @"游戏";
     [self addChildViewController:gameVc];
     
     //声音
-    SYSoundTableViewController *soundVc = [[SYSoundTableViewController alloc]init];
+    SYEssenceBaseViewController *soundVc = [[SYEssenceBaseViewController alloc]init];
     soundVc.title = @"声音";
     [self addChildViewController:soundVc];
     
