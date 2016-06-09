@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "SYBaseViewController.h"
 
-@interface SYNewViewController : UIViewController
+@interface SYNewViewController : SYBaseViewController
 
 @end

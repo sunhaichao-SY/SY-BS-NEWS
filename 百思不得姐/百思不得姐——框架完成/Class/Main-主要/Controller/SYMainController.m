@@ -49,7 +49,7 @@
     [self addOneChildViewController:[[SYEssenceViewController alloc]init] title:@"精华" image:@"tabBar_essence_icon" selected:@"tabBar_essence_click_icon"];
     
     //新帖
-    [self addOneChildViewController:[[SYNewViewController alloc]init] title:@"新帖" image:@"tabBar_new_icon" selected:@"tabBar_new_click_icon"];
+    [self addOneChildViewController:[[SYNewViewController alloc]init] title:@"最新" image:@"tabBar_new_icon" selected:@"tabBar_new_click_icon"];
     
     //关注
     [self addOneChildViewController:[[SYFollowViewController alloc]init] title:@"关注" image:@"tabBar_friendTrends_icon" selected:@"tabBar_friendTrends_click_icon"];

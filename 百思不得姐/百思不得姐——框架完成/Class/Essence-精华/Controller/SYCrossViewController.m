@@ -7,12 +7,7 @@
 //
 
 #import "SYCrossViewController.h"
-#import "SYCrossAllViewController.h"
-#import "SYCrossTextViewController.h"
-#import "SYCrossVideoViewController.h"
-#import "SYCrossPictureViewController.h"
-#import "SYCrossSoundViewController.h"
-
+#import "SYEssenceBaseViewController.h"
 
 @interface SYCrossViewController ()
 
@@ -44,27 +39,27 @@
 {
 
     //全部
-    SYCrossAllViewController *all = [[SYCrossAllViewController alloc]init];
+    SYEssenceBaseViewController *all = [[SYEssenceBaseViewController alloc]init];
     all.title = @"全部";
     [self addChildViewController:all];
     
     //视频
-    SYCrossVideoViewController *video = [[SYCrossVideoViewController alloc]init];
+    SYEssenceBaseViewController *video = [[SYEssenceBaseViewController alloc]init];
     video.title = @"视频";
     [self addChildViewController:video];
     
     //图片
-    SYCrossPictureViewController *picture = [[SYCrossPictureViewController alloc]init];
+    SYEssenceBaseViewController *picture = [[SYEssenceBaseViewController alloc]init];
     picture.title = @"图片";
     [self addChildViewController:picture];
     
     //段子
-    SYCrossTextViewController *text = [[SYCrossTextViewController alloc]init];
+    SYEssenceBaseViewController *text = [[SYEssenceBaseViewController alloc]init];
     text.title = @"段子";
     [self addChildViewController:text];
     
     //声音
-    SYCrossSoundViewController *sound = [[SYCrossSoundViewController alloc]init];
+    SYEssenceBaseViewController *sound = [[SYEssenceBaseViewController alloc]init];
     sound.title = @"声音";
     [self addChildViewController:sound];
 }

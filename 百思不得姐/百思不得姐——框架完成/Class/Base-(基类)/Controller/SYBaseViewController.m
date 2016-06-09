@@ -234,7 +234,7 @@ static NSString *const ID = @"cell";
     [self.topView setContentOffset:CGPointMake(offsetX, 0) animated:YES];
     
     // 设置标题缩放，如果不写这句代码，再次点计算中按钮之后，该按钮会恢复成原来的样子
-    titleBtn.transform = CGAffineTransformMakeScale(1.3, 1.3);
+    titleBtn.transform = CGAffineTransformMakeScale(1.2, 1.2);
     
     _selectButton = titleBtn;
     
@@ -278,8 +278,8 @@ static NSString *const ID = @"cell";
     //设置按钮文字的大小缩放
     CGFloat scaleR = scrollView.contentOffset.x / SYScreenW - leftI;
     CGFloat scaleL = 1 - scaleR;
-    leftBTn.transform = CGAffineTransformMakeScale(scaleL * 0.3 + 1, scaleL * 0.3 + 1);
-    rightBtn.transform = CGAffineTransformMakeScale(scaleR * 0.3 + 1, scaleR * 0.3 + 1);
+    leftBTn.transform = CGAffineTransformMakeScale(scaleL * 0.2 + 1, scaleL * 0.2 + 1);
+    rightBtn.transform = CGAffineTransformMakeScale(scaleR * 0.2 + 1, scaleR * 0.2 + 1);
     
     //设置按钮颜色的变化
     UIColor *colorR = [UIColor colorWithRed:scaleR green:0 blue:0 alpha:1];
