@@ -132,19 +132,28 @@
                             <constraint firstItem="RFY-cx-Oua" firstAttribute="top" secondItem="gVZ-UP-sOk" secondAttribute="top" id="ylf-2Q-9i5"/>
                         </constraints>
                     </view>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i9t-ek-7S6">
+                        <rect key="frame" x="10" y="50" width="300" height="19.5"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
                 </subviews>
                 <constraints>
                     <constraint firstItem="QNj-Y6-73c" firstAttribute="leading" secondItem="MET-J4-5De" secondAttribute="leading" id="2uR-Xd-Xp1"/>
                     <constraint firstItem="QNj-Y6-73c" firstAttribute="bottom" secondItem="jLB-3v-oNp" secondAttribute="bottom" id="Obv-4m-ZSi"/>
                     <constraint firstAttribute="bottom" secondItem="gVZ-UP-sOk" secondAttribute="bottom" id="Xkm-ZS-g05"/>
                     <constraint firstItem="SXU-99-tLI" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="bSU-jm-uiC"/>
+                    <constraint firstItem="i9t-ek-7S6" firstAttribute="leading" secondItem="jLB-3v-oNp" secondAttribute="leading" id="bxq-dM-xaj"/>
                     <constraint firstItem="MET-J4-5De" firstAttribute="top" secondItem="jLB-3v-oNp" secondAttribute="top" id="bzI-Fj-19Y"/>
                     <constraint firstAttribute="trailing" secondItem="gVZ-UP-sOk" secondAttribute="trailing" id="f2b-2w-Tty"/>
                     <constraint firstItem="jLB-3v-oNp" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="syn-Xt-38k"/>
                     <constraint firstAttribute="trailing" secondItem="SXU-99-tLI" secondAttribute="trailing" constant="10" id="tXk-zy-dPn"/>
                     <constraint firstItem="jLB-3v-oNp" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="ueB-E4-nyQ"/>
                     <constraint firstItem="MET-J4-5De" firstAttribute="leading" secondItem="jLB-3v-oNp" secondAttribute="trailing" constant="10" id="wAw-2O-qBQ"/>
+                    <constraint firstItem="i9t-ek-7S6" firstAttribute="top" secondItem="jLB-3v-oNp" secondAttribute="bottom" constant="10" id="wji-jn-XyN"/>
                     <constraint firstItem="gVZ-UP-sOk" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="yND-gy-vFJ"/>
+                    <constraint firstItem="i9t-ek-7S6" firstAttribute="trailing" secondItem="SXU-99-tLI" secondAttribute="trailing" id="zd4-z0-EpB"/>
                 </constraints>
             </tableViewCellContentView>
             <connections>
@@ -153,6 +162,7 @@
                 <outlet property="iconView" destination="jLB-3v-oNp" id="MGA-uW-l0O"/>
                 <outlet property="nameView" destination="MET-J4-5De" id="bF6-z7-KlT"/>
                 <outlet property="shareView" destination="E7d-A0-UB0" id="CpK-A0-GPk"/>
+                <outlet property="textContent" destination="i9t-ek-7S6" id="qfz-4v-ZEJ"/>
                 <outlet property="timeView" destination="QNj-Y6-73c" id="EGz-V9-QdK"/>
                 <outlet property="zanView" destination="Fr6-a5-I2K" id="NZa-yF-GZF"/>
             </connections>

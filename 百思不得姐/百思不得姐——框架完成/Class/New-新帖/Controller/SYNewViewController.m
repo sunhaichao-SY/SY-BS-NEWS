@@ -19,7 +19,6 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
   
     //设置导航栏的内容
     [self setupNavigationBar];

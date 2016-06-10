@@ -33,6 +33,9 @@ static CGFloat const margin = 10;
 //转发
 @property (weak, nonatomic) IBOutlet UIButton *commentView;
 
+//内容
+@property (weak, nonatomic) IBOutlet UILabel *textContent;
+
 @end
 @implementation SYWholeCell
 
@@ -62,7 +65,7 @@ static CGFloat const margin = 10;
     [self.iconView sd_setImageWithURL:[NSURL URLWithString:textItem.u[@"header"][0]] placeholderImage:[UIImage imageNamed:@"defaultTagIcon~iphone"]];
     self.nameView.text = textItem.u[@"name"];
     self.timeView.text = textItem.passtime;
-    
+    self.textContent.text = textItem.text;
     
     [self setupButtonTitle:self.zanView count:textItem.up placeholder:@"顶"];
     [self setupButtonTitle:self.caiView count:textItem.down placeholder:@"踩"];
@@ -79,6 +82,7 @@ static CGFloat const margin = 10;
         placeholder = [NSString stringWithFormat:@"%zd",count];
     }
     [button setTitle:placeholder forState:UIControlStateNormal];
+    
 }
 
 - (void)setFrame:(CGRect)frame
