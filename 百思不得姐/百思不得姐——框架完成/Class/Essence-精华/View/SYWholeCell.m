@@ -54,7 +54,8 @@ static CGFloat const margin = 10;
     self.iconView.layer.cornerRadius = (self.iconView.sy_width * 0.5);
     self.iconView.layer.masksToBounds = YES;
     
-    
+   
+  
 }
 
 - (void)setTextItem:(SYTextItem *)textItem
@@ -83,6 +84,21 @@ static CGFloat const margin = 10;
     }
     [button setTitle:placeholder forState:UIControlStateNormal];
     
+    /**********用来设置段落的间距**********/
+  
+    //创建NSMutableAttributedString实例，并将text传入
+    NSMutableAttributedString *attStr = [[NSMutableAttributedString alloc]initWithString:_textContent.text];
+    //创建NSMutableParagraphStyle实例
+    NSMutableParagraphStyle *style = [[NSMutableParagraphStyle alloc]init];
+    //设置行距
+    [style setLineSpacing:12.0f];
+    
+    //根据给定长度与style设置attStr式样
+    [attStr addAttribute:NSParagraphStyleAttributeName value:style range:NSMakeRange(0, _textContent.text.length)];
+    //Label获取attStr式样
+    _textContent.attributedText = attStr;
+
+    
 }
 
 - (void)setFrame:(CGRect)frame
@@ -95,6 +111,8 @@ static CGFloat const margin = 10;
     
     [super setFrame:frame];
 
+    
+    
 }
 
 @end

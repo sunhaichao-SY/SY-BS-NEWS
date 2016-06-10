@@ -20,7 +20,7 @@ static NSString *const ID = @"cell";
 //帖子数据
 @property (nonatomic,strong) NSMutableArray *textItems;
 //当前页码
-@property (nonatomic,assign) NSInteger page;
+@property (nonatomic,assign) NSInteger count;
 //当加载下一页数据是需要这个参数
 @property (nonatomic,copy) NSString *np;
 //上一次请求
@@ -95,7 +95,7 @@ static NSString *const ID = @"cell";
         
         [self.tableView.mj_header endRefreshing];
         
-        self.page = NO;
+        self.count = NO;
         
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         if (self.params != params) return;
@@ -114,8 +114,8 @@ static NSString *const ID = @"cell";
     
     AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
     NSMutableDictionary *paramas = [NSMutableDictionary dictionary];
-    NSInteger page = self.page + 1;
-    paramas[@"np"] = @(page);
+    NSInteger count = self.count + 1;
+    paramas[@"count"] = @(count);
     paramas[@"np"] = self.np;
     self.params = paramas;
     
@@ -133,7 +133,7 @@ static NSString *const ID = @"cell";
         
         [self.tableView.mj_footer endRefreshing];
         
-        self.page = page;
+        self.count = count;
         
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         if (self.params != paramas) return;
@@ -156,6 +156,7 @@ static NSString *const ID = @"cell";
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     SYWholeCell *cell = [tableView dequeueReusableCellWithIdentifier:ID];
+    cell.selectionStyle = UITableViewCellSelectionStyleNone;
     
     cell.textItem = self.textItems[indexPath.row];
     
@@ -165,7 +166,7 @@ static NSString *const ID = @"cell";
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    return 350;
+    return 500;
 }
 
 

@@ -173,7 +173,7 @@ static NSString *const ID = @"cell";
 //    titleLabel.textColor= SYCommonBgColor;
     titleLabel.textColor = [UIColor colorWithRed:140/255.0 green:140/255.0 blue:140/255.0 alpha:1];
     
-    titleLabel.text= @"四爷之推荐标签";
+    titleLabel.text= @"推荐标签";
     [myView addSubview:titleLabel];
     return myView;
 }
