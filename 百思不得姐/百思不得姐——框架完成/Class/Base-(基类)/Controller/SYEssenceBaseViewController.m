@@ -82,12 +82,11 @@ static NSString *const ID = @"cell";
     self.params = params;
     //http://s.budejie.com/topic/list/zuixin/29/bs0315-iphone-4.2/0-20.json
     [manager GET:@"http://s.budejie.com/topic/tag-topic/64/hot/bs0315-iphone-4.2/0-20.json" parameters:params progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-        
-        [responseObject writeToFile:@"/Users/sunhaichao/Desktop/podfile.plist" atomically:YES];
+    
         if (self.params != params) return;
         
         self.np = responseObject[@"info"][@"np"];
-        NSLog(@"%@",responseObject);
+      
         self.textItems = [SYTextItem mj_objectArrayWithKeyValuesArray:responseObject[@"list"]];
         
         

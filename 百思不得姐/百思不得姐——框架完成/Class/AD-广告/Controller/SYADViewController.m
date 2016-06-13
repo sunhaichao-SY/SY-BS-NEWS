@@ -80,11 +80,6 @@ static NSString *const SYCode2 = @"phcqnauGuHYkFMRquANhmgN_IauBThfqmgKsUARhIWdGU
     // 3.请求参数，在这里遇到一个BUG就是AFN不支持text/html格式的转译，所以我们需要手动的在AFURLResponseSerialization.m这个文件里面添加@"text/html"来进行转译
     [mgr GET:@"http://mobads.baidu.com/cpro/ui/mads.php" parameters:parameters progress:nil success:^(NSURLSessionDataTask * _Nonnull task, NSDictionary  *_Nullable responseObject) {
         
-//        NSLog(@"%@",responseObject);
-        
-        //在开发中，一般先把请求数据写进Plist中，方便查看
-//        [responseObject writeToFile:@"/Users/sunhaichao/Desktop/AD.plist" atomically:nil];
-        
         //获取广告字典
         NSDictionary *adDic = [responseObject[@"ad"] firstObject];
         

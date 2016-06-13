@@ -61,6 +61,14 @@
 		4EA725251D0322530044E472 /* SYMeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EA725231D0322530044E472 /* SYMeCell.m */; };
 		4EA725261D0322530044E472 /* SYMeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4EA725241D0322530044E472 /* SYMeCell.xib */; };
 		4EC1926F1CFCB09900E55614 /* Demo.gif in Resources */ = {isa = PBXBuildFile; fileRef = 4EC1926E1CFCB09900E55614 /* Demo.gif */; };
+		4EDB5E0B1D0D428B00DCF868 /* 输出框打印中文.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EDB5E0A1D0D428B00DCF868 /* 输出框打印中文.m */; };
+		4EDB5E0F1D0D641500DCF868 /* SYCategoryItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EDB5E0E1D0D641500DCF868 /* SYCategoryItem.m */; };
+		4EDB5E111D0D649000DCF868 /* SYRecommendViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4EDB5E101D0D649000DCF868 /* SYRecommendViewController.xib */; };
+		4EDB5E151D0D69E500DCF868 /* SYCaregroyCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EDB5E131D0D69E500DCF868 /* SYCaregroyCell.m */; };
+		4EDB5E161D0D69E500DCF868 /* SYCaregroyCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4EDB5E141D0D69E500DCF868 /* SYCaregroyCell.xib */; };
+		4EDB5E201D0D8B3900DCF868 /* SYUserCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EDB5E1E1D0D8B3900DCF868 /* SYUserCell.m */; };
+		4EDB5E211D0D8B3900DCF868 /* SYUserCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4EDB5E1F1D0D8B3900DCF868 /* SYUserCell.xib */; };
+		4EDB5E241D0D8C1300DCF868 /* SYUserItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EDB5E231D0D8C1300DCF868 /* SYUserItem.m */; };
 		4EEAF3E81D073F09007AD8B0 /* SYTextItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EEAF3E71D073F09007AD8B0 /* SYTextItem.m */; };
 		4EECE3221D01C96C00C492C0 /* SYSubscribeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EECE3211D01C96C00C492C0 /* SYSubscribeViewController.m */; };
 		4EF2BBEC1D0559B700982A04 /* SYStarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EF2BBEB1D0559B700982A04 /* SYStarViewController.m */; };
@@ -174,6 +182,18 @@
 		4EA725231D0322530044E472 /* SYMeCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SYMeCell.m; path = "百思不得姐——框架完成/Class/Me-我/Controller/SYMeCell.m"; sourceTree = SOURCE_ROOT; };
 		4EA725241D0322530044E472 /* SYMeCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = SYMeCell.xib; path = "百思不得姐——框架完成/Class/Me-我/Controller/SYMeCell.xib"; sourceTree = SOURCE_ROOT; };
 		4EC1926E1CFCB09900E55614 /* Demo.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = Demo.gif; sourceTree = "<group>"; };
+		4EDB5E0A1D0D428B00DCF868 /* 输出框打印中文.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "输出框打印中文.m"; sourceTree = "<group>"; };
+		4EDB5E0D1D0D641500DCF868 /* SYCategoryItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SYCategoryItem.h; sourceTree = "<group>"; };
+		4EDB5E0E1D0D641500DCF868 /* SYCategoryItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SYCategoryItem.m; sourceTree = "<group>"; };
+		4EDB5E101D0D649000DCF868 /* SYRecommendViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SYRecommendViewController.xib; sourceTree = "<group>"; };
+		4EDB5E121D0D69E500DCF868 /* SYCaregroyCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SYCaregroyCell.h; sourceTree = "<group>"; };
+		4EDB5E131D0D69E500DCF868 /* SYCaregroyCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SYCaregroyCell.m; sourceTree = "<group>"; };
+		4EDB5E141D0D69E500DCF868 /* SYCaregroyCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SYCaregroyCell.xib; sourceTree = "<group>"; };
+		4EDB5E1D1D0D8B3900DCF868 /* SYUserCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SYUserCell.h; sourceTree = "<group>"; };
+		4EDB5E1E1D0D8B3900DCF868 /* SYUserCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SYUserCell.m; sourceTree = "<group>"; };
+		4EDB5E1F1D0D8B3900DCF868 /* SYUserCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SYUserCell.xib; sourceTree = "<group>"; };
+		4EDB5E221D0D8C1300DCF868 /* SYUserItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SYUserItem.h; sourceTree = "<group>"; };
+		4EDB5E231D0D8C1300DCF868 /* SYUserItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SYUserItem.m; sourceTree = "<group>"; };
 		4EEAF3E61D073F09007AD8B0 /* SYTextItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SYTextItem.h; sourceTree = "<group>"; };
 		4EEAF3E71D073F09007AD8B0 /* SYTextItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SYTextItem.m; sourceTree = "<group>"; };
 		4EECE3201D01C96C00C492C0 /* SYSubscribeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SYSubscribeViewController.h; sourceTree = "<group>"; };
@@ -469,6 +489,7 @@
 				4E9C51171CE9FEB4004505C3 /* SYFollowViewController.m */,
 				4EA435AF1D020B3700EB1403 /* SYRecommendViewController.h */,
 				4EA435B01D020B3700EB1403 /* SYRecommendViewController.m */,
+				4EDB5E101D0D649000DCF868 /* SYRecommendViewController.xib */,
 				4EECE3201D01C96C00C492C0 /* SYSubscribeViewController.h */,
 				4EECE3211D01C96C00C492C0 /* SYSubscribeViewController.m */,
 				4E3A5A221D015F0600B0ED38 /* SYAttentionViewController.h */,
@@ -487,6 +508,12 @@
 				4EA435A21D020A2C00EB1403 /* SYRecommendCell.h */,
 				4EA435A31D020A2C00EB1403 /* SYRecommendCell.m */,
 				4EA435A41D020A2C00EB1403 /* SYRecommendCell.xib */,
+				4EDB5E121D0D69E500DCF868 /* SYCaregroyCell.h */,
+				4EDB5E131D0D69E500DCF868 /* SYCaregroyCell.m */,
+				4EDB5E141D0D69E500DCF868 /* SYCaregroyCell.xib */,
+				4EDB5E1D1D0D8B3900DCF868 /* SYUserCell.h */,
+				4EDB5E1E1D0D8B3900DCF868 /* SYUserCell.m */,
+				4EDB5E1F1D0D8B3900DCF868 /* SYUserCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -615,6 +642,7 @@
 		4E9C51011CE9FC60004505C3 /* Other-其他 */ = {
 			isa = PBXGroup;
 			children = (
+				4EDB5E0A1D0D428B00DCF868 /* 输出框打印中文.m */,
 				4E9C51021CE9FC60004505C3 /* AppDelegate.h */,
 				4E9C51031CE9FC60004505C3 /* AppDelegate.m */,
 				4E9C51331CEA0B2C004505C3 /* PrefixHeader.pch */,
@@ -665,6 +693,10 @@
 			children = (
 				4EA435B31D020B6500EB1403 /* SYRecommendItem.h */,
 				4EA435B41D020B6500EB1403 /* SYRecommendItem.m */,
+				4EDB5E0D1D0D641500DCF868 /* SYCategoryItem.h */,
+				4EDB5E0E1D0D641500DCF868 /* SYCategoryItem.m */,
+				4EDB5E221D0D8C1300DCF868 /* SYUserItem.h */,
+				4EDB5E231D0D8C1300DCF868 /* SYUserItem.m */,
 			);
 			name = Model;
 			path = Controller/Model;
@@ -831,17 +863,20 @@
 				4E9C50C61CE9F5A6004505C3 /* Assets.xcassets in Resources */,
 				4E46953B1CFDBDCF002CFAB7 /* LaunchImage@2x.png in Resources */,
 				4E9C510F1CE9FD52004505C3 /* Info.plist in Resources */,
+				4EDB5E111D0D649000DCF868 /* SYRecommendViewController.xib in Resources */,
 				4E46952D1CFDB79C002CFAB7 /* SYADViewController.xib in Resources */,
 				4EA435A11D02021F00EB1403 /* SYResigeringViewController.xib in Resources */,
 				4EA435A61D020A2C00EB1403 /* SYRecommendCell.xib in Resources */,
 				4E4695371CFDBDCF002CFAB7 /* LaunchImage-700@2x.png in Resources */,
 				4E2790FA1D02F31A00886ECA /* SYMeViewController.storyboard in Resources */,
 				4EC1926F1CFCB09900E55614 /* Demo.gif in Resources */,
+				4EDB5E211D0D8B3900DCF868 /* SYUserCell.xib in Resources */,
 				4E33F4C71D046FC300988945 /* SYWebViewController.xib in Resources */,
 				4E4695361CFDBDCF002CFAB7 /* LaunchImage-700-568h@2x.png in Resources */,
 				4EA725261D0322530044E472 /* SYMeCell.xib in Resources */,
 				4E4695381CFDBDCF002CFAB7 /* LaunchImage-800-667h@2x.png in Resources */,
 				4E3A5A261D015F0600B0ED38 /* SYAttentionViewController.xib in Resources */,
+				4EDB5E161D0D69E500DCF868 /* SYCaregroyCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -916,7 +951,9 @@
 			files = (
 				4E9C511E1CE9FECB004505C3 /* SYNewViewController.m in Sources */,
 				4E46953E1CFDD5B1002CFAB7 /* SYADItem.m in Sources */,
+				4EDB5E0B1D0D428B00DCF868 /* 输出框打印中文.m in Sources */,
 				4EA435A51D020A2C00EB1403 /* SYRecommendCell.m in Sources */,
+				4EDB5E201D0D8B3900DCF868 /* SYUserCell.m in Sources */,
 				4EA725251D0322530044E472 /* SYMeCell.m in Sources */,
 				4EA435AD1D020AD600EB1403 /* SYLoginRegisterViewController.m in Sources */,
 				4E9C510B1CE9FC60004505C3 /* main.m in Sources */,
@@ -929,10 +966,13 @@
 				4E3A5A251D015F0600B0ED38 /* SYAttentionViewController.m in Sources */,
 				4EEAF3E81D073F09007AD8B0 /* SYTextItem.m in Sources */,
 				4EA435B11D020B3700EB1403 /* SYRecommendViewController.m in Sources */,
+				4EDB5E0F1D0D641500DCF868 /* SYCategoryItem.m in Sources */,
 				4E7269711D030FD40085A409 /* SYMeItem.m in Sources */,
 				4EA435A91D020AAB00EB1403 /* SYQuickLoginButton.m in Sources */,
 				4E461F8E1D09A11A0096D73C /* SYEssenceBaseViewController.m in Sources */,
 				4E4C014F1CF14708003A509A /* SYLoginRegisterTextField.m in Sources */,
+				4EDB5E151D0D69E500DCF868 /* SYCaregroyCell.m in Sources */,
+				4EDB5E241D0D8C1300DCF868 /* SYUserItem.m in Sources */,
 				4E9C51321CEA0AC5004505C3 /* UIView+SYCategory.m in Sources */,
 				4EECE3221D01C96C00C492C0 /* SYSubscribeViewController.m in Sources */,
 				4E46952B1CFDB2E1002CFAB7 /* SYADViewController.m in Sources */,

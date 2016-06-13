@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10116" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="KGk-i7-Jjw" customClass="SYUserCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="60"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="59.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="kbM-PD-QLO">
+                        <rect key="frame" x="10" y="10" width="40" height="39.5"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="40" id="jHe-5q-cyi"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="13h-h8-Ulf">
+                        <rect key="frame" x="60" y="35" width="31" height="14.5"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <color key="textColor" red="0.43529411759999997" green="0.4431372549" blue="0.47450980390000003" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fbr-ik-zWB">
+                        <rect key="frame" x="260" y="17" width="50" height="25"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="50" id="QLi-De-H0E"/>
+                            <constraint firstAttribute="height" constant="25" id="hZ3-4Z-iEr"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <state key="normal" title="+ 关注" backgroundImage="tagButtonBG">
+                            <color key="titleColor" red="1" green="0.1129726829" blue="0.13034261599999999" alpha="1" colorSpace="calibratedRGB"/>
+                        </state>
+                        <state key="highlighted" backgroundImage="tagButtonBGClick">
+                            <color key="titleColor" red="0.43529411759999997" green="0.4431372549" blue="0.47450980390000003" alpha="1" colorSpace="calibratedRGB"/>
+                        </state>
+                        <connections>
+                            <action selector="recommendClick:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="vG4-I7-9Ap"/>
+                        </connections>
+                    </button>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qI5-Gn-kn3">
+                        <rect key="frame" x="60" y="10" width="35.5" height="17"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="qI5-Gn-kn3" firstAttribute="leading" secondItem="kbM-PD-QLO" secondAttribute="trailing" constant="10" id="DfK-2O-5u0"/>
+                    <constraint firstItem="qI5-Gn-kn3" firstAttribute="top" secondItem="kbM-PD-QLO" secondAttribute="top" id="Dp3-S3-uwG"/>
+                    <constraint firstItem="fbr-ik-zWB" firstAttribute="centerY" secondItem="kbM-PD-QLO" secondAttribute="centerY" id="Kvw-6K-9zK"/>
+                    <constraint firstItem="kbM-PD-QLO" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="UKU-73-voI"/>
+                    <constraint firstAttribute="trailing" secondItem="fbr-ik-zWB" secondAttribute="trailing" constant="10" id="cwI-3H-qQ9"/>
+                    <constraint firstAttribute="bottom" secondItem="kbM-PD-QLO" secondAttribute="bottom" constant="10" id="mxE-IM-Uh9"/>
+                    <constraint firstItem="13h-h8-Ulf" firstAttribute="leading" secondItem="kbM-PD-QLO" secondAttribute="trailing" constant="10" id="pdE-ig-hFk"/>
+                    <constraint firstItem="kbM-PD-QLO" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="yRs-6C-jH6"/>
+                    <constraint firstItem="13h-h8-Ulf" firstAttribute="bottom" secondItem="kbM-PD-QLO" secondAttribute="bottom" id="zr2-zZ-nLp"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="countView" destination="13h-h8-Ulf" id="GxY-Q4-gGt"/>
+                <outlet property="iconView" destination="kbM-PD-QLO" id="7sw-A8-vcZ"/>
+                <outlet property="nameView" destination="qI5-Gn-kn3" id="HD6-dS-mbd"/>
+            </connections>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="tagButtonBG" width="80" height="31"/>
+        <image name="tagButtonBGClick" width="80" height="31"/>
+    </resources>
+</document>

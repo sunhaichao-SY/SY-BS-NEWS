@@ -64,8 +64,11 @@
         //设置按钮和边界的距离
         backBtn.contentEdgeInsets = UIEdgeInsetsMake(0, -20, 0, 0);
         [backBtn addTarget:self action:@selector(goBack) forControlEvents:UIControlEventTouchUpInside];
+        UIView *view = [[UIView alloc]init];
+        view.frame = backBtn.bounds;
+        [view addSubview:backBtn];
         
-        viewController.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc]initWithCustomView:backBtn];
+        viewController.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc]initWithCustomView:view];
         
         viewController.hidesBottomBarWhenPushed = YES;
     }
