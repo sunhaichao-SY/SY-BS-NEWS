@@ -30,6 +30,14 @@
     [self.iconView sd_setImageWithURL:[NSURL URLWithString:userItem.header] placeholderImage:[UIImage imageNamed:@"defaultTagIcon"]];
     self.nameView.text = userItem.screen_name;
     self.countView.text = [NSString stringWithFormat:@"%zd人关注",userItem.fans_count];
+    
+    if (userItem.is_vip) {
+        self.nameView.textColor = [UIColor redColor];
+        
+    }else
+    {
+        self.nameView.textColor = [UIColor blackColor];
+    }
 }
 - (void)awakeFromNib {
     [super awakeFromNib];

@@ -19,6 +19,10 @@
 
 #define SYSelectedCategory self.caregroyItems[self.caregroyView.indexPathForSelectedRow.row]
 
+#define SYUserURL @"http://api.budejie.com/api/api_open.php?a=list&appname=bs0315&asid=4D9488FE-E59B-41A2-9323-AC3934759456&c=subscribe&category_id=35&client=iphone&device=ios%20device&from=ios&jbk=0&mac=&market=&openudid=f1e1e75d11ec5e8a96503b30220f196e37759455&page=1&pagesize=50&udid=&ver=4.2"
+
+#define SYCategoryURL @"http://api.budejie.com/api/api_open.php?a=category&appname=bs0315&asid=4D9488FE-E59B-41A2-9323-AC3934759456&c=subscribe&client=iphone&device=ios%20device&from=ios&jbk=0&mac=&market=&openudid=f1e1e75d11ec5e8a96503b30220f196e37759455&udid=&ver=4.2"
+
 static NSString *const caregroyID = @"caregroyCell";
 static NSString *const userID = @"userID";
 
@@ -66,13 +70,17 @@ static NSString *const userID = @"userID";
 - (void)loadCategories
 {
     
-    //自定义SVProgressHUD显示时背景颜色
+//    //自定义SVProgressHUD显示时背景颜色
     [SVProgressHUD setDefaultStyle:SVProgressHUDStyleCustom];
-    [SVProgressHUD setBackgroundColor:[UIColor lightGrayColor]];
-    
+    [SVProgressHUD setBackgroundColor:[UIColor blueColor]];
+
     //发送请求
     AFHTTPSessionManager *Manager = [AFHTTPSessionManager manager];
-    [Manager GET:@"http://api.budejie.com/api/api_open.php?a=category&appname=bs0315&asid=4D9488FE-E59B-41A2-9323-AC3934759456&c=subscribe&client=iphone&device=ios%20device&from=ios&jbk=0&mac=&market=&openudid=f1e1e75d11ec5e8a96503b30220f196e37759455&udid=&ver=4.2" parameters:nil progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+    NSMutableDictionary *parameters = [NSMutableDictionary dictionary];
+    parameters[@"a"] = @"category";
+    parameters[@"c"] = @"subscribe";
+
+    [Manager GET:@"http://api.budejie.com/api/api_open.php" parameters:parameters progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         
         //隐藏指示器
         [SVProgressHUD dismiss];
@@ -157,6 +165,8 @@ static NSString *const userID = @"userID";
     //加载数据
     NSMutableDictionary *parameters = [NSMutableDictionary dictionary];
     
+    parameters[@"a"] = @"list";
+    parameters[@"c"] = @"subscribe";
     //此参数记录的右侧按钮的数据属于左侧哪个按钮，点击左侧按钮之后右侧内容会发生变化
     parameters[@"category_id"] = @(categroyItem.ID);
     
@@ -165,8 +175,7 @@ static NSString *const userID = @"userID";
     self.parameters = parameters;
     
     //加载数据
-    [self.manager GET:@"http://api.budejie.com/api/api_open.php?a=friend_recommend&appname=bs0315&asid=4D9488FE-E59B-41A2-9323-AC3934759456&c=user&client=iphone&device=ios%20device&from=ios&jbk=0&last_coord=&last_flag=list&mac=&market=&openudid=f1e1e75d11ec5e8a96503b30220f196e37759455&pre=50&udid=&ver=4.2" parameters:parameters progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-        NSLog(@"%@",responseObject);
+    [self.manager GET:@"http://api.budejie.com/api/api_open.php" parameters:parameters progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         
         //保存一个数组
         NSArray *users = [SYUserItem mj_objectArrayWithKeyValuesArray:responseObject[@"top_list"]];
@@ -212,15 +221,18 @@ static NSString *const userID = @"userID";
     
     //加载数据
     NSMutableDictionary *parameters = [NSMutableDictionary dictionary];
-    parameters[@"category_id"] = @(categroyItem.ID);
     
+    parameters[@"a"] = @"list";
+    parameters[@"c"] = @"subscribe";
+    
+    parameters[@"category_id"] = @(categroyItem.ID);
+
     //页数加1 新的数据会出现
     parameters[@"page"] = @(++categroyItem.currentPage);
     self.parameters = parameters;
     
-    [self.manager GET:@"http://api.budejie.com/api/api_open.php?a=friend_recommend&appname=bs0315&asid=4D9488FE-E59B-41A2-9323-AC3934759456&c=user&client=iphone&device=ios%20device&from=ios&jbk=0&last_coord=&last_flag=list&mac=&market=&openudid=f1e1e75d11ec5e8a96503b30220f196e37759455&pre=50&udid=&ver=4.2" parameters:parameters progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-        NSLog(@"%@",responseObject);
-        
+    [self.manager GET:@"http://api.budejie.com/api/api_open.php" parameters:parameters progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+     
         NSArray *users = [SYUserItem mj_objectArrayWithKeyValuesArray:responseObject[@"top_list"]];
         
          // 添加到当前类别对应的用户数组中
@@ -294,20 +306,24 @@ static NSString *const userID = @"userID";
     }
 }
 
+//选中
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     
+    // 结束刷新
     [self.userView.mj_header endRefreshing];
     [self.userView.mj_footer endRefreshing];
     
     SYCategoryItem *categoryItem = self.caregroyItems[indexPath.row];
     
     if (categoryItem.users.count) {
+        // 显示曾经的数据
         [_userView reloadData];
     } else {
-        
+         // 赶紧刷新表格,目的是: 马上显示当前category的用户数据, 不让用户看见上一个category的残留数据
         [_userView reloadData];
         
+        // 进入下拉刷新状态
         [self.userView.mj_header beginRefreshing];
         }
 }

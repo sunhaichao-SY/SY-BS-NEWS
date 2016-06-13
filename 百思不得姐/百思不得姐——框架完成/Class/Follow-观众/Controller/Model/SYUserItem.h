@@ -12,5 +12,5 @@
 @property (nonatomic,strong) NSString *header;
 @property (nonatomic,assign) NSInteger fans_count;
 @property (nonatomic,strong) NSString *screen_name;
-
+@property (nonatomic,assign,getter=isVip) BOOL is_vip;
 @end
