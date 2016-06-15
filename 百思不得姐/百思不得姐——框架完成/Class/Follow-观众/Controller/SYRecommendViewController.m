@@ -75,12 +75,12 @@ static NSString *const userID = @"userID";
     [SVProgressHUD setBackgroundColor:[UIColor blueColor]];
 
     //发送请求
-    AFHTTPSessionManager *Manager = [AFHTTPSessionManager manager];
+
     NSMutableDictionary *parameters = [NSMutableDictionary dictionary];
     parameters[@"a"] = @"category";
     parameters[@"c"] = @"subscribe";
 
-    [Manager GET:@"http://api.budejie.com/api/api_open.php" parameters:parameters progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+    [self.manager GET:@"http://api.budejie.com/api/api_open.php" parameters:parameters progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         
         //隐藏指示器
         [SVProgressHUD dismiss];
@@ -161,7 +161,7 @@ static NSString *const userID = @"userID";
     
     //设置当前页面为第一页
     categroyItem.currentPage = 1;
-    
+     
     //加载数据
     NSMutableDictionary *parameters = [NSMutableDictionary dictionary];
     

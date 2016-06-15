@@ -36,6 +36,8 @@ static CGFloat const margin = 10;
 //内容
 @property (weak, nonatomic) IBOutlet UILabel *textContent;
 
+@property (weak, nonatomic) IBOutlet UIImageView *XLVip;
+
 @end
 @implementation SYWholeCell
 
@@ -67,6 +69,9 @@ static CGFloat const margin = 10;
     self.nameView.text = textItem.u[@"name"];
     self.timeView.text = textItem.passtime;
     self.textContent.text = textItem.text;
+
+   
+    NSLog(@"%@",textItem.u[@"is_v"]);
     
     [self setupButtonTitle:self.zanView count:textItem.up placeholder:@"顶"];
     [self setupButtonTitle:self.caiView count:textItem.down placeholder:@"踩"];

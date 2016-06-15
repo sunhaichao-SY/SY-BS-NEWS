@@ -52,7 +52,7 @@ static NSString *const ID = @"cell";
 {
     self.tableView.contentInset = UIEdgeInsetsMake(64 + 35, 0, 49, 0);
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
-    self.tableView.showsVerticalScrollIndicator = NO;
+//    self.tableView.showsVerticalScrollIndicator = NO;
     self.view.backgroundColor = SYCommonBgColor;
     
     [self.tableView registerNib:[UINib nibWithNibName:NSStringFromClass([SYWholeCell class]) bundle:nil] forCellReuseIdentifier:ID];
@@ -81,8 +81,9 @@ static NSString *const ID = @"cell";
     NSMutableDictionary *params = [NSMutableDictionary dictionary];
     self.params = params;
     //http://s.budejie.com/topic/list/zuixin/29/bs0315-iphone-4.2/0-20.json
-    [manager GET:@"http://s.budejie.com/topic/tag-topic/64/hot/bs0315-iphone-4.2/0-20.json" parameters:params progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-    
+    [manager GET:@"http://s.budejie.com/topic/list/jingxuan/1/bs0315-iphone-4.2/0-20.json" parameters:params progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        [responseObject writeToFile:@"/Users/sunhaichao/Desktop/ad.plist" atomically:YES];
+        
         if (self.params != params) return;
         
         self.np = responseObject[@"info"][@"np"];

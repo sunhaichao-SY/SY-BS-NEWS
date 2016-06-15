@@ -142,15 +142,24 @@
                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Profile_AddV_authen" translatesAutoresizingMaskIntoConstraints="NO" id="3eM-Zw-sTk">
+                        <rect key="frame" x="30" y="30" width="14" height="14"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="14" id="0G9-Zv-KpV"/>
+                            <constraint firstAttribute="height" constant="14" id="LIa-sC-tq6"/>
+                        </constraints>
+                    </imageView>
                 </subviews>
                 <constraints>
                     <constraint firstItem="QNj-Y6-73c" firstAttribute="leading" secondItem="MET-J4-5De" secondAttribute="leading" id="2uR-Xd-Xp1"/>
                     <constraint firstItem="QNj-Y6-73c" firstAttribute="bottom" secondItem="jLB-3v-oNp" secondAttribute="bottom" id="Obv-4m-ZSi"/>
                     <constraint firstAttribute="bottom" secondItem="gVZ-UP-sOk" secondAttribute="bottom" id="Xkm-ZS-g05"/>
+                    <constraint firstItem="3eM-Zw-sTk" firstAttribute="top" secondItem="jLB-3v-oNp" secondAttribute="top" multiplier="3/1" id="Zc1-RI-A3Y"/>
                     <constraint firstItem="SXU-99-tLI" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="bSU-jm-uiC"/>
                     <constraint firstItem="i9t-ek-7S6" firstAttribute="leading" secondItem="jLB-3v-oNp" secondAttribute="leading" id="bxq-dM-xaj"/>
                     <constraint firstItem="MET-J4-5De" firstAttribute="top" secondItem="jLB-3v-oNp" secondAttribute="top" id="bzI-Fj-19Y"/>
                     <constraint firstAttribute="trailing" secondItem="gVZ-UP-sOk" secondAttribute="trailing" id="f2b-2w-Tty"/>
+                    <constraint firstItem="3eM-Zw-sTk" firstAttribute="leading" secondItem="jLB-3v-oNp" secondAttribute="leading" multiplier="3/1" id="s59-oU-blZ"/>
                     <constraint firstItem="jLB-3v-oNp" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="syn-Xt-38k"/>
                     <constraint firstAttribute="trailing" secondItem="SXU-99-tLI" secondAttribute="trailing" constant="10" id="tXk-zy-dPn"/>
                     <constraint firstItem="jLB-3v-oNp" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="ueB-E4-nyQ"/>
@@ -161,6 +170,7 @@
                 </constraints>
             </tableViewCellContentView>
             <connections>
+                <outlet property="XLVip" destination="3eM-Zw-sTk" id="jiO-Mo-XIZ"/>
                 <outlet property="caiView" destination="YxK-Ta-DNg" id="DVX-vU-wOW"/>
                 <outlet property="commentView" destination="nlC-Ki-Ev4" id="YZQ-gE-Fjv"/>
                 <outlet property="iconView" destination="jLB-3v-oNp" id="MGA-uW-l0O"/>
@@ -170,10 +180,11 @@
                 <outlet property="timeView" destination="QNj-Y6-73c" id="EGz-V9-QdK"/>
                 <outlet property="zanView" destination="Fr6-a5-I2K" id="NZa-yF-GZF"/>
             </connections>
-            <point key="canvasLocation" x="316" y="132"/>
+            <point key="canvasLocation" x="340" y="244"/>
         </tableViewCell>
     </objects>
     <resources>
+        <image name="Profile_AddV_authen" width="14" height="14"/>
         <image name="cell-button-line" width="1" height="29"/>
         <image name="cell-content-line" width="299" height="1"/>
         <image name="cellmorebtnclick" width="24" height="20"/>

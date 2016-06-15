@@ -181,6 +181,7 @@
 		4EA725221D0322530044E472 /* SYMeCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SYMeCell.h; path = "百思不得姐——框架完成/Class/Me-我/Controller/SYMeCell.h"; sourceTree = SOURCE_ROOT; };
 		4EA725231D0322530044E472 /* SYMeCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SYMeCell.m; path = "百思不得姐——框架完成/Class/Me-我/Controller/SYMeCell.m"; sourceTree = SOURCE_ROOT; };
 		4EA725241D0322530044E472 /* SYMeCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = SYMeCell.xib; path = "百思不得姐——框架完成/Class/Me-我/Controller/SYMeCell.xib"; sourceTree = SOURCE_ROOT; };
+		4EAF47DF1D1041C000A3C087 /* SYAllSectionURL.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SYAllSectionURL.h; sourceTree = "<group>"; };
 		4EC1926E1CFCB09900E55614 /* Demo.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = Demo.gif; sourceTree = "<group>"; };
 		4EDB5E0A1D0D428B00DCF868 /* 输出框打印中文.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "输出框打印中文.m"; sourceTree = "<group>"; };
 		4EDB5E0D1D0D641500DCF868 /* SYCategoryItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SYCategoryItem.h; sourceTree = "<group>"; };
@@ -642,6 +643,7 @@
 		4E9C51011CE9FC60004505C3 /* Other-其他 */ = {
 			isa = PBXGroup;
 			children = (
+				4EAF47DF1D1041C000A3C087 /* SYAllSectionURL.h */,
 				4EDB5E0A1D0D428B00DCF868 /* 输出框打印中文.m */,
 				4E9C51021CE9FC60004505C3 /* AppDelegate.h */,
 				4E9C51031CE9FC60004505C3 /* AppDelegate.m */,
