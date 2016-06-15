@@ -12,6 +12,8 @@
 		4E33F4C61D046FC300988945 /* SYWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E33F4C41D046FC300988945 /* SYWebViewController.m */; };
 		4E33F4C71D046FC300988945 /* SYWebViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4E33F4C51D046FC300988945 /* SYWebViewController.xib */; };
 		4E33F4C91D04729200988945 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E33F4C81D04729200988945 /* WebKit.framework */; };
+		4E36E6061D1189510044E87F /* Reveal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E36E6051D1189510044E87F /* Reveal.framework */; };
+		4E36E6081D11896C0044E87F /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E36E6071D11896C0044E87F /* libz.tbd */; };
 		4E3A5A251D015F0600B0ED38 /* SYAttentionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E3A5A231D015F0600B0ED38 /* SYAttentionViewController.m */; };
 		4E3A5A261D015F0600B0ED38 /* SYAttentionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4E3A5A241D015F0600B0ED38 /* SYAttentionViewController.xib */; };
 		4E461F841D094B850096D73C /* SYWholeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E461F821D094B850096D73C /* SYWholeCell.m */; };
@@ -99,6 +101,8 @@
 		4E33F4C41D046FC300988945 /* SYWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SYWebViewController.m; sourceTree = "<group>"; };
 		4E33F4C51D046FC300988945 /* SYWebViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SYWebViewController.xib; sourceTree = "<group>"; };
 		4E33F4C81D04729200988945 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
+		4E36E6051D1189510044E87F /* Reveal.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Reveal.framework; sourceTree = "<group>"; };
+		4E36E6071D11896C0044E87F /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 		4E3A5A221D015F0600B0ED38 /* SYAttentionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SYAttentionViewController.h; sourceTree = "<group>"; };
 		4E3A5A231D015F0600B0ED38 /* SYAttentionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SYAttentionViewController.m; sourceTree = "<group>"; };
 		4E3A5A241D015F0600B0ED38 /* SYAttentionViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SYAttentionViewController.xib; sourceTree = "<group>"; };
@@ -212,6 +216,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4E36E6081D11896C0044E87F /* libz.tbd in Frameworks */,
+				4E36E6061D1189510044E87F /* Reveal.framework in Frameworks */,
 				4E33F4C91D04729200988945 /* WebKit.framework in Frameworks */,
 				13762BF2FB51E40939D9F6F2 /* Pods____________.framework in Frameworks */,
 			);
@@ -237,6 +243,8 @@
 		13EACCF83EEF4BE117E44CA2 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				4E36E6071D11896C0044E87F /* libz.tbd */,
+				4E36E6051D1189510044E87F /* Reveal.framework */,
 				4E33F4C81D04729200988945 /* WebKit.framework */,
 				134D482550200A3F03CD223B /* Pods____________.framework */,
 			);
@@ -1128,6 +1136,10 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "百思不得姐——框架完成/Class/Other-其他/PrefixHeader.pch";
 				INFOPLIST_FILE = "百思不得姐——框架完成/Info.plist";
@@ -1148,6 +1160,10 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "百思不得姐——框架完成/Class/Other-其他/PrefixHeader.pch";
 				INFOPLIST_FILE = "百思不得姐——框架完成/Info.plist";
