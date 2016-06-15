@@ -44,7 +44,6 @@
     self.iconView.layer.cornerRadius = self.iconView.sy_width * 0.5;
     self.iconView.layer.masksToBounds = YES;
 
-    self.backgroundColor = [UIColor redColor];
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {

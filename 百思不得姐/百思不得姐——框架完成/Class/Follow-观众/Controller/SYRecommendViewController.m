@@ -33,9 +33,9 @@ static NSString *const userID = @"userID";
 @property (nonatomic,strong) NSArray *caregroyItems;
 //右侧分栏
 @property (weak, nonatomic) IBOutlet UITableView *userView;
-
+//请求参数
 @property (nonatomic,strong) NSMutableDictionary *parameters;
-
+//AFN请求管理者
 @property (nonatomic,strong) AFHTTPSessionManager *manager;
 
 @end
@@ -92,7 +92,7 @@ static NSString *const userID = @"userID";
         [_caregroyView reloadData];
         
         //默认选中首行,只有先刷新表格之后才能设置默认行
-        [_caregroyView selectRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:0] animated:YES scrollPosition:UITableViewScrollPositionTop];
+        [_caregroyView selectRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:0] animated:NO scrollPosition:UITableViewScrollPositionTop];
         
         //让用户表格进入下拉刷新状态，当选中默认的类别行时，右侧用户数据也应该及时显示出来，所以当已进入这个页面时左侧已有默认行，那么右侧的数据显示时要给用户一种加载中的效果
         [self.userView.mj_header beginRefreshing];
@@ -164,7 +164,6 @@ static NSString *const userID = @"userID";
      
     //加载数据
     NSMutableDictionary *parameters = [NSMutableDictionary dictionary];
-    
     parameters[@"a"] = @"list";
     parameters[@"c"] = @"subscribe";
     //此参数记录的右侧按钮的数据属于左侧哪个按钮，点击左侧按钮之后右侧内容会发生变化
@@ -178,7 +177,7 @@ static NSString *const userID = @"userID";
     [self.manager GET:@"http://api.budejie.com/api/api_open.php" parameters:parameters progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         
         //保存一个数组
-        NSArray *users = [SYUserItem mj_objectArrayWithKeyValuesArray:responseObject[@"top_list"]];
+        NSArray *users = [SYUserItem mj_objectArrayWithKeyValuesArray:responseObject[@"list"]];
         
         //当加载新的数据时应该先删除之前的旧数据
         [categroyItem.users removeAllObjects];
@@ -224,16 +223,14 @@ static NSString *const userID = @"userID";
     
     parameters[@"a"] = @"list";
     parameters[@"c"] = @"subscribe";
-    
     parameters[@"category_id"] = @(categroyItem.ID);
-
     //页数加1 新的数据会出现
     parameters[@"page"] = @(++categroyItem.currentPage);
     self.parameters = parameters;
     
     [self.manager GET:@"http://api.budejie.com/api/api_open.php" parameters:parameters progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
      
-        NSArray *users = [SYUserItem mj_objectArrayWithKeyValuesArray:responseObject[@"top_list"]];
+        NSArray *users = [SYUserItem mj_objectArrayWithKeyValuesArray:responseObject[@"list"]];
         
          // 添加到当前类别对应的用户数组中
         [categroyItem.users addObjectsFromArray:users];
