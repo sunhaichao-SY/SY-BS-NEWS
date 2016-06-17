@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		13762BF2FB51E40939D9F6F2 /* Pods____________.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 134D482550200A3F03CD223B /* Pods____________.framework */; };
+		4E189A371D142AC7001E45A1 /* SYConst.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E189A361D142AC7001E45A1 /* SYConst.m */; };
+		4E189A3B1D14518F001E45A1 /* SYAllPictureView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E189A3A1D14518F001E45A1 /* SYAllPictureView.m */; };
+		4E189A3D1D14519D001E45A1 /* SYAllPictureView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4E189A3C1D14519D001E45A1 /* SYAllPictureView.xib */; };
+		4E189A401D14569E001E45A1 /* SYProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E189A3F1D14569E001E45A1 /* SYProgressView.m */; };
 		4E2790FA1D02F31A00886ECA /* SYMeViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4E2790F91D02F31A00886ECA /* SYMeViewController.storyboard */; };
 		4E33F4C61D046FC300988945 /* SYWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E33F4C41D046FC300988945 /* SYWebViewController.m */; };
 		4E33F4C71D046FC300988945 /* SYWebViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4E33F4C51D046FC300988945 /* SYWebViewController.xib */; };
@@ -32,6 +36,8 @@
 		4E46953B1CFDBDCF002CFAB7 /* LaunchImage@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4E4695341CFDBDCF002CFAB7 /* LaunchImage@2x.png */; };
 		4E46953E1CFDD5B1002CFAB7 /* SYADItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E46953D1CFDD5B1002CFAB7 /* SYADItem.m */; };
 		4E4C014F1CF14708003A509A /* SYLoginRegisterTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E4C014E1CF14708003A509A /* SYLoginRegisterTextField.m */; };
+		4E609DE91D1468F500C3A896 /* SYShowPictureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E609DE71D1468F500C3A896 /* SYShowPictureViewController.m */; };
+		4E609DEA1D1468F500C3A896 /* SYShowPictureViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4E609DE81D1468F500C3A896 /* SYShowPictureViewController.xib */; };
 		4E7269711D030FD40085A409 /* SYMeItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E7269701D030FD40085A409 /* SYMeItem.m */; };
 		4E7F8AF01D05C0FF00B2E727 /* SYBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E7F8AEF1D05C0FF00B2E727 /* SYBaseViewController.m */; };
 		4E9C50C61CE9F5A6004505C3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4E9C50C51CE9F5A6004505C3 /* Assets.xcassets */; };
@@ -96,6 +102,13 @@
 
 /* Begin PBXFileReference section */
 		134D482550200A3F03CD223B /* Pods____________.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = "Pods____________.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4E189A351D142AC7001E45A1 /* SYConst.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SYConst.h; sourceTree = "<group>"; };
+		4E189A361D142AC7001E45A1 /* SYConst.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SYConst.m; sourceTree = "<group>"; };
+		4E189A391D14518F001E45A1 /* SYAllPictureView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SYAllPictureView.h; sourceTree = "<group>"; };
+		4E189A3A1D14518F001E45A1 /* SYAllPictureView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SYAllPictureView.m; sourceTree = "<group>"; };
+		4E189A3C1D14519D001E45A1 /* SYAllPictureView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SYAllPictureView.xib; sourceTree = "<group>"; };
+		4E189A3E1D14569E001E45A1 /* SYProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SYProgressView.h; sourceTree = "<group>"; };
+		4E189A3F1D14569E001E45A1 /* SYProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SYProgressView.m; sourceTree = "<group>"; };
 		4E2790F91D02F31A00886ECA /* SYMeViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SYMeViewController.storyboard; sourceTree = "<group>"; };
 		4E33F4C31D046FC300988945 /* SYWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SYWebViewController.h; sourceTree = "<group>"; };
 		4E33F4C41D046FC300988945 /* SYWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SYWebViewController.m; sourceTree = "<group>"; };
@@ -129,6 +142,9 @@
 		4E46953D1CFDD5B1002CFAB7 /* SYADItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SYADItem.m; sourceTree = "<group>"; };
 		4E4C014D1CF14708003A509A /* SYLoginRegisterTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SYLoginRegisterTextField.h; sourceTree = "<group>"; };
 		4E4C014E1CF14708003A509A /* SYLoginRegisterTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SYLoginRegisterTextField.m; sourceTree = "<group>"; };
+		4E609DE61D1468F500C3A896 /* SYShowPictureViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SYShowPictureViewController.h; sourceTree = "<group>"; };
+		4E609DE71D1468F500C3A896 /* SYShowPictureViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SYShowPictureViewController.m; sourceTree = "<group>"; };
+		4E609DE81D1468F500C3A896 /* SYShowPictureViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SYShowPictureViewController.xib; sourceTree = "<group>"; };
 		4E72696F1D030FD40085A409 /* SYMeItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SYMeItem.h; path = "百思不得姐——框架完成/Class/Me-我/Controller/SYMeItem.h"; sourceTree = SOURCE_ROOT; };
 		4E7269701D030FD40085A409 /* SYMeItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SYMeItem.m; path = "百思不得姐——框架完成/Class/Me-我/Controller/SYMeItem.m"; sourceTree = SOURCE_ROOT; };
 		4E7F8AEE1D05C0FF00B2E727 /* SYBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SYBaseViewController.h; sourceTree = "<group>"; };
@@ -272,6 +288,11 @@
 				4E461F811D094B850096D73C /* SYWholeCell.h */,
 				4E461F821D094B850096D73C /* SYWholeCell.m */,
 				4E461F831D094B850096D73C /* SYWholeCell.xib */,
+				4E189A391D14518F001E45A1 /* SYAllPictureView.h */,
+				4E189A3A1D14518F001E45A1 /* SYAllPictureView.m */,
+				4E189A3C1D14519D001E45A1 /* SYAllPictureView.xib */,
+				4E189A3E1D14569E001E45A1 /* SYProgressView.h */,
+				4E189A3F1D14569E001E45A1 /* SYProgressView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -467,6 +488,9 @@
 				4EF2BBEB1D0559B700982A04 /* SYStarViewController.m */,
 				4EF2BBED1D055A8800982A04 /* SYCrossViewController.h */,
 				4EF2BBEE1D055A8800982A04 /* SYCrossViewController.m */,
+				4E609DE61D1468F500C3A896 /* SYShowPictureViewController.h */,
+				4E609DE71D1468F500C3A896 /* SYShowPictureViewController.m */,
+				4E609DE81D1468F500C3A896 /* SYShowPictureViewController.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -694,6 +718,8 @@
 				4E9C51351CEA178A004505C3 /* UITabBarItem+SYCategory.m */,
 				4E461F861D09727F0096D73C /* NSDate+SYExtension.h */,
 				4E461F871D09727F0096D73C /* NSDate+SYExtension.m */,
+				4E189A351D142AC7001E45A1 /* SYConst.h */,
+				4E189A361D142AC7001E45A1 /* SYConst.m */,
 			);
 			path = Categroy;
 			sourceTree = "<group>";
@@ -881,12 +907,14 @@
 				4E2790FA1D02F31A00886ECA /* SYMeViewController.storyboard in Resources */,
 				4EC1926F1CFCB09900E55614 /* Demo.gif in Resources */,
 				4EDB5E211D0D8B3900DCF868 /* SYUserCell.xib in Resources */,
+				4E189A3D1D14519D001E45A1 /* SYAllPictureView.xib in Resources */,
 				4E33F4C71D046FC300988945 /* SYWebViewController.xib in Resources */,
 				4E4695361CFDBDCF002CFAB7 /* LaunchImage-700-568h@2x.png in Resources */,
 				4EA725261D0322530044E472 /* SYMeCell.xib in Resources */,
 				4E4695381CFDBDCF002CFAB7 /* LaunchImage-800-667h@2x.png in Resources */,
 				4E3A5A261D015F0600B0ED38 /* SYAttentionViewController.xib in Resources */,
 				4EDB5E161D0D69E500DCF868 /* SYCaregroyCell.xib in Resources */,
+				4E609DEA1D1468F500C3A896 /* SYShowPictureViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -972,8 +1000,10 @@
 				4E4695281CFDACE3002CFAB7 /* SYPublishViewController.m in Sources */,
 				4E9C51211CEA052C004505C3 /* SYNavigationViewController.m in Sources */,
 				4E9C51181CE9FEB4004505C3 /* SYFollowViewController.m in Sources */,
+				4E189A401D14569E001E45A1 /* SYProgressView.m in Sources */,
 				4E33F4C61D046FC300988945 /* SYWebViewController.m in Sources */,
 				4E3A5A251D015F0600B0ED38 /* SYAttentionViewController.m in Sources */,
+				4E189A371D142AC7001E45A1 /* SYConst.m in Sources */,
 				4EEAF3E81D073F09007AD8B0 /* SYTextItem.m in Sources */,
 				4EA435B11D020B3700EB1403 /* SYRecommendViewController.m in Sources */,
 				4EDB5E0F1D0D641500DCF868 /* SYCategoryItem.m in Sources */,
@@ -993,10 +1023,12 @@
 				4E9C511B1CE9FEC2004505C3 /* SYMeViewController.m in Sources */,
 				4EF2BBEF1D055A8800982A04 /* SYCrossViewController.m in Sources */,
 				4E7F8AF01D05C0FF00B2E727 /* SYBaseViewController.m in Sources */,
+				4E189A3B1D14518F001E45A1 /* SYAllPictureView.m in Sources */,
 				4E9C51151CE9FEA2004505C3 /* SYEssenceViewController.m in Sources */,
 				4E461F841D094B850096D73C /* SYWholeCell.m in Sources */,
 				4EA435BC1D020BEA00EB1403 /* SYSettingViewController.m in Sources */,
 				4E9C51121CE9FDAF004505C3 /* SYMainController.m in Sources */,
+				4E609DE91D1468F500C3A896 /* SYShowPictureViewController.m in Sources */,
 				4E9C51091CE9FC60004505C3 /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

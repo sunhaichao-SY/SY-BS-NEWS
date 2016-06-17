@@ -8,14 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-typedef enum : NSUInteger {
-    SYEssenceBaseTypeAll = 1,
-    SYEssenceBaseTypePicture = 10,
-    SYEssenceBaseTypeWord = 29,
-    SYEssenceBaseTypeVioce = 31,
-    SYEssenceBaseTypeVideo = 41
-} SYEssenceBaseType;
-
 @interface SYEssenceBaseViewController : UITableViewController
 
 @property (nonatomic,assign) SYEssenceBaseType type;

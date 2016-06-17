@@ -9,6 +9,7 @@
 #import "SYWholeCell.h"
 #import "SYTextItem.h"
 #import "UIImageView+WebCache.h"
+#import "SYAllPictureView.h"
 
 static CGFloat const margin = 10;
 @interface SYWholeCell()
@@ -36,13 +37,27 @@ static CGFloat const margin = 10;
 //内容
 @property (weak, nonatomic) IBOutlet UILabel *textContent;
 
+//vip
 @property (weak, nonatomic) IBOutlet UIImageView *XLVip;
+
+//帖子中间的内容
+@property (nonatomic,weak) SYAllPictureView *pictureView;
 
 @end
 @implementation SYWholeCell
 
+- (SYAllPictureView *)pictureView
+{
+    if (_pictureView == nil) {
+        SYAllPictureView *pictureView = [SYAllPictureView pictureView];
+        [self.contentView addSubview:pictureView];
+        _pictureView = pictureView;
+    }
+    return _pictureView;
+}
+
 - (void)awakeFromNib {
-    [super awakeFromNib];
+    
     UIImageView *bgImage = [[UIImageView alloc]init];
     bgImage.image = [UIImage imageNamed:@"mainCellBackground"];
     self.backgroundView = bgImage;
@@ -60,23 +75,39 @@ static CGFloat const margin = 10;
   
 }
 
-- (void)setTextItem:(SYTextItem *)textItem
+- (void)setTextItems:(SYTextItem *)textItems
 {
-    _textItem = textItem;
+    _textItems = textItems;
     
-   
-    [self.iconView sd_setImageWithURL:[NSURL URLWithString:textItem.u[@"header"][0]] placeholderImage:[UIImage imageNamed:@"defaultTagIcon~iphone"]];
-    self.nameView.text = textItem.u[@"name"];
-    self.timeView.text = textItem.passtime;
-    self.textContent.text = textItem.text;
-
-   
-    NSLog(@"%@",textItem.u[@"is_v"]);
+   //设置头像
+    [self.iconView sd_setImageWithURL:[NSURL URLWithString:textItems.u[@"header"][0]] placeholderImage:[UIImage imageNamed:@"defaultTagIcon~iphone"]];
     
-    [self setupButtonTitle:self.zanView count:textItem.up placeholder:@"顶"];
-    [self setupButtonTitle:self.caiView count:textItem.down placeholder:@"踩"];
-    [self setupButtonTitle:self.shareView count:textItem.forward placeholder:@"分享"];
-    [self setupButtonTitle:self.commentView count:textItem.comment placeholder:@"评论"];
+    //设置名字
+    self.nameView.text = textItems.u[@"name"];
+    
+    //设置帖子的创建
+    self.timeView.text = textItems.passtime;
+    
+    // 设置帖子的文字内容
+    self.textContent.text = textItems.text;
+    
+    
+    //根据模型类型（帖子类型）添加对应的内容到cell的中间
+    
+    if (textItems.type == SYEssenceBaseTypePicture) {
+        //图片帖子
+        self.pictureView.textItem = textItems;
+        self.pictureView.frame = textItems.pictureF;
+    }else if (textItems.type == SYEssenceBaseTypeVioce){
+        //声音帖子
+    }
+    
+    
+      //设置按钮文字
+    [self setupButtonTitle:self.zanView count:textItems.up placeholder:@"顶"];
+    [self setupButtonTitle:self.caiView count:textItems.down placeholder:@"踩"];
+    [self setupButtonTitle:self.shareView count:textItems.forward placeholder:@"分享"];
+    [self setupButtonTitle:self.commentView count:textItems.comment placeholder:@"评论"];
 }
 
 - (void)setupButtonTitle:(UIButton *)button count:(NSInteger)count placeholder:(NSString *)placeholder

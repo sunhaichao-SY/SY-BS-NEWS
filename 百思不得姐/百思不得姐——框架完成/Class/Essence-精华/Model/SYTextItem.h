@@ -6,7 +6,9 @@
 //  Copyright © 2016年 码农界四爷__King. All rights reserved.
 //  段子 模型
 
-#import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
+
+
 
 @interface SYTextItem : NSObject
 
@@ -31,6 +33,25 @@
 //姓名和头像模型
 @property (nonatomic,strong) NSDictionary *u;
 
+//gif图片
+@property (nonatomic,strong) NSDictionary *gif;
+
+//image图片
+@property (nonatomic,strong) NSDictionary *image;
+//帖子的类型
+@property (nonatomic,assign) SYEssenceBaseType type;
+
+/*********** 额外的辅助属性 ***********/
+
+//cell的高度
+@property (nonatomic,assign,readonly) CGFloat cellHeight;
+//图片空间的frame
+@property (nonatomic,assign,readonly) CGRect pictureF;
+//图片是否太大
+@property (nonatomic,assign,getter=isBigPicture) BOOL bigPicture;
+
+//图片的下载进度
+@property (nonatomic,assign) CGFloat pictureProgress;
 @end
 
 

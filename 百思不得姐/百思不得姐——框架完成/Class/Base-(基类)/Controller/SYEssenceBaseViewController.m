@@ -87,8 +87,10 @@ static NSString *const ID = @"cell";
 //    params[@"c"] = @"data";
     params[@"type"] = @(self.type);
     self.params = params;
-    //http://s.budejie.com/topic/list/zuixin/29/bs0315-iphone-4.2/0-20.json
+
     [manager GET:@"http://s.budejie.com/topic/list/jingxuan/1/bs0315-iphone-4.2/0-20.json" parameters:params progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+       
+        [responseObject writeToFile:@"/Users/sunhaichao/Desktop/AD.plist" atomically:YES];
         
         if (self.params != params) return;
         
@@ -168,7 +170,7 @@ static NSString *const ID = @"cell";
     
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
     
-    cell.textItem = self.textItems[indexPath.row];
+    cell.textItems = self.textItems[indexPath.row];
     
     
     return cell;

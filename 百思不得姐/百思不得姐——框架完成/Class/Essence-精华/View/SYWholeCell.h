@@ -10,5 +10,5 @@
 @class SYTextItem;
 @interface SYWholeCell : UITableViewCell
 //整体数据
-@property (nonatomic,strong) SYTextItem *textItem;
+@property (nonatomic,strong) SYTextItem *textItems;
 @end
