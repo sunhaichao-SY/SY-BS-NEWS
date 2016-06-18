@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
-
+@class SYTextItem;
 @interface SYShowPictureViewController : UIViewController
+@property (nonatomic,strong) SYTextItem *textItem;
 
 @end

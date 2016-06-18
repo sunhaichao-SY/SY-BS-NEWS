@@ -178,7 +178,9 @@ static NSString *const ID = @"cell";
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    return 500;
+    SYTextItem *textItem = self.textItems[indexPath.row];
+    
+    return textItem.cellHeight;
 }
 
 
