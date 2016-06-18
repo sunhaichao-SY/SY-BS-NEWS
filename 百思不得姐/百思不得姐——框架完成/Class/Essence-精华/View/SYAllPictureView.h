@@ -7,8 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+
 @class SYTextItem;
+
 @interface SYAllPictureView : UIView
-@property (nonatomic,strong) SYTextItem *textItem;
+
+@property (nonatomic,strong) SYTextItem *textItems;
+
 + (instancetype)pictureView;
+
 @end

@@ -10,6 +10,7 @@
 #import "SYTextItem.h"
 #import "UIImageView+WebCache.h"
 #import "SYAllPictureView.h"
+#import "SYUItem.h"
 
 static CGFloat const margin = 10;
 @interface SYWholeCell()
@@ -80,10 +81,10 @@ static CGFloat const margin = 10;
     _textItems = textItems;
     
    //设置头像
-    [self.iconView sd_setImageWithURL:[NSURL URLWithString:textItems.u[@"header"][0]] placeholderImage:[UIImage imageNamed:@"defaultTagIcon~iphone"]];
+    [self.iconView sd_setImageWithURL:[NSURL URLWithString:textItems.u.header.firstObject] placeholderImage:[UIImage imageNamed:@"defaultTagIcon~iphone"]];
     
     //设置名字
-    self.nameView.text = textItems.u[@"name"];
+    self.nameView.text = textItems.u.name;
     
     //设置帖子的创建
     self.timeView.text = textItems.passtime;
@@ -96,7 +97,7 @@ static CGFloat const margin = 10;
     
     if (textItems.type == SYEssenceBaseTypePicture) {
         //图片帖子
-        self.pictureView.textItem = textItems;
+        self.pictureView.textItems = textItems;
         self.pictureView.frame = textItems.pictureF;
     }else if (textItems.type == SYEssenceBaseTypeVioce){
         //声音帖子

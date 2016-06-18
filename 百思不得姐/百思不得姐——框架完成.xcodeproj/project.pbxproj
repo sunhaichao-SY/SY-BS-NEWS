@@ -20,6 +20,7 @@
 		4E36E6081D11896C0044E87F /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E36E6071D11896C0044E87F /* libz.tbd */; };
 		4E3A5A251D015F0600B0ED38 /* SYAttentionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E3A5A231D015F0600B0ED38 /* SYAttentionViewController.m */; };
 		4E3A5A261D015F0600B0ED38 /* SYAttentionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4E3A5A241D015F0600B0ED38 /* SYAttentionViewController.xib */; };
+		4E3C78921D15A72A00B615FC /* SYUItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E3C78911D15A72A00B615FC /* SYUItem.m */; };
 		4E461F841D094B850096D73C /* SYWholeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E461F821D094B850096D73C /* SYWholeCell.m */; };
 		4E461F851D094B850096D73C /* SYWholeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4E461F831D094B850096D73C /* SYWholeCell.xib */; };
 		4E461F881D09727F0096D73C /* NSDate+SYExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E461F871D09727F0096D73C /* NSDate+SYExtension.m */; };
@@ -119,6 +120,8 @@
 		4E3A5A221D015F0600B0ED38 /* SYAttentionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SYAttentionViewController.h; sourceTree = "<group>"; };
 		4E3A5A231D015F0600B0ED38 /* SYAttentionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SYAttentionViewController.m; sourceTree = "<group>"; };
 		4E3A5A241D015F0600B0ED38 /* SYAttentionViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SYAttentionViewController.xib; sourceTree = "<group>"; };
+		4E3C78901D15A72A00B615FC /* SYUItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SYUItem.h; sourceTree = "<group>"; };
+		4E3C78911D15A72A00B615FC /* SYUItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SYUItem.m; sourceTree = "<group>"; };
 		4E461F811D094B850096D73C /* SYWholeCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SYWholeCell.h; sourceTree = "<group>"; };
 		4E461F821D094B850096D73C /* SYWholeCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SYWholeCell.m; sourceTree = "<group>"; };
 		4E461F831D094B850096D73C /* SYWholeCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SYWholeCell.xib; sourceTree = "<group>"; };
@@ -500,6 +503,8 @@
 			children = (
 				4EEAF3E61D073F09007AD8B0 /* SYTextItem.h */,
 				4EEAF3E71D073F09007AD8B0 /* SYTextItem.m */,
+				4E3C78901D15A72A00B615FC /* SYUItem.h */,
+				4E3C78911D15A72A00B615FC /* SYUItem.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -1003,6 +1008,7 @@
 				4E189A401D14569E001E45A1 /* SYProgressView.m in Sources */,
 				4E33F4C61D046FC300988945 /* SYWebViewController.m in Sources */,
 				4E3A5A251D015F0600B0ED38 /* SYAttentionViewController.m in Sources */,
+				4E3C78921D15A72A00B615FC /* SYUItem.m in Sources */,
 				4E189A371D142AC7001E45A1 /* SYConst.m in Sources */,
 				4EEAF3E81D073F09007AD8B0 /* SYTextItem.m in Sources */,
 				4EA435B11D020B3700EB1403 /* SYRecommendViewController.m in Sources */,

@@ -7,8 +7,7 @@
 //  段子 模型
 
 #import <UIKit/UIKit.h>
-
-
+@class SYUItem;
 
 @interface SYTextItem : NSObject
 
@@ -31,15 +30,17 @@
 @property (nonatomic,assign) NSInteger comment;
 
 //姓名和头像模型
-@property (nonatomic,strong) NSDictionary *u;
+@property (nonatomic,strong) SYUItem *u;
 
 //gif图片
-@property (nonatomic,strong) NSDictionary *gif;
+@property (nonatomic,strong) SYUItem *gif;
 
 //image图片
-@property (nonatomic,strong) NSDictionary *image;
+@property (nonatomic,strong) SYUItem *image;
+
 //帖子的类型
 @property (nonatomic,assign) SYEssenceBaseType type;
+
 
 /*********** 额外的辅助属性 ***********/
 

@@ -9,7 +9,7 @@
 #import "SYTextItem.h"
 #import "NSDate+SYExtension.h"
 #import <MJExtension/MJExtension.h>
-
+#import "SYUItem.h"
 @implementation SYTextItem
 {
     CGFloat _cellHeight;
@@ -35,8 +35,8 @@
             //图片显示出来的宽度
             CGFloat pictureW = maxSize.width;
             //图片显示出来的高度
-            CGFloat imageH = [self.image[@"height"]intValue];
-            CGFloat imageW = [self.image[@"widht"] intValue];
+            CGFloat imageH =  self.image.height;
+            CGFloat imageW = self.image.width;
             CGFloat pictureH = pictureW * imageH / imageW;
             
             if (pictureH >= SYTopicCellPictureMaxH) { //图片过长
