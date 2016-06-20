@@ -41,26 +41,31 @@
     //全部
     SYEssenceBaseViewController *all = [[SYEssenceBaseViewController alloc]init];
     all.title = @"全部";
+    all.URL = SYThroughAllURL;
     [self addChildViewController:all];
     
     //视频
     SYEssenceBaseViewController *video = [[SYEssenceBaseViewController alloc]init];
     video.title = @"视频";
+    video.URL = SYThroughVideoURL;
     [self addChildViewController:video];
     
     //图片
     SYEssenceBaseViewController *picture = [[SYEssenceBaseViewController alloc]init];
     picture.title = @"图片";
+    picture.URL = SYThroughPictureURL;
     [self addChildViewController:picture];
     
     //段子
     SYEssenceBaseViewController *text = [[SYEssenceBaseViewController alloc]init];
     text.title = @"段子";
+    text.URL = SYThroughTextURL;
     [self addChildViewController:text];
     
     //声音
     SYEssenceBaseViewController *sound = [[SYEssenceBaseViewController alloc]init];
     sound.title = @"声音";
+    sound.URL = SYThroughSoundURL;
     [self addChildViewController:sound];
 }
 

@@ -86,7 +86,7 @@ static NSString *const ID = @"cell";
 
     self.params = params;
 
-    [manager GET:@"http://s.budejie.com/topic/list/jingxuan/1/bs0315-iphone-4.2/0-20.json" parameters:params progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+    [manager GET:_URL parameters:params progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
        
         [responseObject writeToFile:@"/Users/sunhaichao/Desktop/AD.plist" atomically:YES];
         

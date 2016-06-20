@@ -51,41 +51,49 @@
     //全部
     SYEssenceBaseViewController *allVc = [[SYEssenceBaseViewController alloc]init];
     allVc.title = @"全部";
+    allVc.URL = SYNewAllURL;
     [self addChildViewController:allVc];
     
     //视频
     SYEssenceBaseViewController *videoVc = [[SYEssenceBaseViewController alloc]init];
     videoVc.title = @"视频";
+    videoVc.URL = SYNewVideoURL;
     [self addChildViewController:videoVc];
     
     //图片
     SYEssenceBaseViewController *pictureVc = [[SYEssenceBaseViewController alloc]init];
     pictureVc.title = @"图片";
+    pictureVc.URL = SYNewPictureURL;
     [self addChildViewController:pictureVc];
     
     //段子
     SYEssenceBaseViewController *textVc = [[SYEssenceBaseViewController alloc]init];
     textVc.title = @"段子";
+    textVc.URL = SYNewTextURL;
     [self addChildViewController:textVc];
     
     //网红
     SYEssenceBaseViewController *starVc = [[SYEssenceBaseViewController alloc]init];
     starVc.title = @"网红";
+    starVc.URL = SYNewStartURL;
     [self addChildViewController:starVc];
     
     //美女
     SYEssenceBaseViewController *girlVc = [[SYEssenceBaseViewController alloc]init];
     girlVc.title = @"美女";
+    girlVc.URL = SYNewGirlURL;
     [self addChildViewController:girlVc];
     
     //游戏
     SYEssenceBaseViewController *gameVc = [[SYEssenceBaseViewController alloc]init];
     gameVc.title = @"游戏";
+    gameVc.URL = SYNewGameURL;
     [self addChildViewController:gameVc];
     
     //声音
     SYEssenceBaseViewController *soundVc = [[SYEssenceBaseViewController alloc]init];
     soundVc.title = @"声音";
+    soundVc.URL = SYNewSoundURL;
     [self addChildViewController:soundVc];
     
 }
