@@ -16,7 +16,6 @@
 		4E33F4C61D046FC300988945 /* SYWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E33F4C41D046FC300988945 /* SYWebViewController.m */; };
 		4E33F4C71D046FC300988945 /* SYWebViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4E33F4C51D046FC300988945 /* SYWebViewController.xib */; };
 		4E33F4C91D04729200988945 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E33F4C81D04729200988945 /* WebKit.framework */; };
-		4E36E6061D1189510044E87F /* Reveal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E36E6051D1189510044E87F /* Reveal.framework */; };
 		4E36E6081D11896C0044E87F /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E36E6071D11896C0044E87F /* libz.tbd */; };
 		4E3A5A251D015F0600B0ED38 /* SYAttentionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E3A5A231D015F0600B0ED38 /* SYAttentionViewController.m */; };
 		4E3A5A261D015F0600B0ED38 /* SYAttentionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4E3A5A241D015F0600B0ED38 /* SYAttentionViewController.xib */; };
@@ -44,10 +43,8 @@
 		4E9C50C61CE9F5A6004505C3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4E9C50C51CE9F5A6004505C3 /* Assets.xcassets */; };
 		4E9C50C91CE9F5A6004505C3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4E9C50C71CE9F5A6004505C3 /* LaunchScreen.storyboard */; };
 		4E9C50D41CE9F5A6004505C3 /* ___________Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E9C50D31CE9F5A6004505C3 /* ___________Tests.m */; };
-		4E9C50DF1CE9F5A7004505C3 /* ___________UITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E9C50DE1CE9F5A7004505C3 /* ___________UITests.m */; };
 		4E9C51091CE9FC60004505C3 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E9C51031CE9FC60004505C3 /* AppDelegate.m */; };
 		4E9C510B1CE9FC60004505C3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E9C51061CE9FC60004505C3 /* main.m */; };
-		4E9C510F1CE9FD52004505C3 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4E9C510E1CE9FD52004505C3 /* Info.plist */; };
 		4E9C51121CE9FDAF004505C3 /* SYMainController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E9C51111CE9FDAF004505C3 /* SYMainController.m */; };
 		4E9C51151CE9FEA2004505C3 /* SYEssenceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E9C51141CE9FEA2004505C3 /* SYEssenceViewController.m */; };
 		4E9C51181CE9FEB4004505C3 /* SYFollowViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E9C51171CE9FEB4004505C3 /* SYFollowViewController.m */; };
@@ -69,7 +66,9 @@
 		4EA435BC1D020BEA00EB1403 /* SYSettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EA435B91D020BEA00EB1403 /* SYSettingViewController.m */; };
 		4EA725251D0322530044E472 /* SYMeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EA725231D0322530044E472 /* SYMeCell.m */; };
 		4EA725261D0322530044E472 /* SYMeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4EA725241D0322530044E472 /* SYMeCell.xib */; };
-		4EC1926F1CFCB09900E55614 /* Demo.gif in Resources */ = {isa = PBXBuildFile; fileRef = 4EC1926E1CFCB09900E55614 /* Demo.gif */; };
+		4ED367081D16F0E8005EEC55 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4ED367071D16F0E8005EEC55 /* QuartzCore.framework */; };
+		4ED53F271D171A0A00CBB9F7 /* Reveal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E36E6051D1189510044E87F /* Reveal.framework */; };
+		4ED53F2A1D171E5D00CBB9F7 /* ___________UITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4ED53F291D171E5D00CBB9F7 /* ___________UITests.m */; };
 		4EDB5E0B1D0D428B00DCF868 /* 输出框打印中文.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EDB5E0A1D0D428B00DCF868 /* 输出框打印中文.m */; };
 		4EDB5E0F1D0D641500DCF868 /* SYCategoryItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EDB5E0E1D0D641500DCF868 /* SYCategoryItem.m */; };
 		4EDB5E111D0D649000DCF868 /* SYRecommendViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4EDB5E101D0D649000DCF868 /* SYRecommendViewController.xib */; };
@@ -159,8 +158,6 @@
 		4E9C50D31CE9F5A6004505C3 /* ___________Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "___________Tests.m"; sourceTree = "<group>"; };
 		4E9C50D51CE9F5A6004505C3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4E9C50DA1CE9F5A7004505C3 /* 百思不得姐——框架完成UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "百思不得姐——框架完成UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		4E9C50DE1CE9F5A7004505C3 /* ___________UITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "___________UITests.m"; sourceTree = "<group>"; };
-		4E9C50E01CE9F5A7004505C3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4E9C51021CE9FC60004505C3 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		4E9C51031CE9FC60004505C3 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		4E9C51061CE9FC60004505C3 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -205,7 +202,10 @@
 		4EA725231D0322530044E472 /* SYMeCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SYMeCell.m; path = "百思不得姐——框架完成/Class/Me-我/Controller/SYMeCell.m"; sourceTree = SOURCE_ROOT; };
 		4EA725241D0322530044E472 /* SYMeCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = SYMeCell.xib; path = "百思不得姐——框架完成/Class/Me-我/Controller/SYMeCell.xib"; sourceTree = SOURCE_ROOT; };
 		4EAF47DF1D1041C000A3C087 /* SYAllSectionURL.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SYAllSectionURL.h; sourceTree = "<group>"; };
-		4EC1926E1CFCB09900E55614 /* Demo.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = Demo.gif; sourceTree = "<group>"; };
+		4ED367071D16F0E8005EEC55 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		4ED53F251D1719E700CBB9F7 /* Reveal 上午2.18.10.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = "Reveal 上午2.18.10.framework"; sourceTree = "<group>"; };
+		4ED53F291D171E5D00CBB9F7 /* ___________UITests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "___________UITests.m"; sourceTree = "<group>"; };
+		4ED53F2B1D171E6600CBB9F7 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4EDB5E0A1D0D428B00DCF868 /* 输出框打印中文.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "输出框打印中文.m"; sourceTree = "<group>"; };
 		4EDB5E0D1D0D641500DCF868 /* SYCategoryItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SYCategoryItem.h; sourceTree = "<group>"; };
 		4EDB5E0E1D0D641500DCF868 /* SYCategoryItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SYCategoryItem.m; sourceTree = "<group>"; };
@@ -235,8 +235,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4ED367081D16F0E8005EEC55 /* QuartzCore.framework in Frameworks */,
 				4E36E6081D11896C0044E87F /* libz.tbd in Frameworks */,
-				4E36E6061D1189510044E87F /* Reveal.framework in Frameworks */,
+				4ED53F271D171A0A00CBB9F7 /* Reveal.framework in Frameworks */,
 				4E33F4C91D04729200988945 /* WebKit.framework in Frameworks */,
 				13762BF2FB51E40939D9F6F2 /* Pods____________.framework in Frameworks */,
 			);
@@ -262,6 +263,8 @@
 		13EACCF83EEF4BE117E44CA2 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				4ED53F251D1719E700CBB9F7 /* Reveal 上午2.18.10.framework */,
+				4ED367071D16F0E8005EEC55 /* QuartzCore.framework */,
 				4E36E6071D11896C0044E87F /* libz.tbd */,
 				4E36E6051D1189510044E87F /* Reveal.framework */,
 				4E33F4C81D04729200988945 /* WebKit.framework */,
@@ -393,7 +396,7 @@
 			children = (
 				4E9C50B81CE9F5A6004505C3 /* 百思不得姐——框架完成 */,
 				4E9C50D21CE9F5A6004505C3 /* 百思不得姐——框架完成Tests */,
-				4E9C50DD1CE9F5A7004505C3 /* 百思不得姐——框架完成UITests */,
+				4ED53F281D171E1C00CBB9F7 /* 百思不得姐——框架完成UITests */,
 				4E9C50B71CE9F5A6004505C3 /* Products */,
 				EB72288701B36CF71CBB1954 /* Pods */,
 				13EACCF83EEF4BE117E44CA2 /* Frameworks */,
@@ -414,7 +417,6 @@
 			isa = PBXGroup;
 			children = (
 				4E9C50EC1CE9FC60004505C3 /* Class */,
-				4E9C510E1CE9FD52004505C3 /* Info.plist */,
 				4E9C50B91CE9F5A6004505C3 /* Supporting Files */,
 			);
 			path = "百思不得姐——框架完成";
@@ -430,7 +432,7 @@
 				4E4695321CFDBDCF002CFAB7 /* LaunchImage-800-Portrait-736h@3x.png */,
 				4E4695331CFDBDCF002CFAB7 /* LaunchImage.png */,
 				4E4695341CFDBDCF002CFAB7 /* LaunchImage@2x.png */,
-				4EC1926E1CFCB09900E55614 /* Demo.gif */,
+				4E9C510E1CE9FD52004505C3 /* Info.plist */,
 				4E9C50C51CE9F5A6004505C3 /* Assets.xcassets */,
 				4E9C50C71CE9F5A6004505C3 /* LaunchScreen.storyboard */,
 			);
@@ -444,15 +446,6 @@
 				4E9C50D51CE9F5A6004505C3 /* Info.plist */,
 			);
 			path = "百思不得姐——框架完成Tests";
-			sourceTree = "<group>";
-		};
-		4E9C50DD1CE9F5A7004505C3 /* 百思不得姐——框架完成UITests */ = {
-			isa = PBXGroup;
-			children = (
-				4E9C50DE1CE9F5A7004505C3 /* ___________UITests.m */,
-				4E9C50E01CE9F5A7004505C3 /* Info.plist */,
-			);
-			path = "百思不得姐——框架完成UITests";
 			sourceTree = "<group>";
 		};
 		4E9C50EC1CE9FC60004505C3 /* Class */ = {
@@ -776,6 +769,15 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		4ED53F281D171E1C00CBB9F7 /* 百思不得姐——框架完成UITests */ = {
+			isa = PBXGroup;
+			children = (
+				4ED53F291D171E5D00CBB9F7 /* ___________UITests.m */,
+				4ED53F2B1D171E6600CBB9F7 /* Info.plist */,
+			);
+			path = "百思不得姐——框架完成UITests";
+			sourceTree = "<group>";
+		};
 		EB72288701B36CF71CBB1954 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -903,14 +905,12 @@
 				4E4695391CFDBDCF002CFAB7 /* LaunchImage-800-Portrait-736h@3x.png in Resources */,
 				4E9C50C61CE9F5A6004505C3 /* Assets.xcassets in Resources */,
 				4E46953B1CFDBDCF002CFAB7 /* LaunchImage@2x.png in Resources */,
-				4E9C510F1CE9FD52004505C3 /* Info.plist in Resources */,
 				4EDB5E111D0D649000DCF868 /* SYRecommendViewController.xib in Resources */,
 				4E46952D1CFDB79C002CFAB7 /* SYADViewController.xib in Resources */,
 				4EA435A11D02021F00EB1403 /* SYResigeringViewController.xib in Resources */,
 				4EA435A61D020A2C00EB1403 /* SYRecommendCell.xib in Resources */,
 				4E4695371CFDBDCF002CFAB7 /* LaunchImage-700@2x.png in Resources */,
 				4E2790FA1D02F31A00886ECA /* SYMeViewController.storyboard in Resources */,
-				4EC1926F1CFCB09900E55614 /* Demo.gif in Resources */,
 				4EDB5E211D0D8B3900DCF868 /* SYUserCell.xib in Resources */,
 				4E189A3D1D14519D001E45A1 /* SYAllPictureView.xib in Resources */,
 				4E33F4C71D046FC300988945 /* SYWebViewController.xib in Resources */,
@@ -1051,7 +1051,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4E9C50DF1CE9F5A7004505C3 /* ___________UITests.m in Sources */,
+				4ED53F2A1D171E5D00CBB9F7 /* ___________UITests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

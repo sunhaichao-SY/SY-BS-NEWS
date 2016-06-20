@@ -7,6 +7,7 @@
 //  段子 模型
 
 #import <UIKit/UIKit.h>
+
 @class SYUItem;
 
 @interface SYTextItem : NSObject

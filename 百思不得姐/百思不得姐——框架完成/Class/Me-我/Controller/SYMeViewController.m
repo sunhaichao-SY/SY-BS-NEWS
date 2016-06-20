@@ -45,7 +45,6 @@ static NSString *const ID = @"cell";
     [self loadData];
 
 }
-//http://d.api.budejie.com/op/square/bs0315-iphone-4.2/0-100.json
 //加载数据
 - (void)loadData
 {
@@ -53,9 +52,6 @@ static NSString *const ID = @"cell";
 
     [manager GET:@"http://d.api.budejie.com/op/square/bs0315-iphone-4.2/0-100.json" parameters:nil progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id _Nullable responseObject) {
 
-#warning 打印不出来plist
-        [responseObject writeToFile:@"/Users/sunhaichao/Desktop/AD.plist" atomically:YES];
-        
         NSArray *dictArr = responseObject[@"square_list"];
         
         _squareItems = [SYMeItem mj_objectArrayWithKeyValuesArray:dictArr];

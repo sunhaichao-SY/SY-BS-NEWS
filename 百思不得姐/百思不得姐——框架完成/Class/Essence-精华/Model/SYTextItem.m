@@ -8,7 +8,6 @@
 
 #import "SYTextItem.h"
 #import "NSDate+SYExtension.h"
-#import <MJExtension/MJExtension.h>
 #import "SYUItem.h"
 @implementation SYTextItem
 {

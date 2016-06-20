@@ -92,6 +92,12 @@ static CGFloat const margin = 10;
     // 设置帖子的文字内容
     self.textContent.text = textItems.text;
     
+    //vip
+    if (textItems.u.is_v) {
+        self.XLVip.hidden = NO;
+    }else{
+        self.XLVip.hidden = YES;
+    }
     
     //根据模型类型（帖子类型）添加对应的内容到cell的中间
     

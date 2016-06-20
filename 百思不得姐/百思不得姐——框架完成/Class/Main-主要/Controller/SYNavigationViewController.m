@@ -82,15 +82,6 @@
 }
 //UIGestureRecognizerDelegate 用来判断是否接受手势处理
 
-#warning 这两个方法有什么区别
-/*One*/
-/*
-- (BOOL)gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldReceiveTouch:(UITouch *)touch
-{
-    return self.childViewControllers.count > 1;
-}
-*/
-
 /*Two*/
 - (BOOL)gestureRecognizerShouldBegin:(UIGestureRecognizer *)gestureRecognizer
 {

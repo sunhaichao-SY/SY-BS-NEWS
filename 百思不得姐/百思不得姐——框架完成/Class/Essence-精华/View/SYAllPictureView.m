@@ -10,7 +10,6 @@
 #import "SYProgressView.h"
 #import "SYTextItem.h"
 #import "UIImageView+WebCache.h"
-#import "SYProgressView.h"
 #import "SYShowPictureViewController.h"
 #import "SYUItem.h"
 @interface SYAllPictureView()
@@ -97,45 +96,5 @@
         self.seeBigButton.hidden = YES;
         
     }
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 @end
