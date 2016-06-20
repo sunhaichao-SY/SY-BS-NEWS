@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		13762BF2FB51E40939D9F6F2 /* Pods____________.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 134D482550200A3F03CD223B /* Pods____________.framework */; };
-		4E189A371D142AC7001E45A1 /* SYConst.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E189A361D142AC7001E45A1 /* SYConst.m */; };
 		4E189A3B1D14518F001E45A1 /* SYAllPictureView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E189A3A1D14518F001E45A1 /* SYAllPictureView.m */; };
 		4E189A3D1D14519D001E45A1 /* SYAllPictureView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4E189A3C1D14519D001E45A1 /* SYAllPictureView.xib */; };
 		4E189A401D14569E001E45A1 /* SYProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E189A3F1D14569E001E45A1 /* SYProgressView.m */; };
@@ -102,8 +101,6 @@
 
 /* Begin PBXFileReference section */
 		134D482550200A3F03CD223B /* Pods____________.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = "Pods____________.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		4E189A351D142AC7001E45A1 /* SYConst.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SYConst.h; sourceTree = "<group>"; };
-		4E189A361D142AC7001E45A1 /* SYConst.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SYConst.m; sourceTree = "<group>"; };
 		4E189A391D14518F001E45A1 /* SYAllPictureView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SYAllPictureView.h; sourceTree = "<group>"; };
 		4E189A3A1D14518F001E45A1 /* SYAllPictureView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SYAllPictureView.m; sourceTree = "<group>"; };
 		4E189A3C1D14519D001E45A1 /* SYAllPictureView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SYAllPictureView.xib; sourceTree = "<group>"; };
@@ -716,8 +713,6 @@
 				4E9C51351CEA178A004505C3 /* UITabBarItem+SYCategory.m */,
 				4E461F861D09727F0096D73C /* NSDate+SYExtension.h */,
 				4E461F871D09727F0096D73C /* NSDate+SYExtension.m */,
-				4E189A351D142AC7001E45A1 /* SYConst.h */,
-				4E189A361D142AC7001E45A1 /* SYConst.m */,
 			);
 			path = Categroy;
 			sourceTree = "<group>";
@@ -1009,7 +1004,6 @@
 				4E33F4C61D046FC300988945 /* SYWebViewController.m in Sources */,
 				4E3A5A251D015F0600B0ED38 /* SYAttentionViewController.m in Sources */,
 				4E3C78921D15A72A00B615FC /* SYUItem.m in Sources */,
-				4E189A371D142AC7001E45A1 /* SYConst.m in Sources */,
 				4EEAF3E81D073F09007AD8B0 /* SYTextItem.m in Sources */,
 				4EA435B11D020B3700EB1403 /* SYRecommendViewController.m in Sources */,
 				4EDB5E0F1D0D641500DCF868 /* SYCategoryItem.m in Sources */,

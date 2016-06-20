@@ -9,6 +9,7 @@
 #import "SYTextItem.h"
 #import "NSDate+SYExtension.h"
 #import "SYUItem.h"
+
 @implementation SYTextItem
 {
     CGFloat _cellHeight;
@@ -21,16 +22,16 @@
     if (!_cellHeight) {
         
         //文字的最大尺寸
-        CGSize maxSize = CGSizeMake([UIScreen mainScreen].bounds.size.width - 4 * SYTopicCellMargin, MAXFLOAT);
+        CGSize maxSize = CGSizeMake([UIScreen mainScreen].bounds.size.width - 4 * 10, MAXFLOAT);
         //计算文字的高度
         CGFloat textH = [self.text boundingRectWithSize:maxSize options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName : [UIFont systemFontOfSize:14]} context:nil].size.height;
         
         //cell的高度
         //文字部分的高度
-        _cellHeight = SYTopicCellTextY + textH + SYTopicCellMargin;
+        _cellHeight = 55 + textH + 10;
 //        SYEssenceBaseTypePicture
         //根据段子的类型来计算cell的高度
-        if (self.type == SYEssenceBaseTypePicture) {//图片帖子
+        if ([self.type isEqualToString:@"image"]) {//图片帖子
             //图片显示出来的宽度
             CGFloat pictureW = maxSize.width;
             //图片显示出来的高度
@@ -38,22 +39,21 @@
             CGFloat imageW = self.image.width;
             CGFloat pictureH = pictureW * imageH / imageW;
             
-            if (pictureH >= SYTopicCellPictureMaxH) { //图片过长
-                pictureH = SYTopicCellPictureBreakH;
+            if (pictureH >= 1000) { //图片过长
+                pictureH = 250;
                 self.bigPicture = YES;//大图
             }
             
             //计算图片控件的frame
-            CGFloat pictureX =SYTopicCellMargin;
-            CGFloat pictureY = SYTopicCellTextY + textH + SYTopicCellMargin;
+            CGFloat pictureX =10;
+            CGFloat pictureY = 55 + textH + 10;
             _pictureF = CGRectMake(pictureX, pictureY , pictureW, pictureH);
             
-            _cellHeight += pictureH +SYTopicCellMargin;
-        }else if (self.type == SYEssenceBaseTypeVioce){
-            //声音帖子
+            _cellHeight += pictureH +10;
         }
+        
         //底部工具条
-        _cellHeight += SYTopicCellButtonBarH + SYTopicCellMargin;
+        _cellHeight += 44 + 10;
     }
     
     return _cellHeight;

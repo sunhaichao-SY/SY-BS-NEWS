@@ -8,9 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
+
+
 @class SYUItem;
 
 @interface SYTextItem : NSObject
+
 
 //时间
 @property (nonatomic,strong) NSString *passtime;
@@ -30,6 +33,9 @@
 //评论
 @property (nonatomic,assign) NSInteger comment;
 
+//类型
+@property (nonatomic,strong) NSString *type;
+
 //姓名和头像模型
 @property (nonatomic,strong) SYUItem *u;
 
@@ -39,16 +45,15 @@
 //image图片
 @property (nonatomic,strong) SYUItem *image;
 
-//帖子的类型
-@property (nonatomic,assign) SYEssenceBaseType type;
-
 
 /*********** 额外的辅助属性 ***********/
 
 //cell的高度
 @property (nonatomic,assign,readonly) CGFloat cellHeight;
+
 //图片空间的frame
 @property (nonatomic,assign,readonly) CGRect pictureF;
+
 //图片是否太大
 @property (nonatomic,assign,getter=isBigPicture) BOOL bigPicture;
 

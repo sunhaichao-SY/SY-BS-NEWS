@@ -48,45 +48,60 @@
 - (void)addAllChildViewController
 {
     
-    //全部
+    //推荐
     SYEssenceBaseViewController *allVc = [[SYEssenceBaseViewController alloc]init];
-    allVc.title = @"全部";
+    allVc.title = @"推荐";
+    allVc.URL = SYEssenceRecommendURL;
     [self addChildViewController:allVc];
     
     //视频
     SYEssenceBaseViewController *videoVc = [[SYEssenceBaseViewController alloc]init];
     videoVc.title = @"视频";
+    videoVc.URL = SYEssenceVideoURL;
     [self addChildViewController:videoVc];
     
     //图片
     SYEssenceBaseViewController *pictureVc = [[SYEssenceBaseViewController alloc]init];
     pictureVc.title = @"图片";
+    pictureVc.URL = SYEssencePictureURL;
     [self addChildViewController:pictureVc];
     
     //段子
     SYEssenceBaseViewController *textVc = [[SYEssenceBaseViewController alloc]init];
     textVc.title = @"段子";
+    textVc.URL = SYEssenceTextURL;
     [self addChildViewController:textVc];
     
     //网红
     SYEssenceBaseViewController *starVc = [[SYEssenceBaseViewController alloc]init];
     starVc.title = @"网红";
+    starVc.URL = SYEssenceStartURL;
     [self addChildViewController:starVc];
+    
+    //排行
+    SYEssenceBaseViewController *rankingVc = [[SYEssenceBaseViewController alloc]init];
+    rankingVc.title = @"排行";
+    rankingVc.URL = SYEssenceListsURL;
+    [self addChildViewController:rankingVc];
+    
+    //社会
+    SYEssenceBaseViewController *societyVc = [[SYEssenceBaseViewController alloc]init];
+    societyVc.title = @"社会";
+    societyVc.URL = SYEssenceSocietyURL;
+    [self addChildViewController:societyVc];
     
     //美女
     SYEssenceBaseViewController *girlVc = [[SYEssenceBaseViewController alloc]init];
     girlVc.title = @"美女";
+    girlVc.URL = SYEssenceGirlURL;
     [self addChildViewController:girlVc];
     
     //游戏
     SYEssenceBaseViewController *gameVc = [[SYEssenceBaseViewController alloc]init];
     gameVc.title = @"游戏";
+    gameVc.URL = SYEssenceGameURL;
     [self addChildViewController:gameVc];
     
-    //声音
-    SYEssenceBaseViewController *soundVc = [[SYEssenceBaseViewController alloc]init];
-    soundVc.title = @"声音";
-    [self addChildViewController:soundVc];
     
 }
 

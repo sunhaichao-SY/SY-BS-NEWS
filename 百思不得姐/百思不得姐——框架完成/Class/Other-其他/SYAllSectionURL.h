@@ -8,77 +8,77 @@
 
 #ifndef SYAllSectionURL_h
 #define SYAllSectionURL_h
-/******************* 精华 *******************/
+/******************* 精华(Essence) *******************/
 //推荐
-#define SYRecommendURL http://s.budejie.com/topic/list/jingxuan/1/bs0315-iphone-4.2/0-20.json
+#define SYEssenceRecommendURL @"http://s.budejie.com/topic/list/jingxuan/1/bs0315-iphone-4.2/0-20.json"
 
 //视频
-#define SYVideoURL http://s.budejie.com/topic/list/jingxuan/41/bs0315-iphone-4.2/0-20.json
+#define SYEssenceVideoURL @"http://s.budejie.com/topic/list/jingxuan/41/bs0315-iphone-4.2/0-20.json"
 
 //图片
-#define SYPictureURL http://s.budejie.com/topic/list/jingxuan/10/bs0315-iphone-4.2/0-20.json
+#define SYEssencePictureURL @"http://s.budejie.com/topic/list/jingxuan/10/bs0315-iphone-4.2/0-20.json"
 
 //段子
-#define SYTextURL http://s.budejie.com/topic/tag-topic/64/hot/bs0315-iphone-4.2/0-20.json
+#define SYEssenceTextURL @"http://s.budejie.com/topic/tag-topic/64/hot/bs0315-iphone-4.2/0-20.json"
 
 //网红
-#define SYStartURL http://s.budejie.com/topic/tag-topic/3096/hot/bs0315-iphone-4.2/0-20.json
+#define SYEssenceStartURL @"http://s.budejie.com/topic/tag-topic/3096/hot/bs0315-iphone-4.2/0-20.json"
 
 //排行
-#define SYListsURL http://s.budejie.com/topic/list/remen/1/bs0315-iphone-4.2/0-20.json
+#define SYEssenceListsURL @"http://s.budejie.com/topic/list/remen/1/bs0315-iphone-4.2/0-20.json"
 
 //社会
-#define SYSocietyURL http://s.budejie.com/topic/tag-topic/473/hot/bs0315-iphone-4.2/0-20.json
+#define SYEssenceSocietyURL @"http://s.budejie.com/topic/tag-topic/473/hot/bs0315-iphone-4.2/0-20.json"
 
 //美女
-#define SYGirlURL http://s.budejie.com/topic/tag-topic/117/hot/bs0315-iphone-4.2/0-20.json
+#define SYEssenceGirlURL @"http://s.budejie.com/topic/tag-topic/117/hot/bs0315-iphone-4.2/0-20.json"
 
 //游戏
-#define SYGameURL http://s.budejie.com/topic/tag-topic/164/hot/bs0315-iphone-4.2/0-20.json
+#define SYEssenceGameURL @"http://s.budejie.com/topic/tag-topic/164/hot/bs0315-iphone-4.2/0-20.json"
 
 
-/******************* 穿越 *******************/
+/******************* 穿越(Through) *******************/
 
 //全部
-#define SYRecommendURL http://d.api.budejie.com/topic/list/chuanyue/1/bs0315-iphone-4.2/0-20.json
+#define SYThroughAllURL @"http://d.api.budejie.com/topic/list/chuanyue/1/bs0315-iphone-4.2/0-20.json"
 
 //视频
-#define SYRecommendURL http://d.api.budejie.com/topic/list/chuanyue/41/bs0315-iphone-4.2/0-20.json
+#define SYThroughVideoURL @"http://d.api.budejie.com/topic/list/chuanyue/41/bs0315-iphone-4.2/0-20.json"
 
 //图片
-#define SYRecommendURL http://d.api.budejie.com/topic/list/chuanyue/10/bs0315-iphone-4.2/0-20.json
+#define SYThroughPictureURL @"http://d.api.budejie.com/topic/list/chuanyue/10/bs0315-iphone-4.2/0-20.json"
 
 //段子
-#define SYRecommendURL http://d.api.budejie.com/topic/list/chuanyue/29/bs0315-iphone-4.2/0-20.json
+#define SYThroughTextURL @"http://d.api.budejie.com/topic/list/chuanyue/29/bs0315-iphone-4.2/0-20.json"
 
 //声音
-#define SYRecommendURL http://d.api.budejie.com/topic/list/chuanyue/31/bs0315-iphone-4.2/0-20.json
+#define SYThroughSoundURL @"http://d.api.budejie.com/topic/list/chuanyue/31/bs0315-iphone-4.2/0-20.json"
 
 /******************* 最新 *******************/
 
 //全部
-#define SYRecommendURL http://s.budejie.com/topic/list/zuixin/1/bs0315-iphone-4.2/0-20.json
+#define SYNewAllURL @"http://s.budejie.com/topic/list/zuixin/1/bs0315-iphone-4.2/0-20.json"
 
 //视频
-#define SYVideoURL http:http://s.budejie.com/topic/list/zuixin/41/bs0315-iphone-4.2/0-20.json
+#define SYNewVideoURL @"http:http://s.budejie.com/topic/list/zuixin/41/bs0315-iphone-4.2/0-20.json"
 
 //图片
-#define SYPictureURL http://s.budejie.com/topic/list/zuixin/10/bs0315-iphone-4.2/0-20.json
+#define SYNewPictureURL @"http://s.budejie.com/topic/list/zuixin/10/bs0315-iphone-4.2/0-20.json"
 
 //段子
-#define SYTextURL http://s.budejie.com/topic/list/zuixin/29/bs0315-iphone-4.2/0-20.json
+#define SYNewTextURL @"http://s.budejie.com/topic/list/zuixin/29/bs0315-iphone-4.2/0-20.json"
 
 //网红
-#define SYStartURL http://s.budejie.com/topic/tag-topic/3096/new/bs0315-iphone-4.2/0-20.json
+#define SYNewStartURL @"http://s.budejie.com/topic/tag-topic/3096/new/bs0315-iphone-4.2/0-20.json"
 
 //美女
-#define SYGirlURL http://s.budejie.com/topic/tag-topic/117/new/bs0315-iphone-4.2/0-20.json
+#define SYNewGirlURL @"http://s.budejie.com/topic/tag-topic/117/new/bs0315-iphone-4.2/0-20.json"
 
 //游戏
-#define SYGameURL http://s.budejie.com/topic/tag-topic/164/new/bs0315-iphone-4.2/0-20.json
+#define SYNewGameURL @"http://s.budejie.com/topic/tag-topic/164/new/bs0315-iphone-4.2/0-20.json"
 
 //声音
-#define SYGameURL http://s.budejie.com/topic/list/zuixin/31/bs0315-iphone-4.2/0-20.json
+#define SYNewSoundURL @"http://s.budejie.com/topic/list/zuixin/31/bs0315-iphone-4.2/0-20.json"
 
 
 

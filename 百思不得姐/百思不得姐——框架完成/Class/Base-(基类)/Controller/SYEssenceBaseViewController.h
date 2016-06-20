@@ -7,8 +7,9 @@
 //  精华内容公共基类
 
 #import <UIKit/UIKit.h>
+@class SYTextItem;
 
 @interface SYEssenceBaseViewController : UITableViewController
 
-@property (nonatomic,assign) SYEssenceBaseType type;
+@property (nonatomic,strong) NSString *URL;
 @end

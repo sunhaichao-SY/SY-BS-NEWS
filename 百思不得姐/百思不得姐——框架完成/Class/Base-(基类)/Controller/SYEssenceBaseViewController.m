@@ -83,9 +83,7 @@ static NSString *const ID = @"cell";
     AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
     
     NSMutableDictionary *params = [NSMutableDictionary dictionary];
-//    params[@"a"] = @"list";
-//    params[@"c"] = @"data";
-    params[@"type"] = @(self.type);
+
     self.params = params;
 
     [manager GET:@"http://s.budejie.com/topic/list/jingxuan/1/bs0315-iphone-4.2/0-20.json" parameters:params progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
@@ -114,7 +112,6 @@ static NSString *const ID = @"cell";
     
 }
 
-// http://s.budejie.com/topic/tag-topic/64/hot/bs0315-iphone-4.2/0-20.json
 - (void)loadMoreData
 {
     
@@ -122,16 +119,14 @@ static NSString *const ID = @"cell";
     
     AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
     NSMutableDictionary *paramas = [NSMutableDictionary dictionary];
-//    paramas[@"a"] = @"list";
-//    paramas[@"c"] = @"data";
-    paramas[@"type"] = @(self.type);
+
     NSInteger page = self.page + 1;
     paramas[@"page"] = @(page);
     paramas[@"maxtime"] = self.maxtime;
     self.params = paramas;
     
     
-    [manager GET:@"http://s.budejie.com/topic/list/jingxuan/1/bs0315-iphone-4.2/0-20.json" parameters:paramas progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+    [manager GET:_URL parameters:paramas progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         if (self.params != paramas) return;
         
         self.maxtime = responseObject[@"info"][@"maxtime"];
