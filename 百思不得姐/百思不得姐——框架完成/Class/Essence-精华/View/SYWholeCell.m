@@ -11,6 +11,7 @@
 #import "UIImageView+WebCache.h"
 #import "SYAllPictureView.h"
 #import "SYUItem.h"
+#import "SYGIFItem.h"
 
 static CGFloat const margin = 10;
 @interface SYWholeCell()
@@ -110,6 +111,14 @@ static CGFloat const margin = 10;
     }
     
     
+    
+  
+    
+    
+    
+    
+    
+    
       //设置按钮文字
     [self setupButtonTitle:self.zanView count:textItems.up placeholder:@"顶"];
     [self setupButtonTitle:self.caiView count:textItems.down placeholder:@"踩"];
@@ -127,20 +136,19 @@ static CGFloat const margin = 10;
     }
     [button setTitle:placeholder forState:UIControlStateNormal];
     
-    /**********用来设置段落的间距**********/
-  
-    //创建NSMutableAttributedString实例，并将text传入
-    NSMutableAttributedString *attStr = [[NSMutableAttributedString alloc]initWithString:_textContent.text];
-    //创建NSMutableParagraphStyle实例
-    NSMutableParagraphStyle *style = [[NSMutableParagraphStyle alloc]init];
-    //设置行距
-    [style setLineSpacing:12.0f];
-    
-    //根据给定长度与style设置attStr式样
-    [attStr addAttribute:NSParagraphStyleAttributeName value:style range:NSMakeRange(0, _textContent.text.length)];
-    //Label获取attStr式样
-    _textContent.attributedText = attStr;
-
+////    /**********用来设置段落的间距**********/
+//  
+//    //创建NSMutableAttributedString实例，并将text传入
+//    NSMutableAttributedString *attStr = [[NSMutableAttributedString alloc]initWithString:_textContent.text];
+//    //创建NSMutableParagraphStyle实例
+//    NSMutableParagraphStyle *style = [[NSMutableParagraphStyle alloc]init];
+//    //设置行距
+//    [style setLineSpacing:12.0f];
+//    
+//    //根据给定长度与style设置attStr式样
+//    [attStr addAttribute:NSParagraphStyleAttributeName value:style range:NSMakeRange(0, _textContent.text.length)];
+//    //Label获取attStr式样
+//    _textContent.attributedText = attStr;
     
 }
 
@@ -153,9 +161,8 @@ static CGFloat const margin = 10;
     frame.origin.y += margin;
     
     [super setFrame:frame];
-
-    
-    
 }
+
+
 
 @end

@@ -136,10 +136,9 @@
                             <constraint firstItem="RFY-cx-Oua" firstAttribute="top" secondItem="gVZ-UP-sOk" secondAttribute="top" id="ylf-2Q-9i5"/>
                         </constraints>
                     </view>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i9t-ek-7S6">
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i9t-ek-7S6">
                         <rect key="frame" x="10" y="50" width="300" height="21.5"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="18"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Profile_AddV_authen" translatesAutoresizingMaskIntoConstraints="NO" id="3eM-Zw-sTk">
@@ -180,7 +179,7 @@
                 <outlet property="timeView" destination="QNj-Y6-73c" id="EGz-V9-QdK"/>
                 <outlet property="zanView" destination="Fr6-a5-I2K" id="NZa-yF-GZF"/>
             </connections>
-            <point key="canvasLocation" x="340" y="244"/>
+            <point key="canvasLocation" x="274" y="244"/>
         </tableViewCell>
     </objects>
     <resources>

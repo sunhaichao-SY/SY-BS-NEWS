@@ -12,6 +12,7 @@
 		4E189A3D1D14519D001E45A1 /* SYAllPictureView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4E189A3C1D14519D001E45A1 /* SYAllPictureView.xib */; };
 		4E189A401D14569E001E45A1 /* SYProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E189A3F1D14569E001E45A1 /* SYProgressView.m */; };
 		4E2790FA1D02F31A00886ECA /* SYMeViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4E2790F91D02F31A00886ECA /* SYMeViewController.storyboard */; };
+		4E2FA0DD1D196DA100858802 /* SYVideoItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E2FA0DC1D196DA100858802 /* SYVideoItem.m */; };
 		4E33F4C61D046FC300988945 /* SYWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E33F4C41D046FC300988945 /* SYWebViewController.m */; };
 		4E33F4C71D046FC300988945 /* SYWebViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4E33F4C51D046FC300988945 /* SYWebViewController.xib */; };
 		4E33F4C91D04729200988945 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E33F4C81D04729200988945 /* WebKit.framework */; };
@@ -65,6 +66,7 @@
 		4EA435BC1D020BEA00EB1403 /* SYSettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EA435B91D020BEA00EB1403 /* SYSettingViewController.m */; };
 		4EA725251D0322530044E472 /* SYMeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EA725231D0322530044E472 /* SYMeCell.m */; };
 		4EA725261D0322530044E472 /* SYMeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4EA725241D0322530044E472 /* SYMeCell.xib */; };
+		4EC8EFA61D1867BC00F3CDD0 /* SYGIFItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EC8EFA51D1867BC00F3CDD0 /* SYGIFItem.m */; };
 		4ED367081D16F0E8005EEC55 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4ED367071D16F0E8005EEC55 /* QuartzCore.framework */; };
 		4ED53F271D171A0A00CBB9F7 /* Reveal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E36E6051D1189510044E87F /* Reveal.framework */; };
 		4ED53F2A1D171E5D00CBB9F7 /* ___________UITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4ED53F291D171E5D00CBB9F7 /* ___________UITests.m */; };
@@ -107,6 +109,8 @@
 		4E189A3E1D14569E001E45A1 /* SYProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SYProgressView.h; sourceTree = "<group>"; };
 		4E189A3F1D14569E001E45A1 /* SYProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SYProgressView.m; sourceTree = "<group>"; };
 		4E2790F91D02F31A00886ECA /* SYMeViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SYMeViewController.storyboard; sourceTree = "<group>"; };
+		4E2FA0DB1D196DA100858802 /* SYVideoItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SYVideoItem.h; sourceTree = "<group>"; };
+		4E2FA0DC1D196DA100858802 /* SYVideoItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SYVideoItem.m; sourceTree = "<group>"; };
 		4E33F4C31D046FC300988945 /* SYWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SYWebViewController.h; sourceTree = "<group>"; };
 		4E33F4C41D046FC300988945 /* SYWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SYWebViewController.m; sourceTree = "<group>"; };
 		4E33F4C51D046FC300988945 /* SYWebViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SYWebViewController.xib; sourceTree = "<group>"; };
@@ -199,6 +203,8 @@
 		4EA725231D0322530044E472 /* SYMeCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SYMeCell.m; path = "百思不得姐——框架完成/Class/Me-我/Controller/SYMeCell.m"; sourceTree = SOURCE_ROOT; };
 		4EA725241D0322530044E472 /* SYMeCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = SYMeCell.xib; path = "百思不得姐——框架完成/Class/Me-我/Controller/SYMeCell.xib"; sourceTree = SOURCE_ROOT; };
 		4EAF47DF1D1041C000A3C087 /* SYAllSectionURL.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SYAllSectionURL.h; sourceTree = "<group>"; };
+		4EC8EFA41D1867BC00F3CDD0 /* SYGIFItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SYGIFItem.h; sourceTree = "<group>"; };
+		4EC8EFA51D1867BC00F3CDD0 /* SYGIFItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SYGIFItem.m; sourceTree = "<group>"; };
 		4ED367071D16F0E8005EEC55 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		4ED53F251D1719E700CBB9F7 /* Reveal 上午2.18.10.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = "Reveal 上午2.18.10.framework"; sourceTree = "<group>"; };
 		4ED53F291D171E5D00CBB9F7 /* ___________UITests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "___________UITests.m"; sourceTree = "<group>"; };
@@ -495,6 +501,10 @@
 				4EEAF3E71D073F09007AD8B0 /* SYTextItem.m */,
 				4E3C78901D15A72A00B615FC /* SYUItem.h */,
 				4E3C78911D15A72A00B615FC /* SYUItem.m */,
+				4EC8EFA41D1867BC00F3CDD0 /* SYGIFItem.h */,
+				4EC8EFA51D1867BC00F3CDD0 /* SYGIFItem.m */,
+				4E2FA0DB1D196DA100858802 /* SYVideoItem.h */,
+				4E2FA0DC1D196DA100858802 /* SYVideoItem.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -1019,9 +1029,11 @@
 				4EA435A01D02021F00EB1403 /* SYResigeringViewController.m in Sources */,
 				4EA435B51D020B6500EB1403 /* SYRecommendItem.m in Sources */,
 				4E9C51241CEA05DB004505C3 /* SYTabBar.m in Sources */,
+				4E2FA0DD1D196DA100858802 /* SYVideoItem.m in Sources */,
 				4EF2BBEC1D0559B700982A04 /* SYStarViewController.m in Sources */,
 				4E9C511B1CE9FEC2004505C3 /* SYMeViewController.m in Sources */,
 				4EF2BBEF1D055A8800982A04 /* SYCrossViewController.m in Sources */,
+				4EC8EFA61D1867BC00F3CDD0 /* SYGIFItem.m in Sources */,
 				4E7F8AF01D05C0FF00B2E727 /* SYBaseViewController.m in Sources */,
 				4E189A3B1D14518F001E45A1 /* SYAllPictureView.m in Sources */,
 				4E9C51151CE9FEA2004505C3 /* SYEssenceViewController.m in Sources */,

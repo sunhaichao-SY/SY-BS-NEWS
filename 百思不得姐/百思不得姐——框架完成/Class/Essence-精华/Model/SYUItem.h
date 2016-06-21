@@ -10,6 +10,8 @@
 
 @interface SYUItem : NSObject
 
+/************ u ************/
+
 //头像数组
 @property (nonatomic,strong) NSArray *header;
 
@@ -19,7 +21,7 @@
 //名字
 @property (nonatomic,strong) NSString *name;
 
-/************ 图片 ************/
+/************ image ************/
 
 //大图
 @property (nonatomic,strong) NSArray *big;
@@ -38,13 +40,6 @@
 
 //宽度
 @property (nonatomic,assign) NSInteger width;
-
-
-
-
-
-
-
 
 
 

@@ -8,9 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-
-
-@class SYUItem;
+@class SYUItem,SYGIFItem,SYVideoItem;
 
 @interface SYTextItem : NSObject
 
@@ -40,11 +38,13 @@
 @property (nonatomic,strong) SYUItem *u;
 
 //gif图片
-@property (nonatomic,strong) SYUItem *gif;
+@property (nonatomic,strong) SYGIFItem *gif;
 
 //image图片
 @property (nonatomic,strong) SYUItem *image;
 
+//video
+@property (nonatomic,strong) SYVideoItem *video;
 
 /*********** 额外的辅助属性 ***********/
 

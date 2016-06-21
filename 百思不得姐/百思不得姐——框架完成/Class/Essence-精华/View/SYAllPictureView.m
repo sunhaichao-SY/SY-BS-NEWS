@@ -12,6 +12,7 @@
 #import "UIImageView+WebCache.h"
 #import "SYShowPictureViewController.h"
 #import "SYUItem.h"
+#import "SYGIFItem.h"
 @interface SYAllPictureView()
 //图片
 @property (weak, nonatomic) IBOutlet UIImageView *imageView;
@@ -36,34 +37,55 @@
 {
     self.autoresizingMask = UIViewAutoresizingNone;
     
-    //给图片添加监听器
+    //设置图片可以与用户交互
     self.imageView.userInteractionEnabled = YES;
+    
+    //给图片添加点击手势
     [self.imageView addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(showPicture)]];
 }
 
 
+//点击图片会进行全屏显示
 - (void)showPicture
 {
     SYShowPictureViewController *showPicture = [[SYShowPictureViewController alloc]init];
+    
     showPicture.textItem = self.textItems;
+    
     [[UIApplication sharedApplication].keyWindow.rootViewController presentViewController:showPicture animated:YES completion:nil];
 }
 
 - (void)setTextItems:(SYTextItem *)textItems
 {
     _textItems = textItems;
-    
+   
+
     //立马显示最新的进度值(防止因为网速慢，导致显示的是其他图片的下载进度，说白了就是进度条的循环引用)
     [self.progressView setProgress:textItems.pictureProgress animated:NO];
     
     //设置图片
-    [self.imageView sd_setImageWithURL:[NSURL URLWithString:textItems.image.download_url.firstObject ]placeholderImage:nil options:0 progress:^(NSInteger receivedSize, NSInteger expectedSize) {
+    NSString *url;
+    if ([self.textItems.type isEqualToString:@"image"]) {
+        url = self.textItems.image.download_url.firstObject;
+      
+    } else if ([self.textItems.type isEqualToString:@"gif"]) {
+    
+    }
+    
+    [self.imageView sd_setImageWithURL:[NSURL URLWithString:url]placeholderImage:nil options:0 progress:^(NSInteger receivedSize, NSInteger expectedSize) {
+        
+        //加载数据时显示进度条
         self.progressView.hidden = NO;
+        
         //进度值
         textItems.pictureProgress = 1.0 * receivedSize / expectedSize;
+        
         //显示进度值
         [self.progressView setProgress:textItems.pictureProgress animated:NO];
+        
     } completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
+        
+        //加载成功后隐藏进度条
         self.progressView.hidden = YES;
         
         //如果是大图片，才要进行绘图处理
@@ -76,6 +98,7 @@
         
         CGFloat wight = textItems.pictureF.size.width;
         CGFloat height = wight *image.size.height / image.size.width;
+        
         [image drawInRect:CGRectMake(0, 0, wight, height)];
         
         //获得图片
@@ -85,9 +108,8 @@
     }];
     
     //判断是否为GIF
-    NSString *extension = [textItems.image.download_url.firstObject pathExtension];
-    
-    self.gifView.hidden = ![extension.lowercaseString isEqualToString:@"gif"];
+
+    self.gifView.hidden = [textItems.type isEqualToString:@"image"];
     
     //判断是否显示“点击查看全图”
     if (textItems.isBigPicture) {//大图

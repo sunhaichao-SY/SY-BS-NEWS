@@ -23,7 +23,7 @@
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="common-gif" translatesAutoresizingMaskIntoConstraints="NO" id="ref-1y-5Il" userLabel="GIF">
                     <rect key="frame" x="0.0" y="0.0" width="31" height="31"/>
                 </imageView>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dxF-vK-o3t">
+                <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dxF-vK-o3t">
                     <rect key="frame" x="0.0" y="206" width="375" height="44"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="44" id="qmT-qB-vYg"/>

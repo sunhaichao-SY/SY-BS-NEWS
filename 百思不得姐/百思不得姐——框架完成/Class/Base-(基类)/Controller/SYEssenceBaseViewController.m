@@ -6,6 +6,8 @@
 //  Copyright © 2016年 码农界四爷__King. All rights reserved.
 //  最基本的帖子内容
 
+/****** 精华内容公共基类 ******/
+
 #import "SYEssenceBaseViewController.h"
 #import <AFNetworking/AFNetworking.h>
 #import "UIImageView+WebCache.h"
@@ -52,22 +54,32 @@ static NSString *const ID = @"cell";
 }
 - (void)setupNavigationStyles
 {
+    //设置内容的TableView的尺寸在滚动栏下
     self.tableView.contentInset = UIEdgeInsetsMake(64 + 35, 0, 49, 0);
-
+    //取消TableView的分隔栏
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+    
 //    self.tableView.showsVerticalScrollIndicator = NO;
+    //背景颜色
     self.view.backgroundColor = SYCommonBgColor;
     
+    //注册Xib
     [self.tableView registerNib:[UINib nibWithNibName:NSStringFromClass([SYWholeCell class]) bundle:nil] forCellReuseIdentifier:ID];
 }
 
+//添加刷新控件
 - (void)setupRefresh
 {
+    //下拉刷新
     self.tableView.mj_header = [MJRefreshNormalHeader headerWithRefreshingTarget:self refreshingAction:@selector(loadNewData)];
-    //自动改变透明度
+    
+    //根据下拉的距离提示符自动改变透明度
     self.tableView.mj_header.automaticallyChangeAlpha = YES;
+    
+    //当已进入页面时自动下拉刷新
     [self.tableView.mj_header beginRefreshing];
     
+    //上拉加载以前的数据
     self.tableView.mj_footer = [MJRefreshAutoNormalFooter footerWithRefreshingTarget:self refreshingAction:@selector(loadMoreData)];
     
     
@@ -77,19 +89,18 @@ static NSString *const ID = @"cell";
 //加载新的数据
 - (void)loadNewData
 {
+    //开始刷新
     [self.tableView.mj_footer endRefreshing];
     
-    
+    //设置请求方式
     AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
     
     NSMutableDictionary *params = [NSMutableDictionary dictionary];
-
     self.params = params;
 
     [manager GET:_URL parameters:params progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-       
-        [responseObject writeToFile:@"/Users/sunhaichao/Desktop/AD.plist" atomically:YES];
-        
+
+        [responseObject writeToFile:@"/Users/sunhaichao/Desktop/ALL.plist" atomically:YES];
         if (self.params != params) return;
         
         self.maxtime = responseObject[@"info"][@"maxtime"];
@@ -176,13 +187,6 @@ static NSString *const ID = @"cell";
     SYTextItem *textItem = self.textItems[indexPath.row];
     
     return textItem.cellHeight;
-}
-
-
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    
-    [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
 
 @end

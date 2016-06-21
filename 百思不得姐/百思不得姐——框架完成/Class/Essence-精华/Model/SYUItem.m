@@ -7,7 +7,12 @@
 //
 
 #import "SYUItem.h"
-
+#import <MJExtension/MJExtension.h>
 @implementation SYUItem
-
++ (NSDictionary *)mj_replacedKeyFromPropertyName
+{
+    return @{
+             @"GIFdownload_url" : @"download_url",
+             };
+}
 @end

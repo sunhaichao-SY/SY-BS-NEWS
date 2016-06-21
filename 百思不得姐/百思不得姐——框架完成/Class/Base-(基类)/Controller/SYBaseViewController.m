@@ -4,7 +4,10 @@
 //
 //  Created by 码农界四爷__King on 16/6/6.
 //  Copyright © 2016年 码农界四爷__King. All rights reserved.
-//  精华和最新控制器的基类，只要继承这个类就会有相同的效果
+//
+
+
+/****** 精华和最新控制器的基类，只要继承这个类就会有相同的效果 ******/
 
 #import "SYBaseViewController.h"
 
