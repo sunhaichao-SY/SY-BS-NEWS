@@ -10,7 +10,7 @@
 #import "SYEssenceBaseViewController.h"
 
 @interface SYCrossViewController ()
-
+@property (nonatomic,strong) SYEssenceBaseViewController *all;
 @end
 
 @implementation SYCrossViewController
@@ -41,6 +41,7 @@
     //全部
     SYEssenceBaseViewController *all = [[SYEssenceBaseViewController alloc]init];
     all.title = @"全部";
+    self.all = all;
     all.URL = SYThroughAllURL;
     [self addChildViewController:all];
     
@@ -71,7 +72,8 @@
 
 - (void)crossClick
 {
-    SYLogFunc
+    //http://d.api.budejie.com/topic/list/chuanyue/1/bs0315-iphone-4.2/0-20.json
+    
 }
 
 

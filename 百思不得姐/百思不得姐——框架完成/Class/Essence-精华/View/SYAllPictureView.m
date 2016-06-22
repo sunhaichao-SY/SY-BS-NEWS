@@ -13,6 +13,7 @@
 #import "SYShowPictureViewController.h"
 #import "SYUItem.h"
 #import "SYGIFItem.h"
+#import "SYVideoItem.h"
 @interface SYAllPictureView()
 //图片
 @property (weak, nonatomic) IBOutlet UIImageView *imageView;
@@ -51,13 +52,15 @@
     SYShowPictureViewController *showPicture = [[SYShowPictureViewController alloc]init];
     
     showPicture.textItem = self.textItems;
-    
+
     [[UIApplication sharedApplication].keyWindow.rootViewController presentViewController:showPicture animated:YES completion:nil];
 }
 
 - (void)setTextItems:(SYTextItem *)textItems
 {
     _textItems = textItems;
+    NSLog(@"---%@",textItems.type);
+
    
 
     //立马显示最新的进度值(防止因为网速慢，导致显示的是其他图片的下载进度，说白了就是进度条的循环引用)
@@ -67,9 +70,8 @@
     NSString *url;
     if ([self.textItems.type isEqualToString:@"image"]) {
         url = self.textItems.image.download_url.firstObject;
-      
     } else if ([self.textItems.type isEqualToString:@"gif"]) {
-    
+        url = self.textItems.gif.images.firstObject;
     }
     
     [self.imageView sd_setImageWithURL:[NSURL URLWithString:url]placeholderImage:nil options:0 progress:^(NSInteger receivedSize, NSInteger expectedSize) {

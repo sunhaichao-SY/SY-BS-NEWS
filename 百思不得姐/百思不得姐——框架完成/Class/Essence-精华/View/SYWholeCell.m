@@ -103,11 +103,13 @@ static CGFloat const margin = 10;
     //根据模型类型（帖子类型）添加对应的内容到cell的中间
 
     if ([textItems.type isEqualToString:@"image"]) {
-        //图片帖子
+        //image帖子
         self.pictureView.textItems = textItems;
         self.pictureView.frame = textItems.pictureF;
-    }else if ([textItems.type isEqualToString:@"voide"]){
-        //声音帖子
+    }else if ([textItems.type isEqualToString:@"gif"]){
+        //gif帖子
+        self.pictureView.textItems = textItems;
+        self.pictureView.frame = textItems.pictureF;
     }
     
     

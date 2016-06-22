@@ -6,9 +6,10 @@
 //  Copyright © 2016年 码农界四爷__King. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 
 @interface SYVideoItem : NSObject
+
 @property (nonatomic,strong) NSArray *download;
 @property (nonatomic,assign) NSInteger height;
 @property (nonatomic,assign) NSInteger width;

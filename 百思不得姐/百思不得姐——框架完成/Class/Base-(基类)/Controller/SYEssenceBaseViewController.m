@@ -100,7 +100,6 @@ static NSString *const ID = @"cell";
 
     [manager GET:_URL parameters:params progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
 
-        [responseObject writeToFile:@"/Users/sunhaichao/Desktop/ALL.plist" atomically:YES];
         if (self.params != params) return;
         
         self.maxtime = responseObject[@"info"][@"maxtime"];
