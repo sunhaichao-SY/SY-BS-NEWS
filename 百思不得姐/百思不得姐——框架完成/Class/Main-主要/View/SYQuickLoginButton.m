@@ -11,11 +11,24 @@
 @implementation SYQuickLoginButton
 - (void)awakeFromNib
 {
-    //设置字体居中
-    self.titleLabel.textAlignment = NSTextAlignmentCenter;
+    [self setup];
+    
 }
 
+- (instancetype)initWithFrame:(CGRect)frame
+{
+    self = [super initWithFrame:frame];
+    if (self) {
+        [self setup];
+    }
+    return self;
+}
 
+- (void)setup{
+    //设置字体居中
+    self.titleLabel.textAlignment = NSTextAlignmentCenter;
+
+}
 - (void)layoutSubviews
 {
     [super layoutSubviews];

@@ -110,6 +110,9 @@ static CGFloat const margin = 10;
         //gif帖子
         self.pictureView.textItems = textItems;
         self.pictureView.frame = textItems.pictureF;
+    }else if ([textItems.type isEqualToString:@"video"]){
+        self.pictureView.textItems = textItems;
+        self.pictureView.frame = textItems.pictureF;
     }
     
     

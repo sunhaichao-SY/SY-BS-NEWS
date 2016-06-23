@@ -36,6 +36,7 @@
 		4E46953B1CFDBDCF002CFAB7 /* LaunchImage@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4E4695341CFDBDCF002CFAB7 /* LaunchImage@2x.png */; };
 		4E46953E1CFDD5B1002CFAB7 /* SYADItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E46953D1CFDD5B1002CFAB7 /* SYADItem.m */; };
 		4E4C014F1CF14708003A509A /* SYLoginRegisterTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E4C014E1CF14708003A509A /* SYLoginRegisterTextField.m */; };
+		4E51BCC41D1B6D5000DA9A1E /* SYPublishViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4E51BCC31D1B6D5000DA9A1E /* SYPublishViewController.xib */; };
 		4E609DE91D1468F500C3A896 /* SYShowPictureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E609DE71D1468F500C3A896 /* SYShowPictureViewController.m */; };
 		4E609DEA1D1468F500C3A896 /* SYShowPictureViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4E609DE81D1468F500C3A896 /* SYShowPictureViewController.xib */; };
 		4E7269711D030FD40085A409 /* SYMeItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E7269701D030FD40085A409 /* SYMeItem.m */; };
@@ -145,6 +146,7 @@
 		4E46953D1CFDD5B1002CFAB7 /* SYADItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SYADItem.m; sourceTree = "<group>"; };
 		4E4C014D1CF14708003A509A /* SYLoginRegisterTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SYLoginRegisterTextField.h; sourceTree = "<group>"; };
 		4E4C014E1CF14708003A509A /* SYLoginRegisterTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SYLoginRegisterTextField.m; sourceTree = "<group>"; };
+		4E51BCC31D1B6D5000DA9A1E /* SYPublishViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SYPublishViewController.xib; sourceTree = "<group>"; };
 		4E609DE61D1468F500C3A896 /* SYShowPictureViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SYShowPictureViewController.h; sourceTree = "<group>"; };
 		4E609DE71D1468F500C3A896 /* SYShowPictureViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SYShowPictureViewController.m; sourceTree = "<group>"; };
 		4E609DE81D1468F500C3A896 /* SYShowPictureViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SYShowPictureViewController.xib; sourceTree = "<group>"; };
@@ -357,6 +359,7 @@
 			children = (
 				4E4695241CFDACE3002CFAB7 /* SYPublishViewController.h */,
 				4E4695251CFDACE3002CFAB7 /* SYPublishViewController.m */,
+				4E51BCC31D1B6D5000DA9A1E /* SYPublishViewController.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -916,6 +919,7 @@
 				4EA435A61D020A2C00EB1403 /* SYRecommendCell.xib in Resources */,
 				4E4695371CFDBDCF002CFAB7 /* LaunchImage-700@2x.png in Resources */,
 				4E2790FA1D02F31A00886ECA /* SYMeViewController.storyboard in Resources */,
+				4E51BCC41D1B6D5000DA9A1E /* SYPublishViewController.xib in Resources */,
 				4EDB5E211D0D8B3900DCF868 /* SYUserCell.xib in Resources */,
 				4E189A3D1D14519D001E45A1 /* SYAllPictureView.xib in Resources */,
 				4E33F4C71D046FC300988945 /* SYWebViewController.xib in Resources */,

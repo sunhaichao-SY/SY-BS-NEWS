@@ -55,7 +55,9 @@ static NSString *const ID = @"cell";
 - (void)setupNavigationStyles
 {
     //设置内容的TableView的尺寸在滚动栏下
-    self.tableView.contentInset = UIEdgeInsetsMake(64 + 35, 0, 49, 0);
+    self.tableView.contentInset = UIEdgeInsetsMake(64 + 35, 0, self.tabBarController.tabBar.sy_height, 0);
+    // 设置滚动条的内边距
+    self.tableView.scrollIndicatorInsets = self.tableView.contentInset;
     //取消TableView的分隔栏
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     
@@ -101,16 +103,16 @@ static NSString *const ID = @"cell";
     [manager GET:_URL parameters:params progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
 
         if (self.params != params) return;
-        
+        // 存储maxtime
         self.maxtime = responseObject[@"info"][@"maxtime"];
-      
+       // 字典 -> 模型
         self.textItems = [SYTextItem mj_objectArrayWithKeyValuesArray:responseObject[@"list"]];
         
-        
+        // 刷新表格
         [self.tableView reloadData];
-        
+        // 结束刷新
         [self.tableView.mj_header endRefreshing];
-        
+        // 清空页码
         self.page = 0;
         
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
@@ -129,7 +131,6 @@ static NSString *const ID = @"cell";
     
     AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
     NSMutableDictionary *paramas = [NSMutableDictionary dictionary];
-
     NSInteger page = self.page + 1;
     paramas[@"page"] = @(page);
     paramas[@"maxtime"] = self.maxtime;
