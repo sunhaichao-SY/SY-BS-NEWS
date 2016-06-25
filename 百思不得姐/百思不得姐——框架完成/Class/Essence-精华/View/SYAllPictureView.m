@@ -28,6 +28,7 @@
 
 @implementation SYAllPictureView
 
+//加载xib
 + (instancetype)pictureView
 {
     return [[[NSBundle mainBundle]loadNibNamed:NSStringFromClass( self) owner:nil options:kNilOptions] lastObject];
@@ -35,7 +36,6 @@
 
 - (void)awakeFromNib
 {
-    
     //设置图片可以与用户交互
     self.imageView.userInteractionEnabled = YES;
     
@@ -53,7 +53,7 @@
     SYShowPictureViewController *showPicture = [[SYShowPictureViewController alloc]init];
     
     showPicture.textItem = self.textItems;
-
+//用主窗口调用
     [[UIApplication sharedApplication].keyWindow.rootViewController presentViewController:showPicture animated:YES completion:nil];
 }
 

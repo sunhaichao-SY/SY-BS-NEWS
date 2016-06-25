@@ -56,10 +56,12 @@
 {
     _textItem = textItem;
     
+    //加载图片
     [self.iconView sd_setImageWithURL:[NSURL URLWithString:textItem.audio.download_url.firstObject]];
     
+    //播放次数
     self.playCountLabel.text = [NSString stringWithFormat:@"%zd播放",textItem.audio.playcount];
-    
+    //设置时间格式
     NSInteger min = textItem.audio.duration / 60;
     NSInteger sec = textItem.audio.duration % 60;
     self.timeLabel.text = [NSString stringWithFormat:@"%02zd:%02zd",min,sec];

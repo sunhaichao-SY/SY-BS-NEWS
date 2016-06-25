@@ -58,7 +58,7 @@ static CGFloat const margin = 10;
 @end
 @implementation SYWholeCell
 
-
+//图片Cell懒加载
 - (SYAllPictureView *)pictureView
 {
     if (_pictureView == nil) {
@@ -69,6 +69,7 @@ static CGFloat const margin = 10;
     return _pictureView;
 }
 
+//声音Cell懒加载
 - (SYSoundsView *)soundsView
 {
     if (_soundsView == nil) {
@@ -79,6 +80,7 @@ static CGFloat const margin = 10;
     return _soundsView;
 }
 
+//视频Cell懒加载
 - (SYVideoView *)videoView
 {
     if (_videoView == nil) {
@@ -89,8 +91,10 @@ static CGFloat const margin = 10;
     return _videoView;
 }
 
+
 - (void)awakeFromNib {
     
+    //每个Cell的背景图片
     UIImageView *bgImage = [[UIImageView alloc]init];
     bgImage.image = [UIImage imageNamed:@"mainCellBackground"];
     self.backgroundView = bgImage;
@@ -101,9 +105,11 @@ static CGFloat const margin = 10;
     self.layer.masksToBounds = YES;
      */
     
+    //头像转变成圆形
     self.iconView.layer.cornerRadius = (self.iconView.sy_width * 0.5);
     self.iconView.layer.masksToBounds = YES;
     
+    //自动调整子控件与父控件中间的位置，宽高.UIViewAutoresizingNone的意思是不自动调整。
     self.autoresizingMask = UIViewAutoresizingNone;
   
 }
@@ -124,7 +130,7 @@ static CGFloat const margin = 10;
     // 设置帖子的文字内容
     self.textContent.text = textItems.text;
     
-    //vip
+    //判断是否是Vip
     if (textItems.u.is_v) {
         self.XLVip.hidden = NO;
     }else{
@@ -135,27 +141,42 @@ static CGFloat const margin = 10;
 
     if ([textItems.type isEqualToString:@"image"]) {
         //image帖子
+        //必须设置自己hidden为No，否则cell的循环利用可能会出现到自己的时候不显示的问题
+        self.pictureView.hidden = NO;
         self.pictureView.textItems = textItems;
         self.pictureView.frame = textItems.pictureF;
+        //当显示自己的时候要隐藏其他类型的数据
         self.videoView.hidden = YES;
         self.soundsView.hidden = YES;
     }else if ([textItems.type isEqualToString:@"gif"]){
         //gif帖子
+        //必须设置自己hidden为No，否则cell的循环利用可能会出现到自己的时候不显示的问题
+        self.pictureView.hidden = NO;
         self.pictureView.textItems = textItems;
         self.pictureView.frame = textItems.pictureF;
+        //当显示自己的时候要隐藏其他类型的数据
         self.videoView.hidden = YES;
         self.soundsView.hidden = YES;
     }else if ([textItems.type isEqualToString:@"video"]){
+        //video帖子
+        //必须设置自己hidden为No，否则cell的循环利用可能会出现到自己的时候不显示的问题
+        self.videoView.hidden = NO;
         self.videoView.textItem = textItems;
         self.videoView.frame = textItems.videoF;
+        //当显示自己的时候要隐藏其他类型的数据
         self.pictureView.hidden =YES;
         self.soundsView.hidden =YES;
     }else if ([textItems.type isEqualToString:@"audio"]){
+        //audio帖子
+        //必须设置自己hidden为No，否则cell的循环利用可能会出现到自己的时候不显示的问题
+        self.soundsView.hidden = NO;
         self.soundsView.textItem = textItems;
         self.soundsView.frame = textItems.soundF;
+        //当显示自己的时候要隐藏其他类型的数据
         self.pictureView.hidden =YES;
         self.videoView.hidden = YES;
     }else{
+        //text帖子
         self.pictureView.hidden = YES;
         self.soundsView.hidden = YES;
         self.videoView.hidden = YES;
@@ -168,6 +189,7 @@ static CGFloat const margin = 10;
     [self setupButtonTitle:self.commentView count:textItems.comment placeholder:@"评论"];
 }
 
+//抽取公共方法判断赞、评论等
 - (void)setupButtonTitle:(UIButton *)button count:(NSInteger)count placeholder:(NSString *)placeholder
 {
     if (count > 10000) {
@@ -194,14 +216,14 @@ static CGFloat const margin = 10;
     
 }
 
+//设置Cell之间的距离
 - (void)setFrame:(CGRect)frame
 {
- 
 //    frame.origin.x = margin;
 //    frame.size.width -= 2 * margin;
     frame.size.height -= margin;
     frame.origin.y += margin;
-    
+    //必须下载后面否则无效
     [super setFrame:frame];
 }
 
