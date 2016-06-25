@@ -61,6 +61,7 @@
 
 //视频空间的frame
 @property (nonatomic,assign,readonly) CGRect videoF;
+
 //图片是否太大
 @property (nonatomic,assign,getter=isBigPicture) BOOL bigPicture;
 

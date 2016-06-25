@@ -34,7 +34,7 @@
 
         //cell的高度
         //段子的高度
-        _cellHeight = 40 + 2 * margin + textH;
+        _cellHeight = 30 + 2 * margin + textH;
 
        /******** 图片的cell ********/
 

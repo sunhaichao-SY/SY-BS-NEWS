@@ -86,6 +86,8 @@
 		4EF442481D1E7E5500696FDE /* SYSoundsView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EF442471D1E7E5500696FDE /* SYSoundsView.m */; };
 		4EF4424A1D1E7E6500696FDE /* SYSoundsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4EF442491D1E7E6500696FDE /* SYSoundsView.xib */; };
 		4EF4424D1D1E811400696FDE /* SYAudioItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EF4424C1D1E811400696FDE /* SYAudioItem.m */; };
+		4EF442501D1E930400696FDE /* SYVideoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EF4424F1D1E930400696FDE /* SYVideoView.m */; };
+		4EF442521D1E931000696FDE /* SYVideoView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4EF442511D1E931000696FDE /* SYVideoView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -239,6 +241,9 @@
 		4EF442491D1E7E6500696FDE /* SYSoundsView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SYSoundsView.xib; sourceTree = "<group>"; };
 		4EF4424B1D1E811400696FDE /* SYAudioItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SYAudioItem.h; sourceTree = "<group>"; };
 		4EF4424C1D1E811400696FDE /* SYAudioItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SYAudioItem.m; sourceTree = "<group>"; };
+		4EF4424E1D1E930400696FDE /* SYVideoView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SYVideoView.h; sourceTree = "<group>"; };
+		4EF4424F1D1E930400696FDE /* SYVideoView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SYVideoView.m; sourceTree = "<group>"; };
+		4EF442511D1E931000696FDE /* SYVideoView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SYVideoView.xib; sourceTree = "<group>"; };
 		5541E37ED1144A81B5C75DA1 /* Pods-百思不得姐——框架完成.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-百思不得姐——框架完成.release.xcconfig"; path = "Pods/Target Support Files/Pods-百思不得姐——框架完成/Pods-百思不得姐——框架完成.release.xcconfig"; sourceTree = "<group>"; };
 		B1FE39090441D9484C7ECB12 /* Pods-百思不得姐——框架完成.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-百思不得姐——框架完成.debug.xcconfig"; path = "Pods/Target Support Files/Pods-百思不得姐——框架完成/Pods-百思不得姐——框架完成.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -313,6 +318,9 @@
 				4EF442461D1E7E5500696FDE /* SYSoundsView.h */,
 				4EF442471D1E7E5500696FDE /* SYSoundsView.m */,
 				4EF442491D1E7E6500696FDE /* SYSoundsView.xib */,
+				4EF4424E1D1E930400696FDE /* SYVideoView.h */,
+				4EF4424F1D1E930400696FDE /* SYVideoView.m */,
+				4EF442511D1E931000696FDE /* SYVideoView.xib */,
 				4E189A3E1D14569E001E45A1 /* SYProgressView.h */,
 				4E189A3F1D14569E001E45A1 /* SYProgressView.m */,
 			);
@@ -924,6 +932,7 @@
 				4E461F851D094B850096D73C /* SYWholeCell.xib in Resources */,
 				4E4695351CFDBDCF002CFAB7 /* LaunchImage-568h@2x.png in Resources */,
 				4E4695391CFDBDCF002CFAB7 /* LaunchImage-800-Portrait-736h@3x.png in Resources */,
+				4EF442521D1E931000696FDE /* SYVideoView.xib in Resources */,
 				4E9C50C61CE9F5A6004505C3 /* Assets.xcassets in Resources */,
 				4E46953B1CFDBDCF002CFAB7 /* LaunchImage@2x.png in Resources */,
 				4EDB5E111D0D649000DCF868 /* SYRecommendViewController.xib in Resources */,
@@ -1053,6 +1062,7 @@
 				4EF2BBEC1D0559B700982A04 /* SYStarViewController.m in Sources */,
 				4E9C511B1CE9FEC2004505C3 /* SYMeViewController.m in Sources */,
 				4EF2BBEF1D055A8800982A04 /* SYCrossViewController.m in Sources */,
+				4EF442501D1E930400696FDE /* SYVideoView.m in Sources */,
 				4EC8EFA61D1867BC00F3CDD0 /* SYGIFItem.m in Sources */,
 				4E7F8AF01D05C0FF00B2E727 /* SYBaseViewController.m in Sources */,
 				4E189A3B1D14518F001E45A1 /* SYAllPictureView.m in Sources */,

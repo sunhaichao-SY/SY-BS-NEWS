@@ -10,6 +10,7 @@
 #import "SYTextItem.h"
 #import "UIImageView+WebCache.h"
 #import "SYAllPictureView.h"
+#import "SYVideoView.h"
 #import "SYSoundsView.h"
 #import "SYUItem.h"
 #import "SYGIFItem.h"
@@ -49,8 +50,14 @@ static CGFloat const margin = 10;
 //帖子中间音频的内容
 @property (nonatomic,weak) SYSoundsView *soundsView;
 
+//帖子中间视频的内容
+@property (nonatomic,weak) SYVideoView *videoView;
+
+
+
 @end
 @implementation SYWholeCell
+
 
 - (SYAllPictureView *)pictureView
 {
@@ -65,12 +72,23 @@ static CGFloat const margin = 10;
 - (SYSoundsView *)soundsView
 {
     if (_soundsView == nil) {
-        SYSoundsView *pictureView = [SYSoundsView audioView];
-        [self.contentView addSubview:pictureView];
-        _soundsView = pictureView;
+        SYSoundsView *soundsView = [SYSoundsView audioView];
+        [self.contentView addSubview:soundsView];
+        _soundsView = soundsView;
     }
     return _soundsView;
 }
+
+- (SYVideoView *)videoView
+{
+    if (_videoView == nil) {
+        SYVideoView *videoView = [SYVideoView videoView];
+        [self.contentView addSubview:videoView];
+        _videoView = videoView;
+    }
+    return _videoView;
+}
+
 - (void)awakeFromNib {
     
     UIImageView *bgImage = [[UIImageView alloc]init];
@@ -119,16 +137,28 @@ static CGFloat const margin = 10;
         //image帖子
         self.pictureView.textItems = textItems;
         self.pictureView.frame = textItems.pictureF;
+        self.videoView.hidden = YES;
+        self.soundsView.hidden = YES;
     }else if ([textItems.type isEqualToString:@"gif"]){
         //gif帖子
         self.pictureView.textItems = textItems;
         self.pictureView.frame = textItems.pictureF;
+        self.videoView.hidden = YES;
+        self.soundsView.hidden = YES;
     }else if ([textItems.type isEqualToString:@"video"]){
-      
-        
+        self.videoView.textItem = textItems;
+        self.videoView.frame = textItems.videoF;
+        self.pictureView.hidden =YES;
+        self.soundsView.hidden =YES;
     }else if ([textItems.type isEqualToString:@"audio"]){
         self.soundsView.textItem = textItems;
         self.soundsView.frame = textItems.soundF;
+        self.pictureView.hidden =YES;
+        self.videoView.hidden = YES;
+    }else{
+        self.pictureView.hidden = YES;
+        self.soundsView.hidden = YES;
+        self.videoView.hidden = YES;
     }
     
           //设置按钮文字

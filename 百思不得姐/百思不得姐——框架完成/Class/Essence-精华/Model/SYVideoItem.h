@@ -15,4 +15,6 @@
 @property (nonatomic,assign) NSInteger width;
 @property (nonatomic,assign) NSInteger playcount;
 @property (nonatomic,strong) NSArray *video;
+@property (nonatomic,assign) NSInteger duration;
+@property (nonatomic,strong) NSArray *thumbnail;
 @end
