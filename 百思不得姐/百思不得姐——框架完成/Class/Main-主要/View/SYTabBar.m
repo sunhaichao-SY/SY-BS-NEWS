@@ -37,7 +37,8 @@
     CGFloat height = self.sy_height;
     
     // 设置发布按钮的frame
-    _publishButton.center = CGPointMake(width * 0.5, height * 0.5);
+    _publishButton.center = CGPointMake(width * 0.5, height * 0.5 + 2);
+
     _publishButton.sy_height = height;
     _publishButton.sy_width = width;
     // 设置其他UITabBarButton的frame
