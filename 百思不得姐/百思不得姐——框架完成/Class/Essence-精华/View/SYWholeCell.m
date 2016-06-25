@@ -73,7 +73,7 @@ static CGFloat const margin = 10;
     self.iconView.layer.cornerRadius = (self.iconView.sy_width * 0.5);
     self.iconView.layer.masksToBounds = YES;
     
-   
+    self.autoresizingMask = UIViewAutoresizingNone;
   
 }
 

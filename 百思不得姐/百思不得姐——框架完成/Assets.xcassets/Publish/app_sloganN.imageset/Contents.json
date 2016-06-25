@@ -2,12 +2,12 @@
   "images" : [
     {
       "idiom" : "iphone",
-      "filename" : "app_slogan~iphone.png",
+      "filename" : "app_sloganN~iphone.png",
       "scale" : "1x"
     },
     {
       "idiom" : "iphone",
-      "filename" : "app_slogan~iphone@2x.png",
+      "filename" : "app_sloganN~iphone@2x.png",
       "scale" : "2x"
     },
     {

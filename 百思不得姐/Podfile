@@ -8,6 +8,7 @@ target ‘百思不得姐——框架完成’ do
     pod 'SVProgressHUD'
     pod 'MJRefresh'
     pod 'DACircularProgress'
+    pod 'pop'
     
 end
 

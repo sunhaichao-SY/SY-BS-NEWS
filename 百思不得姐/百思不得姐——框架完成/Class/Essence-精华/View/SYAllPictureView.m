@@ -36,13 +36,15 @@
 
 - (void)awakeFromNib
 {
-    self.autoresizingMask = UIViewAutoresizingNone;
     
     //设置图片可以与用户交互
     self.imageView.userInteractionEnabled = YES;
     
     //给图片添加点击手势
     [self.imageView addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(showPicture)]];
+    
+    self.autoresizingMask = UIViewAutoresizingNone;
+
 }
 
 
@@ -59,10 +61,7 @@
 - (void)setTextItems:(SYTextItem *)textItems
 {
     _textItems = textItems;
-    NSLog(@"---%@",textItems.type);
-
-   
-
+ 
     //立马显示最新的进度值(防止因为网速慢，导致显示的是其他图片的下载进度，说白了就是进度条的循环引用)
     [self.progressView setProgress:textItems.pictureProgress animated:NO];
     

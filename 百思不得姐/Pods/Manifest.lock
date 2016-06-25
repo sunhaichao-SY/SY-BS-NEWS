@@ -17,6 +17,7 @@ PODS:
   - DACircularProgress (2.3.1)
   - MJExtension (3.0.10)
   - MJRefresh (3.1.7)
+  - pop (1.0.9)
   - SDWebImage (3.8.1):
     - SDWebImage/Core (= 3.8.1)
   - SDWebImage/Core (3.8.1)
@@ -27,6 +28,7 @@ DEPENDENCIES:
   - DACircularProgress
   - MJExtension
   - MJRefresh
+  - pop
   - SDWebImage
   - SVProgressHUD
 
@@ -35,9 +37,10 @@ SPEC CHECKSUMS:
   DACircularProgress: 4dd437c0fc3da5161cb289e07ac449493d41db71
   MJExtension: d86aacb740c87519d20e3cca55b6fa4be6cc7548
   MJRefresh: f67f0750d57a4e4ae433da549359ca53b52cdc7d
+  pop: f667631a5108a2e60d9e8797c9b32ddaf2080bce
   SDWebImage: 35f9627a3e44b4f292a8a8ce6a531fa488239b91
   SVProgressHUD: b0830714205bea1317ea1a2ebc71e5633af334d4
 
-PODFILE CHECKSUM: 14a71141637cb3154c54991f980d93106bff595d
+PODFILE CHECKSUM: 914135f2c268ae62fd81598aae90f5ea600bb3f2
 
 COCOAPODS: 1.0.0
