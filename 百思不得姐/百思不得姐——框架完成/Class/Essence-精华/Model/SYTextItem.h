@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@class SYUItem,SYGIFItem,SYVideoItem;
+@class SYUItem,SYGIFItem,SYVideoItem,SYAudioItem;
 
 @interface SYTextItem : NSObject
 
@@ -46,14 +46,21 @@
 //video
 @property (nonatomic,strong) SYVideoItem *video;
 
+//audio
+@property (nonatomic,strong) SYAudioItem *audio;
 /*********** 额外的辅助属性 ***********/
 
 //cell的高度
 @property (nonatomic,assign,readonly) CGFloat cellHeight;
 
-//图片空间的frame
+//图片控件的frame
 @property (nonatomic,assign,readonly) CGRect pictureF;
 
+//声音控件的frame
+@property (nonatomic, assign, readonly) CGRect soundF;
+
+//视频空间的frame
+@property (nonatomic,assign,readonly) CGRect videoF;
 //图片是否太大
 @property (nonatomic,assign,getter=isBigPicture) BOOL bigPicture;
 

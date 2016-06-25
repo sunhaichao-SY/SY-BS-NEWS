@@ -13,7 +13,6 @@
 #import "SYShowPictureViewController.h"
 #import "SYUItem.h"
 #import "SYGIFItem.h"
-#import "SYVideoItem.h"
 @interface SYAllPictureView()
 //图片
 @property (weak, nonatomic) IBOutlet UIImageView *imageView;

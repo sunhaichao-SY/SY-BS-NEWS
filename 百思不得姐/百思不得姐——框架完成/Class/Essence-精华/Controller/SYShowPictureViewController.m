@@ -13,6 +13,7 @@
 #import "UIImageView+WebCache.h"
 #import "SYUItem.h"
 #import "SYGIFItem.h"
+#import "SYAudioItem.h"
 
 @interface SYShowPictureViewController ()
 @property (weak, nonatomic) IBOutlet SYProgressView *progressView;
@@ -25,10 +26,6 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
-    
-    //屏幕尺寸
-    CGFloat screenH = [UIScreen mainScreen].bounds.size.height;
-    CGFloat screenW = [UIScreen mainScreen].bounds.size.width;
     
     //添加图片
     UIImageView *imageView = [[UIImageView alloc]init];
@@ -43,21 +40,23 @@
     self.imageView = imageView;
     
     //图片尺寸
-    CGFloat pictureW = screenW;
+    CGFloat pictureW = SYScreenW;
     CGFloat pictureH;
     if ([_textItem.type isEqualToString:@"image"]) {
         pictureH = pictureW * self.textItem.image.height / self.textItem.image.width;
     }else if ([_textItem.type isEqualToString:@"gif"]){
         pictureH = pictureW * self.textItem.gif.height / self.textItem.gif.width;
+    }else if ([_textItem.type isEqualToString:@"audio"]){
+        pictureH = pictureW * self.textItem.audio.height / self.textItem.audio.width;
     }
     
-    if (pictureH > screenW) {//图片显示的高度超过一个屏幕，需要滚动查看
+    if (pictureH > SYScreenH) {//图片显示的高度超过一个屏幕，需要滚动查看
         imageView.frame = CGRectMake(0, 0, pictureW, pictureH);
         self.scrollView.contentSize = CGSizeMake(0, pictureH);
     }else
     {
         imageView.sy_size = CGSizeMake(pictureW, pictureH);
-        imageView.sy_centerY = screenH * 0.5;
+        imageView.sy_centerY = SYScreenH * 0.5;
     }
     
     //马上显示当前图片的下载进度
@@ -69,7 +68,10 @@
         url = self.textItem.image.download_url.firstObject;
     }else if ([_textItem.type isEqualToString:@"gif"]){
         url = self.textItem.gif.images.firstObject;
+    }else if ([_textItem.type isEqualToString:@"audio"]){
+        url = self.textItem.audio.download_url.firstObject;
     }
+    
     [imageView sd_setImageWithURL:[NSURL URLWithString:url] placeholderImage:nil options:0 progress:^(NSInteger receivedSize, NSInteger expectedSize) {
         [self.progressView setProgress:1.0 * receivedSize / expectedSize animated:NO];
     } completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {

@@ -11,11 +11,11 @@
 #import "SYUItem.h"
 #import "SYGIFItem.h"
 #import "SYVideoItem.h"
+#import "SYAudioItem.h"
 
 @implementation SYTextItem
 {
     CGFloat _cellHeight;
-    CGRect _pictureF;
 }
 
 
@@ -33,7 +33,7 @@
         CGFloat textH = [self.text boundingRectWithSize:maxSize options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName : [UIFont systemFontOfSize:18]} context:nil].size.height;
 
         //cell的高度
-        //段子部分的高度
+        //段子的高度
         _cellHeight = 40 + 2 * margin + textH;
 
        /******** 图片的cell ********/
@@ -85,9 +85,24 @@
             
             CGFloat videoX = 10;
             CGFloat videoY =textH + 50 + 10;
-            _pictureF = CGRectMake(videoX, videoY, videoW, videoH);
+            _videoF = CGRectMake(videoX, videoY, videoW, videoH);
             
             _cellHeight += videoH + 10;
+        }else if ([self.type isEqualToString:@"audio"]){
+            
+            CGFloat audioW = maxSize.width;
+            
+            CGFloat H = self.audio.height;
+            CGFloat W = self.audio.width;
+            
+            CGFloat audioH = audioW * H / W;
+            
+            CGFloat audioX = 10;
+            CGFloat audioY = textH + 50 + 10;
+            _soundF = CGRectMake(audioX, audioY, audioW, audioH);
+            
+            _cellHeight += audioH + 20;
+
         }
         
         //底部工具条

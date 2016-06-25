@@ -107,7 +107,7 @@ static NSString *const ID = @"cell";
         self.maxtime = responseObject[@"info"][@"maxtime"];
        // 字典 -> 模型
         self.textItems = [SYTextItem mj_objectArrayWithKeyValuesArray:responseObject[@"list"]];
-        
+//        [responseObject writeToFile:@"/Users/sunhaichao/Desktop/SY.plist" atomically:YES];
         // 刷新表格
         [self.tableView reloadData];
         // 结束刷新

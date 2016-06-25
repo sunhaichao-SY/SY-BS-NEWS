@@ -10,6 +10,7 @@
 #import "SYTextItem.h"
 #import "UIImageView+WebCache.h"
 #import "SYAllPictureView.h"
+#import "SYSoundsView.h"
 #import "SYUItem.h"
 #import "SYGIFItem.h"
 
@@ -42,8 +43,11 @@ static CGFloat const margin = 10;
 //vip
 @property (weak, nonatomic) IBOutlet UIImageView *XLVip;
 
-//帖子中间的内容
+//帖子中间图片内容
 @property (nonatomic,weak) SYAllPictureView *pictureView;
+
+//帖子中间音频的内容
+@property (nonatomic,weak) SYSoundsView *soundsView;
 
 @end
 @implementation SYWholeCell
@@ -58,6 +62,15 @@ static CGFloat const margin = 10;
     return _pictureView;
 }
 
+- (SYSoundsView *)soundsView
+{
+    if (_soundsView == nil) {
+        SYSoundsView *pictureView = [SYSoundsView audioView];
+        [self.contentView addSubview:pictureView];
+        _soundsView = pictureView;
+    }
+    return _soundsView;
+}
 - (void)awakeFromNib {
     
     UIImageView *bgImage = [[UIImageView alloc]init];
@@ -100,7 +113,7 @@ static CGFloat const margin = 10;
         self.XLVip.hidden = YES;
     }
     
-    //根据模型类型（帖子类型）添加对应的内容到cell的中间
+/******** 根据帖子类型添加对应的内容到cell的中间 ********/
 
     if ([textItems.type isEqualToString:@"image"]) {
         //image帖子
@@ -111,20 +124,14 @@ static CGFloat const margin = 10;
         self.pictureView.textItems = textItems;
         self.pictureView.frame = textItems.pictureF;
     }else if ([textItems.type isEqualToString:@"video"]){
-        self.pictureView.textItems = textItems;
-        self.pictureView.frame = textItems.pictureF;
+      
+        
+    }else if ([textItems.type isEqualToString:@"audio"]){
+        self.soundsView.textItem = textItems;
+        self.soundsView.frame = textItems.soundF;
     }
     
-    
-    
-  
-    
-    
-    
-    
-    
-    
-      //设置按钮文字
+          //设置按钮文字
     [self setupButtonTitle:self.zanView count:textItems.up placeholder:@"顶"];
     [self setupButtonTitle:self.caiView count:textItems.down placeholder:@"踩"];
     [self setupButtonTitle:self.shareView count:textItems.forward placeholder:@"分享"];
