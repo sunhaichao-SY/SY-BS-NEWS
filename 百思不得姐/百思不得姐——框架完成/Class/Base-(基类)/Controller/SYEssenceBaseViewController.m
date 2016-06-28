@@ -16,7 +16,10 @@
 #import <MJRefresh/MJRefresh.h>
 #import "SYWholeCell.h"
 
+#define SYBSURL @"http://api.budejie.com/api/api_open.php?a=dataList&c=comment"
+
 static NSString *const ID = @"cell";
+
 
 @interface SYEssenceBaseViewController ()
 //帖子数据
@@ -24,7 +27,7 @@ static NSString *const ID = @"cell";
 //当前页码
 @property (nonatomic,assign) NSInteger page;
 //当加载下一页数据是需要这个参数
-@property (nonatomic,copy) NSString *maxtime;
+@property (nonatomic,copy) NSNumber *np;
 //上一次请求
 @property (nonatomic,strong) NSDictionary *params;
 
@@ -103,8 +106,8 @@ static NSString *const ID = @"cell";
     [manager GET:_URL parameters:params progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
 
         if (self.params != params) return;
-        // 存储maxtime
-        self.maxtime = responseObject[@"info"][@"maxtime"];
+        // 存储np
+        self.np = responseObject[@"info"][@"np"];
        // 字典 -> 模型
         self.textItems = [SYTextItem mj_objectArrayWithKeyValuesArray:responseObject[@"list"]];
 //        [responseObject writeToFile:@"/Users/sunhaichao/Desktop/SY.plist" atomically:YES];
@@ -133,14 +136,31 @@ static NSString *const ID = @"cell";
     NSMutableDictionary *paramas = [NSMutableDictionary dictionary];
     NSInteger page = self.page + 1;
     paramas[@"page"] = @(page);
-    paramas[@"maxtime"] = self.maxtime;
+    paramas[@"np"] = self.np;
     self.params = paramas;
     
+/*
+ 一直头痛的Bug总结
+ 因为这个项目的URL都是通过青花瓷抓取下来的，所以URL的格式有所不同，这个时候就需要仔细观察，看看URL之间有没有联系，或者有没有相同的地方。
+ 经过仔细对比和通过不同的抓取URL会发现在这个URL中改变数据的内容是通过-20之前那串数字，所以这个时候就可以运用字符串的拼接，首先截距变化前的内容然后在截取后面的内容，把中间改变的数值通过变量传进去，最后进行拼接即可。
+ 示例：
+ http://d.api.budejie.com/topic/list/chuanyue/31/bs0315-iphone-4.2/0-20.json
+ 
+ 首先截取数字串到4.2/
+ 然后中间0属于变量，即通过 paramas[@"np"] 传入
+ 最后-20.json 属于共有的，所以最后拼接上即可
+ */
+    NSRange range = [_URL rangeOfString:@"4.2/"];
+    NSString *preUrl = [_URL substringToIndex:range.location + 4];
+    NSString *lastUrl = @"-20.json";
     
-    [manager GET:_URL parameters:paramas progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+    NSString *url = [NSString stringWithFormat:@"%@%@%@",preUrl,self.np,lastUrl];
+  
+    
+    [manager GET:url parameters:paramas progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         if (self.params != paramas) return;
-        
-        self.maxtime = responseObject[@"info"][@"maxtime"];
+    
+        self.np = responseObject[@"info"][@"np"];
         
         NSArray *newTopics = [SYTextItem mj_objectArrayWithKeyValuesArray:responseObject[@"list"]];
         

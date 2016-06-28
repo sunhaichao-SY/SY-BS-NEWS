@@ -60,7 +60,7 @@
 #define SYNewAllURL @"http://s.budejie.com/topic/list/zuixin/1/bs0315-iphone-4.2/0-20.json"
 
 //视频
-#define SYNewVideoURL @"http:http://s.budejie.com/topic/list/zuixin/41/bs0315-iphone-4.2/0-20.json"
+#define SYNewVideoURL @"http://s.budejie.com/topic/list/zuixin/41/bs0315-iphone-4.2/0-20.json"
 
 //图片
 #define SYNewPictureURL @"http://s.budejie.com/topic/list/zuixin/10/bs0315-iphone-4.2/0-20.json"

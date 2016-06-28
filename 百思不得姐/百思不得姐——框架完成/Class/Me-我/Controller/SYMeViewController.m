@@ -213,21 +213,3 @@ static NSString *const ID = @"cell";
 
 @end
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
