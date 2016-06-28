@@ -8,6 +8,8 @@
 
 #import "SYCrossViewController.h"
 #import "SYEssenceBaseViewController.h"
+#import <MJRefresh/MJRefresh.h>
+
 
 @interface SYCrossViewController ()
 @property (nonatomic,strong) SYEssenceBaseViewController *all;
@@ -72,8 +74,7 @@
 
 - (void)crossClick
 {
-    //http://d.api.budejie.com/topic/list/chuanyue/1/bs0315-iphone-4.2/0-20.json
-    
+
 }
 
 
