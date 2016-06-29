@@ -98,7 +98,10 @@ static CGFloat const margin = 10;
     return _videoView;
 }
 
-
++ (instancetype)WholeCell
+{
+    return [[[NSBundle mainBundle] loadNibNamed:NSStringFromClass(self) owner:nil options:nil] lastObject];
+}
 - (void)awakeFromNib {
     
     //每个Cell的背景图片
@@ -236,7 +239,7 @@ static CGFloat const margin = 10;
 {
 //    frame.origin.x = margin;
 //    frame.size.width -= 2 * margin;
-    frame.size.height -= margin;
+    frame.size.height = self.textItems.cellHeight - margin;
     frame.origin.y += margin;
     //必须下载后面否则无效
     [super setFrame:frame];

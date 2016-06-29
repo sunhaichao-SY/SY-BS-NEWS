@@ -67,6 +67,8 @@
 		4EA435BC1D020BEA00EB1403 /* SYSettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EA435B91D020BEA00EB1403 /* SYSettingViewController.m */; };
 		4EA725251D0322530044E472 /* SYMeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EA725231D0322530044E472 /* SYMeCell.m */; };
 		4EA725261D0322530044E472 /* SYMeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4EA725241D0322530044E472 /* SYMeCell.xib */; };
+		4EBD1C0E1D24210400F97230 /* SYCommentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EBD1C0C1D24210400F97230 /* SYCommentViewController.m */; };
+		4EBD1C0F1D24210400F97230 /* SYCommentViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4EBD1C0D1D24210400F97230 /* SYCommentViewController.xib */; };
 		4EC8EFA61D1867BC00F3CDD0 /* SYGIFItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EC8EFA51D1867BC00F3CDD0 /* SYGIFItem.m */; };
 		4ED367081D16F0E8005EEC55 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4ED367071D16F0E8005EEC55 /* QuartzCore.framework */; };
 		4ED53F271D171A0A00CBB9F7 /* Reveal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E36E6051D1189510044E87F /* Reveal.framework */; };
@@ -211,6 +213,9 @@
 		4EA725231D0322530044E472 /* SYMeCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SYMeCell.m; path = "百思不得姐——框架完成/Class/Me-我/Controller/SYMeCell.m"; sourceTree = SOURCE_ROOT; };
 		4EA725241D0322530044E472 /* SYMeCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = SYMeCell.xib; path = "百思不得姐——框架完成/Class/Me-我/Controller/SYMeCell.xib"; sourceTree = SOURCE_ROOT; };
 		4EAF47DF1D1041C000A3C087 /* SYAllSectionURL.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SYAllSectionURL.h; sourceTree = "<group>"; };
+		4EBD1C0B1D24210400F97230 /* SYCommentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SYCommentViewController.h; sourceTree = "<group>"; };
+		4EBD1C0C1D24210400F97230 /* SYCommentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SYCommentViewController.m; sourceTree = "<group>"; };
+		4EBD1C0D1D24210400F97230 /* SYCommentViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SYCommentViewController.xib; sourceTree = "<group>"; };
 		4EC8EFA41D1867BC00F3CDD0 /* SYGIFItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SYGIFItem.h; sourceTree = "<group>"; };
 		4EC8EFA51D1867BC00F3CDD0 /* SYGIFItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SYGIFItem.m; sourceTree = "<group>"; };
 		4ED367071D16F0E8005EEC55 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
@@ -515,6 +520,9 @@
 				4E609DE61D1468F500C3A896 /* SYShowPictureViewController.h */,
 				4E609DE71D1468F500C3A896 /* SYShowPictureViewController.m */,
 				4E609DE81D1468F500C3A896 /* SYShowPictureViewController.xib */,
+				4EBD1C0B1D24210400F97230 /* SYCommentViewController.h */,
+				4EBD1C0C1D24210400F97230 /* SYCommentViewController.m */,
+				4EBD1C0D1D24210400F97230 /* SYCommentViewController.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -949,6 +957,7 @@
 				4E51BCC41D1B6D5000DA9A1E /* SYPublishViewController.xib in Resources */,
 				4EDB5E211D0D8B3900DCF868 /* SYUserCell.xib in Resources */,
 				4E189A3D1D14519D001E45A1 /* SYAllPictureView.xib in Resources */,
+				4EBD1C0F1D24210400F97230 /* SYCommentViewController.xib in Resources */,
 				4EF4424A1D1E7E6500696FDE /* SYSoundsView.xib in Resources */,
 				4E33F4C71D046FC300988945 /* SYWebViewController.xib in Resources */,
 				4E4695361CFDBDCF002CFAB7 /* LaunchImage-700-568h@2x.png in Resources */,
@@ -1065,6 +1074,7 @@
 				4EA435B51D020B6500EB1403 /* SYRecommendItem.m in Sources */,
 				4E9C51241CEA05DB004505C3 /* SYTabBar.m in Sources */,
 				4E2FA0DD1D196DA100858802 /* SYVideoItem.m in Sources */,
+				4EBD1C0E1D24210400F97230 /* SYCommentViewController.m in Sources */,
 				4EF2BBEC1D0559B700982A04 /* SYStarViewController.m in Sources */,
 				4E9C511B1CE9FEC2004505C3 /* SYMeViewController.m in Sources */,
 				4EF2BBEF1D055A8800982A04 /* SYCrossViewController.m in Sources */,

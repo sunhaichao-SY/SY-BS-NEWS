@@ -15,7 +15,7 @@
 #import <MJExtension/MJExtension.h>
 #import <MJRefresh/MJRefresh.h>
 #import "SYWholeCell.h"
-
+#import "SYCommentViewController.h"
 static NSString *const ID = @"cell";
 
 
@@ -208,5 +208,16 @@ static NSString *const ID = @"cell";
     
     return textItem.cellHeight;
 }
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    SYCommentViewController *commentView = [[SYCommentViewController alloc]init];
+    commentView.items = self.textItems[indexPath.row];
+    [self.navigationController pushViewController:commentView animated:YES];
+}
+
+
+
+
 
 @end
