@@ -16,8 +16,6 @@
 #import <MJRefresh/MJRefresh.h>
 #import "SYWholeCell.h"
 
-#define SYBSURL @"http://api.budejie.com/api/api_open.php?a=dataList&c=comment"
-
 static NSString *const ID = @"cell";
 
 
@@ -110,7 +108,7 @@ static NSString *const ID = @"cell";
         self.np = responseObject[@"info"][@"np"];
        // 字典 -> 模型
         self.textItems = [SYTextItem mj_objectArrayWithKeyValuesArray:responseObject[@"list"]];
-//        [responseObject writeToFile:@"/Users/sunhaichao/Desktop/SY.plist" atomically:YES];
+       
         // 刷新表格
         [self.tableView reloadData];
         // 结束刷新
@@ -165,7 +163,7 @@ static NSString *const ID = @"cell";
         self.np = responseObject[@"info"][@"np"];
         
         NSArray *newTopics = [SYTextItem mj_objectArrayWithKeyValuesArray:responseObject[@"list"]];
-        
+       
         [self.textItems addObjectsFromArray:newTopics];
         
         [self.tableView reloadData];

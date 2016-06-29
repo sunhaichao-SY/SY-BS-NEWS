@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@class SYUItem,SYGIFItem,SYVideoItem,SYAudioItem;
+@class SYUItem,SYGIFItem,SYVideoItem,SYAudioItem,SYTopCommentItem;
 
 @interface SYTextItem : NSObject
 
@@ -48,6 +48,9 @@
 
 //audio
 @property (nonatomic,strong) SYAudioItem *audio;
+
+//评论模型
+@property (nonatomic,strong) SYTopCommentItem *top_comment;
 /*********** 额外的辅助属性 ***********/
 
 //cell的高度

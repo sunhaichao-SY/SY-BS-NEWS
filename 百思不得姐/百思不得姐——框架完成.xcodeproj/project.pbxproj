@@ -88,6 +88,7 @@
 		4EF4424D1D1E811400696FDE /* SYAudioItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EF4424C1D1E811400696FDE /* SYAudioItem.m */; };
 		4EF442501D1E930400696FDE /* SYVideoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EF4424F1D1E930400696FDE /* SYVideoView.m */; };
 		4EF442521D1E931000696FDE /* SYVideoView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4EF442511D1E931000696FDE /* SYVideoView.xib */; };
+		4EFC53AC1D22E6900093E993 /* SYTopCommentItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EFC53AB1D22E6900093E993 /* SYTopCommentItem.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -244,6 +245,8 @@
 		4EF4424E1D1E930400696FDE /* SYVideoView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SYVideoView.h; sourceTree = "<group>"; };
 		4EF4424F1D1E930400696FDE /* SYVideoView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SYVideoView.m; sourceTree = "<group>"; };
 		4EF442511D1E931000696FDE /* SYVideoView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SYVideoView.xib; sourceTree = "<group>"; };
+		4EFC53AA1D22E6900093E993 /* SYTopCommentItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SYTopCommentItem.h; sourceTree = "<group>"; };
+		4EFC53AB1D22E6900093E993 /* SYTopCommentItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SYTopCommentItem.m; sourceTree = "<group>"; };
 		5541E37ED1144A81B5C75DA1 /* Pods-百思不得姐——框架完成.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-百思不得姐——框架完成.release.xcconfig"; path = "Pods/Target Support Files/Pods-百思不得姐——框架完成/Pods-百思不得姐——框架完成.release.xcconfig"; sourceTree = "<group>"; };
 		B1FE39090441D9484C7ECB12 /* Pods-百思不得姐——框架完成.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-百思不得姐——框架完成.debug.xcconfig"; path = "Pods/Target Support Files/Pods-百思不得姐——框架完成/Pods-百思不得姐——框架完成.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -529,6 +532,8 @@
 				4E2FA0DC1D196DA100858802 /* SYVideoItem.m */,
 				4EF4424B1D1E811400696FDE /* SYAudioItem.h */,
 				4EF4424C1D1E811400696FDE /* SYAudioItem.m */,
+				4EFC53AA1D22E6900093E993 /* SYTopCommentItem.h */,
+				4EFC53AB1D22E6900093E993 /* SYTopCommentItem.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -1030,6 +1035,7 @@
 				4EA435A51D020A2C00EB1403 /* SYRecommendCell.m in Sources */,
 				4EDB5E201D0D8B3900DCF868 /* SYUserCell.m in Sources */,
 				4EA725251D0322530044E472 /* SYMeCell.m in Sources */,
+				4EFC53AC1D22E6900093E993 /* SYTopCommentItem.m in Sources */,
 				4EA435AD1D020AD600EB1403 /* SYLoginRegisterViewController.m in Sources */,
 				4E9C510B1CE9FC60004505C3 /* main.m in Sources */,
 				4E9C51361CEA178A004505C3 /* UITabBarItem+SYCategory.m in Sources */,

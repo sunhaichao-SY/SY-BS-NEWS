@@ -12,7 +12,7 @@
 #import "SYGIFItem.h"
 #import "SYVideoItem.h"
 #import "SYAudioItem.h"
-
+#import "SYTopCommentItem.h"
 @implementation SYTextItem
 {
     CGFloat _cellHeight;
@@ -34,7 +34,7 @@
 
         //cell的高度
         //段子的高度
-        _cellHeight = 30 + 2 * margin + textH;
+        _cellHeight = 40 + 2 * margin + textH;
 
        /******** 图片的cell ********/
 
@@ -47,7 +47,7 @@
             CGFloat imageW = self.image.width;
             CGFloat pictureH = pictureW * imageH / imageW;
 
-            if (pictureH >= 1000) { //图片过长
+            if (pictureH >= 1500) { //图片过长
                 pictureH = 250;
                 self.bigPicture = YES;//大图
             }
@@ -103,6 +103,17 @@
             
             _cellHeight += audioH + 20;
 
+        }
+        
+        //最热评论的尺寸
+        if (self.top_comment) {
+        //给评论内容赋值
+            NSString *content = [NSString stringWithFormat:@"%@ : %@",self.top_comment.u.name,self.top_comment.content];
+            
+            //用纯代码计算文字段落的高度
+            CGFloat contentH = [content boundingRectWithSize:maxSize options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName:[UIFont systemFontOfSize:14]} context:nil].size.height;
+            
+            _cellHeight += 15 + contentH;
         }
         
         //底部工具条

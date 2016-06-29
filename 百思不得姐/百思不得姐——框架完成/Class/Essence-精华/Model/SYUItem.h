@@ -21,6 +21,9 @@
 //名字
 @property (nonatomic,strong) NSString *name;
 
+//性别
+@property (nonatomic,strong) NSString *sex;
+
 /************ image ************/
 
 //大图

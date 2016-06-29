@@ -14,6 +14,7 @@
 #import "SYSoundsView.h"
 #import "SYUItem.h"
 #import "SYGIFItem.h"
+#import "SYTopCommentItem.h"
 
 static CGFloat const margin = 10;
 @interface SYWholeCell()
@@ -52,6 +53,12 @@ static CGFloat const margin = 10;
 
 //帖子中间视频的内容
 @property (nonatomic,weak) SYVideoView *videoView;
+
+//评论的内容
+@property (weak, nonatomic) IBOutlet UILabel *commentContentLabel;
+
+//评论的背景
+@property (weak, nonatomic) IBOutlet UIView *commentBJ;
 
 
 
@@ -180,6 +187,14 @@ static CGFloat const margin = 10;
         self.pictureView.hidden = YES;
         self.soundsView.hidden = YES;
         self.videoView.hidden = YES;
+    }
+    
+    //给评论内容赋值
+    if (textItems.top_comment) {
+        //如果有评论则评论不隐藏
+        self.commentView.hidden = NO;
+        //给评论赋值
+        self.commentContentLabel.text = [NSString stringWithFormat:@"%@:%@",textItems.top_comment.u.name,textItems.top_comment.content];
     }
     
           //设置按钮文字

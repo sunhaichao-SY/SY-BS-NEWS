@@ -188,7 +188,7 @@ static NSString *const ID = @"cell";
         //设置按钮底部小线条
         if (i == 0) {
             
-            CGFloat h = 3;
+            CGFloat h = 2;
             CGFloat y = titleBtn.sy_height - h;
             UIView *underLine = [[UIView alloc]init];
             underLine.sy_centerX = titleBtn.sy_centerX ;
@@ -293,7 +293,9 @@ static NSString *const ID = @"cell";
     
     //    按钮底部小条的滚动
 
-//        _underLine.sy_centerX = scrollView.contentOffset.x * (SYScreenW / _topTitleBtn);
+
+//    _underLine.sy_x = scrollView.contentOffset.x / _titleBtns.count ;
+//    _underLine.sy_x= scrollView.sy_x / _titleBtns.count +1;
    
 }
 @end

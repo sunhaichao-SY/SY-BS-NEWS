@@ -36,7 +36,8 @@
     
     //加载图片
     [self.iconView sd_setImageWithURL:[NSURL URLWithString:textItem.video.thumbnail.firstObject]];
- //播放次数
+
+    //播放次数
     self.playCountLabel.text = [NSString stringWithFormat:@"%zd播放",textItem.video.playcount];
      //设置时间格式
     NSInteger min = textItem.video.duration / 60;
