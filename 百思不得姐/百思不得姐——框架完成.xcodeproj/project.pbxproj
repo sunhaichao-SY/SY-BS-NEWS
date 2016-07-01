@@ -85,6 +85,7 @@
 		4EECE3221D01C96C00C492C0 /* SYSubscribeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EECE3211D01C96C00C492C0 /* SYSubscribeViewController.m */; };
 		4EEFBE801D2646940051A9B7 /* SYCommentCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EEFBE7E1D2646940051A9B7 /* SYCommentCell.m */; };
 		4EEFBE811D2646940051A9B7 /* SYCommentCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4EEFBE7F1D2646940051A9B7 /* SYCommentCell.xib */; };
+		4EEFBE9C1D2670C50051A9B7 /* SYUserItems.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EEFBE9B1D2670C50051A9B7 /* SYUserItems.m */; };
 		4EF2BBEC1D0559B700982A04 /* SYStarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EF2BBEB1D0559B700982A04 /* SYStarViewController.m */; };
 		4EF2BBEF1D055A8800982A04 /* SYCrossViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EF2BBEE1D055A8800982A04 /* SYCrossViewController.m */; };
 		4EF442481D1E7E5500696FDE /* SYSoundsView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EF442471D1E7E5500696FDE /* SYSoundsView.m */; };
@@ -243,6 +244,8 @@
 		4EEFBE7D1D2646940051A9B7 /* SYCommentCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SYCommentCell.h; sourceTree = "<group>"; };
 		4EEFBE7E1D2646940051A9B7 /* SYCommentCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SYCommentCell.m; sourceTree = "<group>"; };
 		4EEFBE7F1D2646940051A9B7 /* SYCommentCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SYCommentCell.xib; sourceTree = "<group>"; };
+		4EEFBE9A1D2670C50051A9B7 /* SYUserItems.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SYUserItems.h; sourceTree = "<group>"; };
+		4EEFBE9B1D2670C50051A9B7 /* SYUserItems.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SYUserItems.m; sourceTree = "<group>"; };
 		4EF2BBEA1D0559B700982A04 /* SYStarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SYStarViewController.h; sourceTree = "<group>"; };
 		4EF2BBEB1D0559B700982A04 /* SYStarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SYStarViewController.m; sourceTree = "<group>"; };
 		4EF2BBED1D055A8800982A04 /* SYCrossViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SYCrossViewController.h; sourceTree = "<group>"; };
@@ -550,6 +553,8 @@
 				4EF4424C1D1E811400696FDE /* SYAudioItem.m */,
 				4EFC53AA1D22E6900093E993 /* SYTopCommentItem.h */,
 				4EFC53AB1D22E6900093E993 /* SYTopCommentItem.m */,
+				4EEFBE9A1D2670C50051A9B7 /* SYUserItems.h */,
+				4EEFBE9B1D2670C50051A9B7 /* SYUserItems.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -1060,6 +1065,7 @@
 				4E461F881D09727F0096D73C /* NSDate+SYExtension.m in Sources */,
 				4E4695281CFDACE3002CFAB7 /* SYPublishViewController.m in Sources */,
 				4E9C51211CEA052C004505C3 /* SYNavigationViewController.m in Sources */,
+				4EEFBE9C1D2670C50051A9B7 /* SYUserItems.m in Sources */,
 				4E9C51181CE9FEB4004505C3 /* SYFollowViewController.m in Sources */,
 				4E189A401D14569E001E45A1 /* SYProgressView.m in Sources */,
 				4E33F4C61D046FC300988945 /* SYWebViewController.m in Sources */,

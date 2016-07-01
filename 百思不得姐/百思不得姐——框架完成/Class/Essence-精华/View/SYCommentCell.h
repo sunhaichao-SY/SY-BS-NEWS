@@ -9,5 +9,5 @@
 #import <UIKit/UIKit.h>
 @class SYTopCommentItem;
 @interface SYCommentCell : UITableViewCell
-@property (nonatomic,strong) SYTopCommentItem *Comment;
+@property (nonatomic,strong) SYTopCommentItem *topComment;
 @end

@@ -182,7 +182,7 @@ static NSString *const SYCommentURL = @"http://api.budejie.com/api/api_open.php?
     SYCommentCell *cell = [tableView dequeueReusableCellWithIdentifier:ID];
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
    
-    cell.Comment = [self commentsInIndexPath:indexPath];
+    cell.topComment = [self commentsInIndexPath:indexPath];
     
     return cell;
 }

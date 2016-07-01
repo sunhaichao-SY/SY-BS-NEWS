@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@class SYUItem;
+@class SYUItem,SYUserItems;
 @interface SYTopCommentItem : NSObject
 
 //评论内容
@@ -23,5 +23,8 @@
 
 //U模型
 @property (nonatomic,strong) SYUItem *u;
+
+//user模型
+@property (nonatomic,strong) SYUserItems *user;
 
 @end

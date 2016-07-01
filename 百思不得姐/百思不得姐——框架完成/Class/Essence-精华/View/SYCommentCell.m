@@ -9,7 +9,7 @@
 #import "SYCommentCell.h"
 #import "UIImageView+WebCache.h"
 #import "SYTopCommentItem.h"
-#import "SYUItem.h"
+#import "SYUserItems.h"
 @interface SYCommentCell()
 
 @property (weak, nonatomic) IBOutlet UIImageView *iconView;
@@ -27,17 +27,19 @@
 
 - (void)awakeFromNib {
     [super awakeFromNib];
-    self.iconView.layer.cornerRadius = self.iconView.sy_width / 0.5;
+    self.iconView.layer.cornerRadius = (self.iconView.sy_width * 0.5);
     self.iconView.layer.masksToBounds = YES;
+//    self.iconView.layer.cornerRadius = (self.iconView.sy_width * 0.5);
+//    self.iconView.layer.masksToBounds = YES;
 }
 
-- (void)setComment:(SYTopCommentItem *)Comment
+-(void)setTopComment:(SYTopCommentItem *)topComment
 {
-    _Comment = Comment;
-    [self.iconView sd_setImageWithURL:[NSURL URLWithString:Comment.u.header.firstObject] placeholderImage:[UIImage imageNamed:@"defaultTagIcon"]];
-    self.SexImage.image = [Comment.u.sex isEqualToString:@"m"] ? [UIImage imageNamed:@"Profile_manIcon"] : [UIImage imageNamed:@"Profile_womanIcon"];
-    self.textView.text = Comment.content;
-    self.nameView.text = Comment.u.name;
-    self.likeCountView.text = [NSString stringWithFormat:@"%zd",Comment.like_count];
+    _topComment = topComment;
+    [self.iconView sd_setImageWithURL:[NSURL URLWithString:topComment.user.profile_image] placeholderImage:[UIImage imageNamed:@"defaultTagIcon"]];
+    self.SexImage.image = [topComment.user.sex isEqualToString:@"m"] ? [UIImage imageNamed:@"Profile_manIcon"] : [UIImage imageNamed:@"Profile_womanIcon"];
+    self.textView.text = topComment.content;
+    self.nameView.text = topComment.user.username;
+    self.likeCountView.text = topComment.like_count;
 }
 @end
