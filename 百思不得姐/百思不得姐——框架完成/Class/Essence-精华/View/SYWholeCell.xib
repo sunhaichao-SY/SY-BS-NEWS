@@ -40,8 +40,8 @@
                             <constraint firstAttribute="width" constant="24" id="oqe-TQ-EBa"/>
                             <constraint firstAttribute="height" constant="24" id="ymD-Hs-COJ"/>
                         </constraints>
-                        <state key="normal" image="cellmorebtnnormal"/>
-                        <state key="highlighted" image="cellmorebtnclick"/>
+                        <state key="normal" image="comment_nav_item_share_icon"/>
+                        <state key="highlighted" image="comment_nav_item_share_icon_click"/>
                         <connections>
                             <action selector="ClickMore" destination="KGk-i7-Jjw" eventType="touchUpInside" id="i7b-2u-oQw"/>
                         </connections>
@@ -243,8 +243,8 @@
         <image name="Profile_AddV_authen" width="14" height="14"/>
         <image name="cell-button-line" width="1" height="29"/>
         <image name="cell-content-line" width="299" height="1"/>
-        <image name="cellmorebtnclick" width="24" height="20"/>
-        <image name="cellmorebtnnormal" width="24" height="20"/>
+        <image name="comment_nav_item_share_icon" width="20" height="4"/>
+        <image name="comment_nav_item_share_icon_click" width="20" height="4"/>
         <image name="mainCellCai" width="20" height="20"/>
         <image name="mainCellCaiClick" width="20" height="20"/>
         <image name="mainCellComment" width="20" height="20"/>
