@@ -102,8 +102,13 @@ static NSString *const SYCommentURL = @"http://api.budejie.com/api/api_open.php?
     AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
     
     NSMutableDictionary *parameters = [NSMutableDictionary dictionary];
+    parameters[@"data_id"] = self.items.ID;
+    NSRange range = [SYCommentURL rangeOfString:@"_id="];
+    NSString *preUrl = [SYCommentURL substringToIndex:range.location + 4];
+    NSString *lastUrl = @"&device=ios%20device&from=ios&hot=1&jbk=0&mac=&market=&openudid=f1e1e75d11ec5e8a96503b30220f196e37759455&page=1&per=50&udid=&ver=4.2";
     
-    [manager GET:SYCommentURL parameters:parameters progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+    NSString *url = [NSString stringWithFormat:@"%@%@%@",preUrl,self.items.ID,lastUrl];
+    [manager GET:url parameters:parameters progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         
         //最热评论模型
         self.hotComment = [SYTopCommentItem mj_objectArrayWithKeyValuesArray:responseObject[@"hot"]];

@@ -29,8 +29,7 @@
     [super awakeFromNib];
     self.iconView.layer.cornerRadius = (self.iconView.sy_width * 0.5);
     self.iconView.layer.masksToBounds = YES;
-//    self.iconView.layer.cornerRadius = (self.iconView.sy_width * 0.5);
-//    self.iconView.layer.masksToBounds = YES;
+
 }
 
 -(void)setTopComment:(SYTopCommentItem *)topComment
