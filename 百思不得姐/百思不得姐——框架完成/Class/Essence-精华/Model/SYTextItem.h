@@ -12,6 +12,8 @@
 
 @interface SYTextItem : NSObject
 
+//ID
+@property (nonatomic,strong) NSString *ID;
 
 //时间
 @property (nonatomic,strong) NSString *passtime;
@@ -71,24 +73,3 @@
 //图片的下载进度
 @property (nonatomic,assign) CGFloat pictureProgress;
 @end
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

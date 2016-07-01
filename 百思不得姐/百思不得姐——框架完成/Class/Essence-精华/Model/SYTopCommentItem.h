@@ -17,11 +17,11 @@
 //点赞数
 @property (nonatomic,strong) NSString *like_count;
 
-//U模型
-@property (nonatomic,strong) SYUItem *u;
 
 //声音时间
 @property (nonatomic,assign) NSNumber *voicetime;
 
+//U模型
+@property (nonatomic,strong) SYUItem *u;
 
 @end

@@ -13,12 +13,22 @@
 #import "SYVideoItem.h"
 #import "SYAudioItem.h"
 #import "SYTopCommentItem.h"
+#import <MJExtension/MJExtension.h>
 @implementation SYTextItem
 {
     CGFloat _cellHeight;
 }
 
++ (NSDictionary *)mj_replacedKeyFromPropertyName
+{
+    return @{@"ID" : @"id"};
+    
+}
 
++ (NSDictionary *)mj_objectClassInArray
+{
+    return @{@"top_comment" : @"top_comment"};
+}
 - (CGFloat)cellHeight
 {
     if (!_cellHeight) {
@@ -101,7 +111,7 @@
             CGFloat audioY = textH + 50 + 10;
             _soundF = CGRectMake(audioX, audioY, audioW, audioH);
             
-            _cellHeight += audioH + 20;
+            _cellHeight += audioH + 10;
 
         }
         
@@ -113,7 +123,7 @@
             //用纯代码计算文字段落的高度
             CGFloat contentH = [content boundingRectWithSize:maxSize options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName:[UIFont systemFontOfSize:14]} context:nil].size.height;
             
-            _cellHeight += 15 + contentH;
+            _cellHeight += 15 + contentH +10;
         }
         
         //底部工具条

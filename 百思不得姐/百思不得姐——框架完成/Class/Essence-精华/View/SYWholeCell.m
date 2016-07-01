@@ -198,6 +198,9 @@ static CGFloat const margin = 10;
         self.commentView.hidden = NO;
         //给评论赋值
         self.commentContentLabel.text = [NSString stringWithFormat:@"%@:%@",textItems.top_comment.u.name,textItems.top_comment.content];
+    }else
+    {
+        self.commentView.hidden = YES;
     }
     
           //设置按钮文字
@@ -245,6 +248,9 @@ static CGFloat const margin = 10;
     [super setFrame:frame];
 }
 
+- (IBAction)ClickMore {
+    SYLogFunc
+}
 
 
 @end
