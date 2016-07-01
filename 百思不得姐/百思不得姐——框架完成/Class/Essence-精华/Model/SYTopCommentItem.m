@@ -9,5 +9,9 @@
 #import "SYTopCommentItem.h"
 
 @implementation SYTopCommentItem
-
++ (NSDictionary *)mj_replacedKeyFromPropertyName
+{
+    return @{@"ID" : @"id"};
+    
+}
 @end

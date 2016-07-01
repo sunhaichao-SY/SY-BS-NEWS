@@ -11,6 +11,9 @@
 @class SYUItem,SYUserItems;
 @interface SYTopCommentItem : NSObject
 
+//ID
+@property (nonatomic,strong) NSString *ID;
+
 //评论内容
 @property (nonatomic,strong) NSString *content;
 

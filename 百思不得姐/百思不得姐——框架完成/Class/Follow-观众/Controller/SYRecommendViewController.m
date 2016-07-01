@@ -147,7 +147,7 @@ static NSString *const userID = @"userID";
     self.userView.mj_header = [MJRefreshNormalHeader headerWithRefreshingTarget:self refreshingAction:@selector(loadNewUser)];
     
     //上拉时刷新数据
-    self.userView.mj_footer = [MJRefreshAutoNormalFooter footerWithRefreshingTarget:self refreshingAction:@selector(loadMoreUsers)];
+    self.userView.mj_footer = [MJRefreshBackNormalFooter footerWithRefreshingTarget:self refreshingAction:@selector(loadMoreUsers)];
     
     //进入页面的时候下拉刷新样式应该隐藏
     self.userView.mj_footer.hidden = YES;
@@ -156,6 +156,9 @@ static NSString *const userID = @"userID";
 //当用户下拉时会加载新的数据即刷新控件
 - (void)loadNewUser
 {
+    //设置这段代码的意义在于，当我们下拉或者上拉加载到一半时突然进行其他的操作可以撤销正在进行的操作
+    [self.manager.tasks makeObjectsPerformSelector:@selector(cancel)];
+    
     //左侧选中按钮对应的模型
     SYCategoryItem *categroyItem = SYSelectedCategory;
     
@@ -207,7 +210,7 @@ static NSString *const userID = @"userID";
         
         [SVProgressHUD showErrorWithStatus:@"加载数据失败"];
         // 结束刷新
-        [self.userView.mj_header endRefreshing];
+        [self.userView.mj_footer endRefreshing];
     }];
 
 }
@@ -269,6 +272,7 @@ static NSString *const userID = @"userID";
     if (categoryItem.users.count == categoryItem.total) {
         
         //全部数据已经加载完毕
+//        [self.userView.mj_header endRefreshing];
         [self.userView.mj_footer endRefreshingWithNoMoreData];
         
     }else{
