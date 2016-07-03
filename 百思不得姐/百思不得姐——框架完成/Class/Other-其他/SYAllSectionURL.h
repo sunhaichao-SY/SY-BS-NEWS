@@ -80,6 +80,17 @@
 //声音
 #define SYNewSoundURL @"http://s.budejie.com/topic/list/zuixin/31/bs0315-iphone-4.2/0-20.json"
 
+/******************* 红人榜 *******************/
+
+//红人榜
+#define SYRedStartURL @"http://d.api.budejie.com/user/category/35/budejie-msite-1.0/1-100.json?"
+
+//涨粉最快
+#define SYfansFastestURL @"http://d.api.budejie.com/user/rank/fansrise/baisishequ-iphone-3.8/0-50.json?"
+//贡献榜
+#define SYContributionURL @""
+//粉丝总数
+#define SYFansCountURL @"http://d.api.budejie.com/user/rank/fans/baisishequ-iphone-3.8/0-50.json?"
 
 
 #endif /* SYAllSectionURL_h */

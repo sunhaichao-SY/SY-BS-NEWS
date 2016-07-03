@@ -153,7 +153,7 @@ static NSString *const SYCommentURL = @"http://api.budejie.com/api/api_open.php?
     
     //请求数据
     [self.manager GET:url parameters:parameters progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-        
+
         //最热评论模型
         self.hotComment = [SYTopCommentItem mj_objectArrayWithKeyValuesArray:responseObject[@"hot"]];
         
