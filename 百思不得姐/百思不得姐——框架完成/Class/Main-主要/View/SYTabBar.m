@@ -8,6 +8,9 @@
 
 #import "SYTabBar.h"
 #import "SYPublishViewController.h"
+
+NSString *const SYTabBarDidSelectNotification = @"SYTabBarDidSelectNotification";
+
 @interface SYTabBar()
 //中间发布按钮
 @property (nonatomic,weak) UIButton *publishButton;
@@ -33,20 +36,26 @@
 {
     [super layoutSubviews];
     
+//    //标记按钮是否已经添加过监听器
+    static BOOL added = NO;
+    
     CGFloat width = self.sy_width;
     CGFloat height = self.sy_height;
     
     // 设置发布按钮的frame
     _publishButton.center = CGPointMake(width * 0.5, height * 0.5 + 2);
-
+//
     _publishButton.sy_height = height;
     _publishButton.sy_width = width;
+    
     // 设置其他UITabBarButton的frame
     CGFloat buttonY = 0;
     CGFloat buttonW = width / 5;
     CGFloat buttonH = height;
     NSInteger index = 0;
-    for (UIView *button in self.subviews) {
+    
+    //因为在这里里面需要设置button的监听 如果是view *button 那么就不会提示addtag这个方法
+    for (UIControl *button in self.subviews) {
         if (![button isKindOfClass:[UIControl class]] || button == self.publishButton) continue;
         
         // 计算按钮的x值
@@ -55,9 +64,20 @@
         
         // 增加索引
         index++;
+        
+        if (added == NO) {
+            [button addTarget:self action:@selector(buttonClick) forControlEvents:UIControlEventTouchUpInside];
+        }
+        
     }
+    added = YES;
 }
 
+- (void)buttonClick{
+    
+    //发出一个通知
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"SYTabBarDidSelectNotification" object:nil userInfo:nil];
+}
 //点击中间按钮事件处理
 - (void)publishButtonClick
 {

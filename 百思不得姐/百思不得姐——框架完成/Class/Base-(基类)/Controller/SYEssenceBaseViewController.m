@@ -16,8 +16,9 @@
 #import <MJRefresh/MJRefresh.h>
 #import "SYWholeCell.h"
 #import "SYCommentViewController.h"
-static NSString *const ID = @"cell";
 
+static NSString *const ID = @"cell";
+//NSString *const SYTabBarDidSelectNotification = @"SYTabBarDidSelectNotification";
 
 @interface SYEssenceBaseViewController ()
 //帖子数据
@@ -28,6 +29,9 @@ static NSString *const ID = @"cell";
 @property (nonatomic,copy) NSNumber *np;
 //上一次请求
 @property (nonatomic,strong) NSDictionary *params;
+
+//上次选中的索引(或者控制器)
+@property (nonatomic,assign) NSInteger lastSelectedIndex;
 
 @end
 
@@ -68,8 +72,20 @@ static NSString *const ID = @"cell";
     
     //注册Xib
     [self.tableView registerNib:[UINib nibWithNibName:NSStringFromClass([SYWholeCell class]) bundle:nil] forCellReuseIdentifier:ID];
+//    
+    //监听tabbar点击的通知
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(tabBarSelected) name:@"SYTabBarDidSelectNotification" object:nil];
 }
 
+- (void)tabBarSelected{
+    //如果是连续选中两次，直接刷新
+    if (self.lastSelectedIndex == self.tabBarController.selectedIndex && self.view.isShowingOnKeyWindow) {
+        [self.tableView.mj_header beginRefreshing];
+    }
+    
+    //记录这一次选中的索引
+    self.lastSelectedIndex = self.tabBarController.selectedIndex;
+}
 //添加刷新控件
 - (void)setupRefresh
 {
