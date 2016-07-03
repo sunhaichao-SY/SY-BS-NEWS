@@ -74,7 +74,8 @@
 
 - (void)crossClick
 {
-    SYLogFunc
+    //发出一个通知
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"SYTabBarDidSelectNotification" object:nil userInfo:nil];
 }
 
 

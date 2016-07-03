@@ -207,6 +207,7 @@
                     <constraint firstAttribute="trailing" secondItem="SXU-99-tLI" secondAttribute="trailing" constant="10" id="4nk-kl-l7V"/>
                     <constraint firstItem="i9t-ek-7S6" firstAttribute="trailing" secondItem="SXU-99-tLI" secondAttribute="trailing" id="5yB-nh-y4y"/>
                     <constraint firstAttribute="trailing" secondItem="R1y-ih-9Zf" secondAttribute="trailing" constant="10" id="7xZ-Cn-RR0"/>
+                    <constraint firstItem="i9t-ek-7S6" firstAttribute="trailing" secondItem="SXU-99-tLI" secondAttribute="trailing" id="HXu-eu-0JU"/>
                     <constraint firstItem="QNj-Y6-73c" firstAttribute="bottom" secondItem="jLB-3v-oNp" secondAttribute="bottom" id="Obv-4m-ZSi"/>
                     <constraint firstAttribute="bottom" secondItem="gVZ-UP-sOk" secondAttribute="bottom" id="Xkm-ZS-g05"/>
                     <constraint firstItem="3eM-Zw-sTk" firstAttribute="top" secondItem="jLB-3v-oNp" secondAttribute="top" multiplier="3/1" id="Zc1-RI-A3Y"/>
@@ -222,6 +223,11 @@
                     <constraint firstItem="i9t-ek-7S6" firstAttribute="top" secondItem="jLB-3v-oNp" secondAttribute="bottom" constant="10" id="wji-jn-XyN"/>
                     <constraint firstItem="gVZ-UP-sOk" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="yND-gy-vFJ"/>
                 </constraints>
+                <variation key="default">
+                    <mask key="constraints">
+                        <exclude reference="5yB-nh-y4y"/>
+                    </mask>
+                </variation>
             </tableViewCellContentView>
             <connections>
                 <outlet property="XLVip" destination="3eM-Zw-sTk" id="jiO-Mo-XIZ"/>
