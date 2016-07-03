@@ -25,6 +25,15 @@
 @end
 @implementation SYCommentCell
 
+- (BOOL)canBecomeFirstResponder
+{
+    return YES;
+}
+
+- (BOOL)canPerformAction:(SEL)action withSender:(id)sender
+{
+    return NO;
+}
 - (void)awakeFromNib {
     [super awakeFromNib];
     self.iconView.layer.cornerRadius = (self.iconView.sy_width * 0.5);

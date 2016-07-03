@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		13762BF2FB51E40939D9F6F2 /* Pods____________.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 134D482550200A3F03CD223B /* Pods____________.framework */; };
+		4E0D7CA81D26F0B400B0E57A /* dropdown_anim__0001.gif in Resources */ = {isa = PBXBuildFile; fileRef = 4E0D7CA61D26F0B400B0E57A /* dropdown_anim__0001.gif */; };
+		4E0D7CA91D26F0B400B0E57A /* member_ diamond_iconN.gif in Resources */ = {isa = PBXBuildFile; fileRef = 4E0D7CA71D26F0B400B0E57A /* member_ diamond_iconN.gif */; };
 		4E189A3B1D14518F001E45A1 /* SYAllPictureView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E189A3A1D14518F001E45A1 /* SYAllPictureView.m */; };
 		4E189A3D1D14519D001E45A1 /* SYAllPictureView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4E189A3C1D14519D001E45A1 /* SYAllPictureView.xib */; };
 		4E189A401D14569E001E45A1 /* SYProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E189A3F1D14569E001E45A1 /* SYProgressView.m */; };
@@ -73,6 +75,7 @@
 		4ED367081D16F0E8005EEC55 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4ED367071D16F0E8005EEC55 /* QuartzCore.framework */; };
 		4ED53F271D171A0A00CBB9F7 /* Reveal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E36E6051D1189510044E87F /* Reveal.framework */; };
 		4ED53F2A1D171E5D00CBB9F7 /* ___________UITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4ED53F291D171E5D00CBB9F7 /* ___________UITests.m */; };
+		4EDAC9BF1D27827700B8BF61 /* SYTopClickView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EDAC9BE1D27827700B8BF61 /* SYTopClickView.m */; };
 		4EDB5E0B1D0D428B00DCF868 /* 输出框打印中文.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EDB5E0A1D0D428B00DCF868 /* 输出框打印中文.m */; };
 		4EDB5E0F1D0D641500DCF868 /* SYCategoryItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EDB5E0E1D0D641500DCF868 /* SYCategoryItem.m */; };
 		4EDB5E111D0D649000DCF868 /* SYRecommendViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4EDB5E101D0D649000DCF868 /* SYRecommendViewController.xib */; };
@@ -115,6 +118,8 @@
 
 /* Begin PBXFileReference section */
 		134D482550200A3F03CD223B /* Pods____________.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = "Pods____________.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4E0D7CA61D26F0B400B0E57A /* dropdown_anim__0001.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = dropdown_anim__0001.gif; sourceTree = "<group>"; };
+		4E0D7CA71D26F0B400B0E57A /* member_ diamond_iconN.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "member_ diamond_iconN.gif"; sourceTree = "<group>"; };
 		4E189A391D14518F001E45A1 /* SYAllPictureView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SYAllPictureView.h; sourceTree = "<group>"; };
 		4E189A3A1D14518F001E45A1 /* SYAllPictureView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SYAllPictureView.m; sourceTree = "<group>"; };
 		4E189A3C1D14519D001E45A1 /* SYAllPictureView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SYAllPictureView.xib; sourceTree = "<group>"; };
@@ -225,6 +230,8 @@
 		4ED53F251D1719E700CBB9F7 /* Reveal 上午2.18.10.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = "Reveal 上午2.18.10.framework"; sourceTree = "<group>"; };
 		4ED53F291D171E5D00CBB9F7 /* ___________UITests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "___________UITests.m"; sourceTree = "<group>"; };
 		4ED53F2B1D171E6600CBB9F7 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4EDAC9BD1D27827700B8BF61 /* SYTopClickView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SYTopClickView.h; sourceTree = "<group>"; };
+		4EDAC9BE1D27827700B8BF61 /* SYTopClickView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SYTopClickView.m; sourceTree = "<group>"; };
 		4EDB5E0A1D0D428B00DCF868 /* 输出框打印中文.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "输出框打印中文.m"; sourceTree = "<group>"; };
 		4EDB5E0D1D0D641500DCF868 /* SYCategoryItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SYCategoryItem.h; sourceTree = "<group>"; };
 		4EDB5E0E1D0D641500DCF868 /* SYCategoryItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SYCategoryItem.m; sourceTree = "<group>"; };
@@ -476,6 +483,8 @@
 				4E4695321CFDBDCF002CFAB7 /* LaunchImage-800-Portrait-736h@3x.png */,
 				4E4695331CFDBDCF002CFAB7 /* LaunchImage.png */,
 				4E4695341CFDBDCF002CFAB7 /* LaunchImage@2x.png */,
+				4E0D7CA61D26F0B400B0E57A /* dropdown_anim__0001.gif */,
+				4E0D7CA71D26F0B400B0E57A /* member_ diamond_iconN.gif */,
 				4E9C510E1CE9FD52004505C3 /* Info.plist */,
 				4E9C50C51CE9F5A6004505C3 /* Assets.xcassets */,
 				4E9C50C71CE9F5A6004505C3 /* LaunchScreen.storyboard */,
@@ -647,6 +656,8 @@
 				4E9C51231CEA05DB004505C3 /* SYTabBar.m */,
 				4E4C014D1CF14708003A509A /* SYLoginRegisterTextField.h */,
 				4E4C014E1CF14708003A509A /* SYLoginRegisterTextField.m */,
+				4EDAC9BD1D27827700B8BF61 /* SYTopClickView.h */,
+				4EDAC9BE1D27827700B8BF61 /* SYTopClickView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -961,6 +972,8 @@
 				4EF442521D1E931000696FDE /* SYVideoView.xib in Resources */,
 				4E9C50C61CE9F5A6004505C3 /* Assets.xcassets in Resources */,
 				4E46953B1CFDBDCF002CFAB7 /* LaunchImage@2x.png in Resources */,
+				4E0D7CA81D26F0B400B0E57A /* dropdown_anim__0001.gif in Resources */,
+				4E0D7CA91D26F0B400B0E57A /* member_ diamond_iconN.gif in Resources */,
 				4EDB5E111D0D649000DCF868 /* SYRecommendViewController.xib in Resources */,
 				4E46952D1CFDB79C002CFAB7 /* SYADViewController.xib in Resources */,
 				4EA435A11D02021F00EB1403 /* SYResigeringViewController.xib in Resources */,
@@ -1067,6 +1080,7 @@
 				4E9C51211CEA052C004505C3 /* SYNavigationViewController.m in Sources */,
 				4EEFBE9C1D2670C50051A9B7 /* SYUserItems.m in Sources */,
 				4E9C51181CE9FEB4004505C3 /* SYFollowViewController.m in Sources */,
+				4EDAC9BF1D27827700B8BF61 /* SYTopClickView.m in Sources */,
 				4E189A401D14569E001E45A1 /* SYProgressView.m in Sources */,
 				4E33F4C61D046FC300988945 /* SYWebViewController.m in Sources */,
 				4E3A5A251D015F0600B0ED38 /* SYAttentionViewController.m in Sources */,

@@ -49,12 +49,21 @@
                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dropdown_anim__0001.gif" highlightedImage="member_ diamond_iconN.gif" translatesAutoresizingMaskIntoConstraints="NO" id="uBz-z5-sVe">
+                        <rect key="frame" x="100.5" y="12.5" width="16" height="12"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="12" id="2Kc-J3-Buo"/>
+                            <constraint firstAttribute="width" constant="16" id="t6g-fD-d92"/>
+                        </constraints>
+                    </imageView>
                 </subviews>
                 <constraints>
+                    <constraint firstItem="uBz-z5-sVe" firstAttribute="leading" secondItem="qI5-Gn-kn3" secondAttribute="trailing" constant="5" id="Bqo-mT-aaF"/>
                     <constraint firstItem="qI5-Gn-kn3" firstAttribute="leading" secondItem="kbM-PD-QLO" secondAttribute="trailing" constant="10" id="DfK-2O-5u0"/>
                     <constraint firstItem="qI5-Gn-kn3" firstAttribute="top" secondItem="kbM-PD-QLO" secondAttribute="top" id="Dp3-S3-uwG"/>
                     <constraint firstItem="fbr-ik-zWB" firstAttribute="centerY" secondItem="kbM-PD-QLO" secondAttribute="centerY" id="Kvw-6K-9zK"/>
                     <constraint firstItem="kbM-PD-QLO" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="UKU-73-voI"/>
+                    <constraint firstItem="uBz-z5-sVe" firstAttribute="centerY" secondItem="qI5-Gn-kn3" secondAttribute="centerY" id="X99-WV-1WI"/>
                     <constraint firstAttribute="trailing" secondItem="fbr-ik-zWB" secondAttribute="trailing" constant="10" id="cwI-3H-qQ9"/>
                     <constraint firstAttribute="bottom" secondItem="kbM-PD-QLO" secondAttribute="bottom" constant="10" id="mxE-IM-Uh9"/>
                     <constraint firstItem="13h-h8-Ulf" firstAttribute="leading" secondItem="kbM-PD-QLO" secondAttribute="trailing" constant="10" id="pdE-ig-hFk"/>
@@ -63,6 +72,7 @@
                 </constraints>
             </tableViewCellContentView>
             <connections>
+                <outlet property="VIp" destination="uBz-z5-sVe" id="vOU-b8-A46"/>
                 <outlet property="countView" destination="13h-h8-Ulf" id="GxY-Q4-gGt"/>
                 <outlet property="iconView" destination="kbM-PD-QLO" id="7sw-A8-vcZ"/>
                 <outlet property="nameView" destination="qI5-Gn-kn3" id="HD6-dS-mbd"/>
@@ -70,6 +80,8 @@
         </tableViewCell>
     </objects>
     <resources>
+        <image name="dropdown_anim__0001.gif" width="48" height="36"/>
+        <image name="member_ diamond_iconN.gif" width="48" height="36"/>
         <image name="tagButtonBG" width="80" height="31"/>
         <image name="tagButtonBGClick" width="80" height="31"/>
     </resources>

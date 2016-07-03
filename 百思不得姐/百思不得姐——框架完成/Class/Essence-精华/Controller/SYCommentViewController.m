@@ -259,11 +259,6 @@ static NSString *const SYCommentURL = @"http://api.budejie.com/api/api_open.php?
     
 }
 
-//滚动TableView的时候键盘退下
-- (void)scrollViewWillBeginDragging:(UIScrollView *)scrollView
-{
-    [self.view endEditing:YES];
-}
 
 #pragma mark - UITableViewDataSource
 
@@ -357,6 +352,48 @@ static NSString *const SYCommentURL = @"http://api.budejie.com/api/api_open.php?
 }
 
 - (void)shareBtn{
+    SYLogFunc
+}
+
+- (void)scrollViewWillBeginDragging:(UIScrollView *)scrollView
+{
+    [self.view endEditing:YES];
+    [[UIMenuController sharedMenuController]setMenuVisible:NO animated:YES];
+}
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    UIMenuController *menu = [UIMenuController sharedMenuController];
+    if (menu.isMenuVisible) {
+        [menu setMenuVisible:NO animated:YES];
+    }else{
+        //被点击的Cell
+        SYCommentCell *cell = (SYCommentCell *)[tableView cellForRowAtIndexPath:indexPath];
+        
+        //第一响应者
+        [cell becomeFirstResponder];
+        
+        //显示UIMenuController
+        
+        UIMenuItem *ding = [[UIMenuItem alloc]initWithTitle:@"顶" action:@selector(ding:)];
+        UIMenuItem *replay = [[UIMenuItem alloc]initWithTitle:@"回复" action:@selector(replay:)];
+        UIMenuItem *report = [[UIMenuItem alloc]initWithTitle:@"举报" action:@selector(report:)];
+        menu.menuItems = @[ding,replay,report];
+        CGRect rect = CGRectMake(0, cell.sy_height * 0.5, cell.sy_width, cell.sy_height * 0.5);
+        [menu setTargetRect:rect inView:cell];
+        [menu setMenuVisible:YES animated:YES];
+        }
+}
+
+- (void)ding:(UIMenuController *)menu{
+    SYLogFunc
+}
+
+- (void)replay:(UIMenuController *)replay
+{
+    SYLogFunc
+}
+
+-(void)report:(UIMenuController *)menu{
     SYLogFunc
 }
 @end

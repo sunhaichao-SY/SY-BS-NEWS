@@ -61,8 +61,8 @@ static NSString *const ID = @"cell";
     self.tableView.scrollIndicatorInsets = self.tableView.contentInset;
     //取消TableView的分隔栏
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
-    
-//    self.tableView.showsVerticalScrollIndicator = NO;
+    self.automaticallyAdjustsScrollViewInsets = NO;
+
     //背景颜色
     self.view.backgroundColor = SYCommonBgColor;
     

@@ -74,8 +74,7 @@
 
 - (void)crossClick
 {
-   
-
+    SYLogFunc
 }
 
 

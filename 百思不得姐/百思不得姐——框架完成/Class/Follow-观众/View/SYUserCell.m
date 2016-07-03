@@ -15,6 +15,7 @@
 @property (weak, nonatomic) IBOutlet UIImageView *iconView;
 @property (weak, nonatomic) IBOutlet UILabel *nameView;
 @property (weak, nonatomic) IBOutlet UILabel *countView;
+@property (weak, nonatomic) IBOutlet UIImageView *VIp;
 @end
 
 @implementation SYUserCell
@@ -33,10 +34,11 @@
     
     if (userItem.is_vip) {
         self.nameView.textColor = [UIColor redColor];
-        
+        self.VIp.hidden = NO;
     }else
     {
         self.nameView.textColor = [UIColor blackColor];
+        self.VIp.hidden = YES;
     }
 }
 - (void)awakeFromNib {
