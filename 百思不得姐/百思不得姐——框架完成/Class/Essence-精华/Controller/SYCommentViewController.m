@@ -37,6 +37,7 @@ static NSString *const SYCommentURL = @"http://api.budejie.com/api/api_open.php?
 
 //请求管理者
 @property (nonatomic,strong) AFHTTPSessionManager *manager;
+
 @end
 
 @implementation SYCommentViewController
@@ -96,13 +97,13 @@ static NSString *const SYCommentURL = @"http://api.budejie.com/api/api_open.php?
 //设置头部控件
 - (void)setupHeader{
     
-    //对Cell进行一层包装，可是要控制尺寸变形
+    //对Cell进行一层包装，可以控制尺寸变形
     UIView *header = [[UIView alloc] init];
     
     //清空top_comment 点击Cell跳入下个页面之后，在cell中会取消最热评论
     if (self.items.top_comment) {
         self.saved_top_cmt = self.items.top_comment;
-        self.items.top_comment = nil;
+       self.items.top_comment = nil;
         [self.items setValue:@0 forKey:@"cellHeight"];
     }
     
@@ -111,10 +112,9 @@ static NSString *const SYCommentURL = @"http://api.budejie.com/api/api_open.php?
     wholeCell.textItems = self.items;
     wholeCell.sy_size = CGSizeMake(SYScreenW, self.items.cellHeight);
     [header addSubview:wholeCell];
-    
     //header的高度
     header.sy_height = self.items.cellHeight;
-    
+
     //设置header
     self.tableView.tableHeaderView = header;
     
@@ -248,9 +248,9 @@ static NSString *const SYCommentURL = @"http://api.budejie.com/api/api_open.php?
 {
     [[NSNotificationCenter defaultCenter] removeObserver:self];
     
+    // 恢复帖子的top_cmt，在进入评论页面的时候先把主页面上的评论热点保存在一个模型中，然后在评论的页面里把热点的Cell高度变成0，当退出评论页面时再从模型中取出来赋值展示在一开始的页面
     if (self.saved_top_cmt) {
         self.items.top_comment = self.saved_top_cmt;
-//        self.items.top_comment = nil;
         [self.items setValue:@0 forKey:@"cellHeight"];
     }
     

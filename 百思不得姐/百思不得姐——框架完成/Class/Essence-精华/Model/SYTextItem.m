@@ -115,7 +115,7 @@
 
         }
         
-        //最热评论的尺寸
+        //最热评论的尺寸，如果有评论
         if (self.top_comment) {
         //给评论内容赋值
             NSString *content = [NSString stringWithFormat:@"%@ : %@",self.top_comment.u.name,self.top_comment.content];
@@ -123,7 +123,7 @@
             //用纯代码计算文字段落的高度
             CGFloat contentH = [content boundingRectWithSize:maxSize options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName:[UIFont systemFontOfSize:14]} context:nil].size.height;
             
-            _cellHeight += 15 + contentH +10;
+            _cellHeight += 17 + contentH + 10;
         }
         
         //底部工具条

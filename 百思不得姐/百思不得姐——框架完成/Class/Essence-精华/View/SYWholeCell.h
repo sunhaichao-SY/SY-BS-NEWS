@@ -13,4 +13,6 @@
 @property (nonatomic,strong) SYTextItem *textItems;
 
 + (instancetype)WholeCell;
+
+
 @end

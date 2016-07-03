@@ -61,7 +61,6 @@ static CGFloat const margin = 10;
 @property (weak, nonatomic) IBOutlet UIView *commentBJ;
 
 
-
 @end
 @implementation SYWholeCell
 
@@ -127,6 +126,13 @@ static CGFloat const margin = 10;
 - (void)setTextItems:(SYTextItem *)textItems
 {
     _textItems = textItems;
+    
+    //判断模型里面的最热评论是否存在，如果不存在就隐藏，如果存在就显示出来
+    if (textItems.top_comment == nil) {
+        self.commentBJ.hidden = YES;
+    } else {
+        self.commentBJ.hidden = NO;
+    }
     
    //设置头像
     [self.iconView sd_setImageWithURL:[NSURL URLWithString:textItems.u.header.firstObject] placeholderImage:[UIImage imageNamed:@"defaultTagIcon~iphone"]];
@@ -200,7 +206,7 @@ static CGFloat const margin = 10;
         self.commentContentLabel.text = [NSString stringWithFormat:@"%@:%@",textItems.top_comment.u.name,textItems.top_comment.content];
     }else
     {
-        self.commentView.hidden = YES;
+//        self.commentView.hidden = YES;
     }
     
           //设置按钮文字
