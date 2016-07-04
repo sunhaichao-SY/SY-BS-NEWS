@@ -67,6 +67,7 @@
 ####所谓基类就是把相同的代码抽取出来，然后让其他控制器继承于它，这样一下就可以实现基类里所展示的效果。
 ####精华和最新的界面的结构确定下来之后就是里面tableView的设置，我们观察图片会发现当我们控制器是可以左右滑动的，而且每个控制器有可以上下滑动。这个时候我们会想到scrollView和UICollectionView以及tableView的使用，根据对各个控件的了解UICollectionView它是自带循环利用功能的，所以我们采取UICollectionView加tableView的方法创建，首先采取UICollectionView的流水布局确定左右可以滑动，然后在添加上tableView，就可以实现左右和上下的滑动了。在这需要注意的是如果用UICollectionView那么就必须设置流水布局。但是这里我们必须取消系统自带的滑动功能，并添加滑动手势
 
+
 ```objc
 	//让控制器作为NavigationBar的手势处理代理对象
     id target = self.interactivePopGestureRecognizer.delegate;
@@ -76,8 +77,7 @@
     
     //如果滑动移除控制器的功能失效，则清空即可
     self.interactivePopGestureRecognizer.enabled = NO;
-    
-    ```
+
     
 ####在导航栏下会有一行标题，这个标题是可以左右滑动的，我采取的是UIScrollView，里面利用for循环加添对应数量的Button
 
