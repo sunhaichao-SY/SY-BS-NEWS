@@ -6,7 +6,10 @@
 ##整体
 ####当你第一时间想仿写一个APP的时候你不要着急去布局去抓取数据，你首先要先观察这个APP的整体结构，整体逻辑，以及各个板块之间的联系和构造，然后再根据你自己的经验去画草图，在草图中简要的标注一下各个界面的实现方式和需要用到的控件。
 ####我们先看下百思的整体结构
-##图片
+![(精华)](http://ww4.sinaimg.cn/mw690/7306bf8agw1f5i8llx3nsj20ku11247i.jpg)
+![(最新)](http://ww2.sinaimg.cn/mw690/7306bf8agw1f5i8ll1vr1j20ku112tje.jpg)
+![(关注)](http://ww4.sinaimg.cn/mw690/7306bf8agw1f5i8lo2rocj20ku112q9z.jpg)
+![(我的)](http://ww2.sinaimg.cn/mw690/7306bf8agw1f5i8lp4j0vj20ku112adf.jpg)
 ####通过各个页面的和对比我们会发现，上部导航栏和底部tabbar是固定的，只是中间部分是不同的。
 ####我们先看一下导航栏和底部tabbar
 ##图片
