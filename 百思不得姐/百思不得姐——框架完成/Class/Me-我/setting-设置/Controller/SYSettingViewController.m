@@ -16,12 +16,17 @@
 #import "SYSettingCell.h"
 
 @interface SYSettingViewController ()
+
 // 记录当前tableView的所有数组
 @property (nonatomic, strong) NSMutableArray *groups;
+
+//保存缓存
+@property (nonatomic,strong) NSString *saveCaching;
 @end
 
 @implementation SYSettingViewController
 
+//懒加载
 - (NSMutableArray *)groups
 {
     if (_groups == nil) {
@@ -30,6 +35,7 @@
     return _groups;
 }
 
+//设置分组样式
 - (instancetype)init
 {
     return [super initWithStyle:UITableViewStyleGrouped];
@@ -40,6 +46,9 @@
     
     self.navigationItem.title = @"设置";
     self.view.backgroundColor = SYCommonBgColor;
+
+    self.tableView.sectionFooterHeight = 0;
+    self.tableView.contentInset = UIEdgeInsetsMake(-25, 0, 0, 0);
     
     //添加第一组
     [self setupGroup1];
@@ -48,24 +57,27 @@
     [self setupGroup2];
 }
 
-//添加第一组
+
+//添加第一组，创建对应的模型数据然后直接调用其模型就可以直接创建组
 - (void)setupGroup1
 {
+    
     SYSegmentedSettingItem *titleFond = [SYSegmentedSettingItem itemWithTitle:@"字体大小"];
     
     SYSwitchSettingItem *switchItem = [SYSwitchSettingItem itemWithTitle:@"摇一摇夜间模式"];
     
     SYSettingGroupItem *group = [SYSettingGroupItem groupWithItems:@[titleFond,switchItem]];
-    group.headerTitle = @"功能设置";
     
+    group.headerTitle = @"功能设置";
     [self.groups addObject:group];
 }
 
+
 //第二组
 - (void)setupGroup2{
-    SYArrowSettingItem *clear = [SYArrowSettingItem itemWithTitle:@"清除缓存"];
+    SYArrowSettingItem *clear = [SYArrowSettingItem itemWithTitle:_saveCaching];
     clear.itemOpertion = ^(NSIndexPath *indexPath){
-        SYLogFunc
+        [[SDImageCache sharedImageCache] clearDisk];
     };
     SYArrowSettingItem *recommend = [SYArrowSettingItem itemWithTitle:@"推荐给朋友"];
     SYArrowSettingItem *help = [SYArrowSettingItem itemWithTitle:@"帮助"];
@@ -79,8 +91,6 @@
     
     [self.groups addObject:group1];
 }
-
-
 
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
@@ -97,6 +107,9 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     SYSettingCell *cell = [SYSettingCell cellWithTableView:tableView style:UITableViewCellStyleValue1];
+
+    CGFloat size = [SDImageCache sharedImageCache].getSize / 1000.0 / 1000;
+    _saveCaching = [NSString stringWithFormat:@"清除缓存(已使用%.2fMB)",size];
     
     //取出哪一组
     SYSettingGroupItem *group = self.groups[indexPath.section];
@@ -133,4 +146,5 @@
         return;
     }
 }
+
 @end

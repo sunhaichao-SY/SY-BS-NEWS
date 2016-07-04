@@ -38,7 +38,7 @@
 - (UISegmentedControl *)segmentedControl
 {
     if (_segmentedControl == nil) {
-        _segmentedControl = [[UISegmentedControl alloc]init];
+        _segmentedControl = [[UISegmentedControl alloc] initWithItems:@[@"小",@"中",@"大"]];
     }
     return _segmentedControl;
 }
@@ -76,10 +76,11 @@
         self.accessoryView = self.arrowView;
         self.accessoryType = UITableViewCellSelectionStyleDefault;
     }else if([_item isKindOfClass:[SYSwitchSettingItem class]]){self.accessoryView = self.switchView;
+        //控制cell点击之后不变色
         self.selectionStyle = UITableViewCellSelectionStyleNone;
-    }else if ([_item isKindOfClass:[SYSettingItem class]]){
+    }else if ([_item isKindOfClass:[SYSegmentedSettingItem class]]){
         self.accessoryView = self.segmentedControl;
-        self.accessoryType = UITableViewCellSelectionStyleNone;
+        self.selectionStyle = UITableViewCellSelectionStyleNone;
     }else
     {
         self.selectionStyle = UITableViewCellSelectionStyleDefault;

@@ -91,8 +91,6 @@ static NSString *const ID = @"cell";
 //设置按钮事件处理
 - (void)settingItemClick
 {
-    
-    
     SYSettingViewController *setting = [[SYSettingViewController alloc] init];
     [self.navigationController pushViewController:setting animated:YES];
 }
@@ -210,8 +208,6 @@ static NSString *const ID = @"cell";
     {
         return;
     }
-    
 }
-
 @end
 

@@ -11,4 +11,5 @@
 @interface SYEssenceBaseViewController : UITableViewController
 
 @property (nonatomic,strong) NSString *URL;
+
 @end

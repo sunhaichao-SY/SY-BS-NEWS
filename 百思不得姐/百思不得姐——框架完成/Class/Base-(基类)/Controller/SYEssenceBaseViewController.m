@@ -63,7 +63,7 @@ static NSString *const ID = @"cell";
     self.tableView.contentInset = UIEdgeInsetsMake(64 + 35, 0, self.tabBarController.tabBar.sy_height, 0);
     // 设置滚动条的内边距
     self.tableView.scrollIndicatorInsets = self.tableView.contentInset;
-    //取消TableView的分隔栏
+    //取消TablevView的分隔栏
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     self.automaticallyAdjustsScrollViewInsets = NO;
 

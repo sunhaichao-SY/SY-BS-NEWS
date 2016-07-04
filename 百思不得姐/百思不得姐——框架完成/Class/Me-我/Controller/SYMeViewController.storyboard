@@ -24,14 +24,14 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="登录/注册" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="USr-nL-ysg">
-                                                    <rect key="frame" x="70" y="0.0" width="495" height="43.5"/>
+                                                    <rect key="frame" x="66" y="0.0" width="499" height="43.5"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <imageView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="default_header_image_big" id="VCf-dK-s94">
-                                                    <rect key="frame" x="15" y="1" width="40" height="40"/>
+                                                <imageView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="setup-head-default" id="VCf-dK-s94">
+                                                    <rect key="frame" x="15" y="3" width="36" height="36"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                 </imageView>
                                             </subviews>
@@ -139,7 +139,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="default_header_image_big" width="40" height="40"/>
         <image name="memberStatus" width="26" height="23"/>
+        <image name="setup-head-default" width="36" height="36"/>
     </resources>
 </document>

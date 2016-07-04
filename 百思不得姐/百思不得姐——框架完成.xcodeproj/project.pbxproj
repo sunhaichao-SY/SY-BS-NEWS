@@ -55,6 +55,7 @@
 		4E9695EA1D2A017500880F66 /* SYSegmentedSettingItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E9695E91D2A017500880F66 /* SYSegmentedSettingItem.m */; };
 		4E9695ED1D2A019A00880F66 /* SYArrowSettingItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E9695EC1D2A019A00880F66 /* SYArrowSettingItem.m */; };
 		4E9695F01D2A023D00880F66 /* SYSettingCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E9695EF1D2A023D00880F66 /* SYSettingCell.m */; };
+		4E9695F21D2A2CD500880F66 /* Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4E9695F11D2A2CD500880F66 /* Storyboard.storyboard */; };
 		4E9C50C61CE9F5A6004505C3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4E9C50C51CE9F5A6004505C3 /* Assets.xcassets */; };
 		4E9C50C91CE9F5A6004505C3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4E9C50C71CE9F5A6004505C3 /* LaunchScreen.storyboard */; };
 		4E9C50D41CE9F5A6004505C3 /* ___________Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E9C50D31CE9F5A6004505C3 /* ___________Tests.m */; };
@@ -213,6 +214,7 @@
 		4E9695EC1D2A019A00880F66 /* SYArrowSettingItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SYArrowSettingItem.m; path = "百思不得姐——框架完成/Class/Me-我/setting-设置/Controller/SYArrowSettingItem.m"; sourceTree = SOURCE_ROOT; };
 		4E9695EE1D2A023D00880F66 /* SYSettingCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SYSettingCell.h; path = "百思不得姐——框架完成/Class/Me-我/setting-设置/Controller/SYSettingCell.h"; sourceTree = SOURCE_ROOT; };
 		4E9695EF1D2A023D00880F66 /* SYSettingCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SYSettingCell.m; path = "百思不得姐——框架完成/Class/Me-我/setting-设置/Controller/SYSettingCell.m"; sourceTree = SOURCE_ROOT; };
+		4E9695F11D2A2CD500880F66 /* Storyboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Storyboard.storyboard; sourceTree = "<group>"; };
 		4E9C50B61CE9F5A6004505C3 /* 百思不得姐——框架完成.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "百思不得姐——框架完成.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4E9C50C51CE9F5A6004505C3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4E9C50C81CE9F5A6004505C3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -780,6 +782,7 @@
 				4E33F4C31D046FC300988945 /* SYWebViewController.h */,
 				4E33F4C41D046FC300988945 /* SYWebViewController.m */,
 				4E33F4C51D046FC300988945 /* SYWebViewController.xib */,
+				4E9695F11D2A2CD500880F66 /* Storyboard.storyboard */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -1096,6 +1099,7 @@
 				4EDB5E211D0D8B3900DCF868 /* SYUserCell.xib in Resources */,
 				4EB2878A1D29729E00DE37F4 /* SYFansFastestCell.xib in Resources */,
 				4EEFBE811D2646940051A9B7 /* SYCommentCell.xib in Resources */,
+				4E9695F21D2A2CD500880F66 /* Storyboard.storyboard in Resources */,
 				4E189A3D1D14519D001E45A1 /* SYAllPictureView.xib in Resources */,
 				4EBD1C0F1D24210400F97230 /* SYCommentViewController.xib in Resources */,
 				4EF4424A1D1E7E6500696FDE /* SYSoundsView.xib in Resources */,
