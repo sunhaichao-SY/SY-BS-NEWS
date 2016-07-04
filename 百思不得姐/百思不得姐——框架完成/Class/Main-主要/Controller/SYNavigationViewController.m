@@ -40,7 +40,7 @@
     [self.view addGestureRecognizer:pan];
     pan.delegate = self;
     
-    //让边缘滑动手势失效
+    //如果滑动移除控制器的功能失效，则清空即可
     self.interactivePopGestureRecognizer.enabled = NO;
 }
 
@@ -68,6 +68,7 @@
         view.frame = backBtn.bounds;
         [view addSubview:backBtn];
         
+        //修改导航栏左边的Item
         viewController.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc]initWithCustomView:view];
         
         viewController.hidesBottomBarWhenPushed = YES;

@@ -49,6 +49,12 @@
 		4E609DEA1D1468F500C3A896 /* SYShowPictureViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4E609DE81D1468F500C3A896 /* SYShowPictureViewController.xib */; };
 		4E7269711D030FD40085A409 /* SYMeItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E7269701D030FD40085A409 /* SYMeItem.m */; };
 		4E7F8AF01D05C0FF00B2E727 /* SYBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E7F8AEF1D05C0FF00B2E727 /* SYBaseViewController.m */; };
+		4E9695E11D29FDF300880F66 /* SYSettingItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E9695E01D29FDF300880F66 /* SYSettingItem.m */; };
+		4E9695E41D29FF9A00880F66 /* SYSettingGroupItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E9695E31D29FF9A00880F66 /* SYSettingGroupItem.m */; };
+		4E9695E71D2A00BB00880F66 /* SYSwitchSettingItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E9695E61D2A00BB00880F66 /* SYSwitchSettingItem.m */; };
+		4E9695EA1D2A017500880F66 /* SYSegmentedSettingItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E9695E91D2A017500880F66 /* SYSegmentedSettingItem.m */; };
+		4E9695ED1D2A019A00880F66 /* SYArrowSettingItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E9695EC1D2A019A00880F66 /* SYArrowSettingItem.m */; };
+		4E9695F01D2A023D00880F66 /* SYSettingCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E9695EF1D2A023D00880F66 /* SYSettingCell.m */; };
 		4E9C50C61CE9F5A6004505C3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4E9C50C51CE9F5A6004505C3 /* Assets.xcassets */; };
 		4E9C50C91CE9F5A6004505C3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4E9C50C71CE9F5A6004505C3 /* LaunchScreen.storyboard */; };
 		4E9C50D41CE9F5A6004505C3 /* ___________Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E9C50D31CE9F5A6004505C3 /* ___________Tests.m */; };
@@ -195,6 +201,18 @@
 		4E7269701D030FD40085A409 /* SYMeItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SYMeItem.m; path = "百思不得姐——框架完成/Class/Me-我/Controller/SYMeItem.m"; sourceTree = SOURCE_ROOT; };
 		4E7F8AEE1D05C0FF00B2E727 /* SYBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SYBaseViewController.h; sourceTree = "<group>"; };
 		4E7F8AEF1D05C0FF00B2E727 /* SYBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SYBaseViewController.m; sourceTree = "<group>"; };
+		4E9695DF1D29FDF300880F66 /* SYSettingItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SYSettingItem.h; path = "百思不得姐——框架完成/Class/Me-我/setting-设置/Controller/SYSettingItem.h"; sourceTree = SOURCE_ROOT; };
+		4E9695E01D29FDF300880F66 /* SYSettingItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SYSettingItem.m; path = "百思不得姐——框架完成/Class/Me-我/setting-设置/Controller/SYSettingItem.m"; sourceTree = SOURCE_ROOT; };
+		4E9695E21D29FF9A00880F66 /* SYSettingGroupItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SYSettingGroupItem.h; path = "百思不得姐——框架完成/Class/Me-我/setting-设置/Controller/SYSettingGroupItem.h"; sourceTree = SOURCE_ROOT; };
+		4E9695E31D29FF9A00880F66 /* SYSettingGroupItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SYSettingGroupItem.m; path = "百思不得姐——框架完成/Class/Me-我/setting-设置/Controller/SYSettingGroupItem.m"; sourceTree = SOURCE_ROOT; };
+		4E9695E51D2A00BB00880F66 /* SYSwitchSettingItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SYSwitchSettingItem.h; path = "百思不得姐——框架完成/Class/Me-我/setting-设置/Controller/SYSwitchSettingItem.h"; sourceTree = SOURCE_ROOT; };
+		4E9695E61D2A00BB00880F66 /* SYSwitchSettingItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SYSwitchSettingItem.m; path = "百思不得姐——框架完成/Class/Me-我/setting-设置/Controller/SYSwitchSettingItem.m"; sourceTree = SOURCE_ROOT; };
+		4E9695E81D2A017500880F66 /* SYSegmentedSettingItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SYSegmentedSettingItem.h; path = "百思不得姐——框架完成/Class/Me-我/setting-设置/Controller/SYSegmentedSettingItem.h"; sourceTree = SOURCE_ROOT; };
+		4E9695E91D2A017500880F66 /* SYSegmentedSettingItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SYSegmentedSettingItem.m; path = "百思不得姐——框架完成/Class/Me-我/setting-设置/Controller/SYSegmentedSettingItem.m"; sourceTree = SOURCE_ROOT; };
+		4E9695EB1D2A019A00880F66 /* SYArrowSettingItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SYArrowSettingItem.h; path = "百思不得姐——框架完成/Class/Me-我/setting-设置/Controller/SYArrowSettingItem.h"; sourceTree = SOURCE_ROOT; };
+		4E9695EC1D2A019A00880F66 /* SYArrowSettingItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SYArrowSettingItem.m; path = "百思不得姐——框架完成/Class/Me-我/setting-设置/Controller/SYArrowSettingItem.m"; sourceTree = SOURCE_ROOT; };
+		4E9695EE1D2A023D00880F66 /* SYSettingCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SYSettingCell.h; path = "百思不得姐——框架完成/Class/Me-我/setting-设置/Controller/SYSettingCell.h"; sourceTree = SOURCE_ROOT; };
+		4E9695EF1D2A023D00880F66 /* SYSettingCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SYSettingCell.m; path = "百思不得姐——框架完成/Class/Me-我/setting-设置/Controller/SYSettingCell.m"; sourceTree = SOURCE_ROOT; };
 		4E9C50B61CE9F5A6004505C3 /* 百思不得姐——框架完成.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "百思不得姐——框架完成.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4E9C50C51CE9F5A6004505C3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4E9C50C81CE9F5A6004505C3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -904,6 +922,16 @@
 		4EA435BA1D020BEA00EB1403 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				4E9695DF1D29FDF300880F66 /* SYSettingItem.h */,
+				4E9695E01D29FDF300880F66 /* SYSettingItem.m */,
+				4E9695E21D29FF9A00880F66 /* SYSettingGroupItem.h */,
+				4E9695E31D29FF9A00880F66 /* SYSettingGroupItem.m */,
+				4E9695E51D2A00BB00880F66 /* SYSwitchSettingItem.h */,
+				4E9695E61D2A00BB00880F66 /* SYSwitchSettingItem.m */,
+				4E9695E81D2A017500880F66 /* SYSegmentedSettingItem.h */,
+				4E9695E91D2A017500880F66 /* SYSegmentedSettingItem.m */,
+				4E9695EB1D2A019A00880F66 /* SYArrowSettingItem.h */,
+				4E9695EC1D2A019A00880F66 /* SYArrowSettingItem.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -911,6 +939,8 @@
 		4EA435BB1D020BEA00EB1403 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				4E9695EE1D2A023D00880F66 /* SYSettingCell.h */,
+				4E9695EF1D2A023D00880F66 /* SYSettingCell.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1154,11 +1184,14 @@
 				4EA435A51D020A2C00EB1403 /* SYRecommendCell.m in Sources */,
 				4EDB5E201D0D8B3900DCF868 /* SYUserCell.m in Sources */,
 				4EA725251D0322530044E472 /* SYMeCell.m in Sources */,
+				4E9695F01D2A023D00880F66 /* SYSettingCell.m in Sources */,
 				4EFC53AC1D22E6900093E993 /* SYTopCommentItem.m in Sources */,
 				4EA435AD1D020AD600EB1403 /* SYLoginRegisterViewController.m in Sources */,
+				4E9695E71D2A00BB00880F66 /* SYSwitchSettingItem.m in Sources */,
 				4E9C510B1CE9FC60004505C3 /* main.m in Sources */,
 				4E9C51361CEA178A004505C3 /* UITabBarItem+SYCategory.m in Sources */,
 				4EB2878E1D297DFC00DE37F4 /* SYFansCountViewCell.m in Sources */,
+				4E9695E41D29FF9A00880F66 /* SYSettingGroupItem.m in Sources */,
 				4E4D51141D294EA400D2643E /* SYRedStartCell.m in Sources */,
 				4E461F881D09727F0096D73C /* NSDate+SYExtension.m in Sources */,
 				4E4695281CFDACE3002CFAB7 /* SYPublishViewController.m in Sources */,
@@ -1183,6 +1216,7 @@
 				4EA435A91D020AAB00EB1403 /* SYQuickLoginButton.m in Sources */,
 				4E461F8E1D09A11A0096D73C /* SYEssenceBaseViewController.m in Sources */,
 				4E4C014F1CF14708003A509A /* SYLoginRegisterTextField.m in Sources */,
+				4E9695ED1D2A019A00880F66 /* SYArrowSettingItem.m in Sources */,
 				4EDB5E151D0D69E500DCF868 /* SYCaregroyCell.m in Sources */,
 				4EDB5E241D0D8C1300DCF868 /* SYUserItem.m in Sources */,
 				4E9C51321CEA0AC5004505C3 /* UIView+SYCategory.m in Sources */,
@@ -1194,9 +1228,11 @@
 				4E9C51241CEA05DB004505C3 /* SYTabBar.m in Sources */,
 				4E2FA0DD1D196DA100858802 /* SYVideoItem.m in Sources */,
 				4E4D510F1D294D2D00D2643E /* SYFansCountViewController.m in Sources */,
+				4E9695E11D29FDF300880F66 /* SYSettingItem.m in Sources */,
 				4EBD1C0E1D24210400F97230 /* SYCommentViewController.m in Sources */,
 				4EF2BBEC1D0559B700982A04 /* SYStarViewController.m in Sources */,
 				4E9C511B1CE9FEC2004505C3 /* SYMeViewController.m in Sources */,
+				4E9695EA1D2A017500880F66 /* SYSegmentedSettingItem.m in Sources */,
 				4EB287891D29729E00DE37F4 /* SYFansFastestCell.m in Sources */,
 				4E4D510C1D294D1400D2643E /* SYContributionViewController.m in Sources */,
 				4EF2BBEF1D055A8800982A04 /* SYCrossViewController.m in Sources */,

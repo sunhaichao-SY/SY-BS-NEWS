@@ -232,8 +232,4 @@ static NSString *const ID = @"cell";
     [self.navigationController pushViewController:commentView animated:YES];
 }
 
-
-
-
-
 @end

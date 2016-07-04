@@ -91,7 +91,9 @@ static NSString *const ID = @"cell";
 //设置按钮事件处理
 - (void)settingItemClick
 {
-    SYSettingViewController *setting = [[SYSettingViewController alloc]init];
+    
+    
+    SYSettingViewController *setting = [[SYSettingViewController alloc] init];
     [self.navigationController pushViewController:setting animated:YES];
 }
 //月亮按钮事件处理
