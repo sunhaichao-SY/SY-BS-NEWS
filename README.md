@@ -7,12 +7,9 @@
 #####当你第一时间想仿写一个APP的时候你不要着急去布局去抓取数据，你首先要先观察这个APP的整体结构，整体逻辑，以及各个板块之间的联系和构造，然后再根据你自己的经验去画草图，在草图中简要的标注一下各个界面的实现方式和需要用到的控件。
 #####我们先看下百思的整体结构
 
-<img src="http://ww4.sinaimg.cn/mw690/7306bf8agw1f5i8llx3nsj20ku11247i.jpg" width="30%" height="30%">
-
-<img src="http://ww2.sinaimg.cn/mw690/7306bf8agw1f5i8ll1vr1j20ku112tje.jpg" width="30%" height="30%">
-
-<img src="http://ww4.sinaimg.cn/mw690/7306bf8agw1f5i8lo2rocj20ku112q9z.jpg" width="30%" height="30%">
-
+<img src="http://ww4.sinaimg.cn/mw690/7306bf8agw1f5i8llx3nsj20ku11247i.jpg" width="30%" height="30%">  
+<img src="http://ww2.sinaimg.cn/mw690/7306bf8agw1f5i8ll1vr1j20ku112tje.jpg" width="30%" height="30%">  
+<img src="http://ww4.sinaimg.cn/mw690/7306bf8agw1f5i8lo2rocj20ku112q9z.jpg" width="30%" height="30%">  
 <img src="http://ww2.sinaimg.cn/mw690/7306bf8agw1f5i8lp4j0vj20ku112adf.jpg" width="30%" height="30%">
 
 #####通过各个页面的和对比我们会发现，上部导航栏和底部tabbar是固定的，只是中间部分是不同的。
@@ -30,7 +27,7 @@
 
 <img src="http://ww2.sinaimg.cn/mw690/7306bf8agw1f5i8lt4r6jj20kk028glk.jpg" width="30%" height="30%">
 
-<img src="http://ww4.sinaimg.cn/mw690/7306bf8agw1f5i8ltxwvej212m0e0n1q.jpg" width="30%" height="30%">
+<img src="http://ww4.sinaimg.cn/mw690/7306bf8agw1f5i8ltxwvej212m0e0n1q.jpg" width="70%" height="70%">
 
 #####再来看一下底部，我们会发现底部中间有个按钮和其他按钮是不同的这个时候我们有两种方法来解决这个问题。
 #####第一种需要自定义tabbar
@@ -81,8 +78,7 @@
 #####第二种空出一个tabbarItem的位置，把这个按钮放在这个空出来的tabbarItem上。
 #####通过对比我们会发现精华和最新页面中间部分是相同的，在导航栏下都有一个scrollView，只是里面的数据和中间tableView展示的数据不一样。
 
-<img src="http://ww1.sinaimg.cn/mw690/7306bf8agw1f5i8lv992cj20ka0umaoe.jpg" width="30%" height="30%">
-
+<img src="http://ww1.sinaimg.cn/mw690/7306bf8agw1f5i8lv992cj20ka0umaoe.jpg" width="30%" height="30%">  
 <img src="http://ww3.sinaimg.cn/mw690/7306bf8agw1f5i8lvrpcdj20kq0uk448.jpg" width="30%" height="30%">
 
 #####那么我们就可以理解为，精华页面和最新页面的结构大致一样，这个时候我们就可以抽取一个基类SYBaseViewController.h 
@@ -173,7 +169,7 @@
 
 #####其他的控件都是需要通过xib创建然后动态加入到cell中，这个地方我在代码的注释中写的很详细，仔细看一下我代码精华模块中view和model两部分的代码，其实很简单，就是分别把不同的部分用xib先确定下来，然后在模型中设置cell高度的同时添加进去即可。这部分属于该APP中的一个重中之重，这一块需要理解透彻才好。
 
-<img src="http://ww4.sinaimg.cn/mw690/7306bf8agw1f5i8m16usrj20ag0jaacm.jpg" width="30%" height="30%">
+<img src="http://ww4.sinaimg.cn/mw690/7306bf8agw1f5i8m16usrj20ag0jaacm.jpg" width="70%" height="70%">
 
 #####当我们点击cell可以跳转到评论页面，我们观察评论页面顶部的整体cell是从主页面直接传进去的不是通过网络加载的，这个时候我们就需要把主页面的cell的模型整体传过去，然后下面通过自定义cell就可以了。
 ##图片
@@ -223,7 +219,7 @@
 ```
 #####点击左上角是推荐关注，里面采取在一个控制器上放了两个tableView的方式来制作的，只要根据左边数据传过来相对应的ID就可以设置右边内容
 。
-<img src="http://ww4.sinaimg.cn/mw690/7306bf8agw1f5i8lyb2swj211c0g6wig.jpg" width="30%" height="30%">
+<img src="http://ww4.sinaimg.cn/mw690/7306bf8agw1f5i8lyb2swj211c0g6wig.jpg" width="70%" height="70%">
 
 ###我的界面
 #####我的界面这个整体来说还是挺简单的控制器是UItableView，stype设置成group,下面的九宫格才去的是UICollectionView的流水不拒，然后添加到tableFooterView上即可。
