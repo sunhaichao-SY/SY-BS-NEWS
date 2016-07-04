@@ -77,10 +77,9 @@
     
     //如果滑动移除控制器的功能失效，则清空即可
     self.interactivePopGestureRecognizer.enabled = NO;
-
+```
     
-####在导航栏下会有一行标题，这个标题是可以左右滑动的，我采取的是UIScrollView，里面利用for循环加添对应数量的Button
-
+ ####在导航栏下会有一行标题，这个标题是可以左右滑动的，我采取的是UIScrollView，里面利用for循环加添对应数量的Button
 
 ```objc
 
