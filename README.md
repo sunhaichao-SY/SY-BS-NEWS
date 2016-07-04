@@ -17,8 +17,8 @@
 ####这里我继承了UIView实现了一个自定义tabbar的效果，修改里面tabBarItem的位置
 
 
-```objc
 
+```objc
 	//重新布局TabBar
 	- (void)layoutSubviews
 	{
@@ -56,6 +56,7 @@
     }
     added = YES;
 	}	
+```
 
 ####第二种空出一个tabbarItem的位置，把这个按钮放在这个空出来的tabbarItem上。
 ####通过对比我们会发现精华和最新页面中间部分是相同的，在导航栏下都有一个scrollView，只是里面的数据和中间tableView展示的数据不一样。
@@ -77,6 +78,7 @@
     //如果滑动移除控制器的功能失效，则清空即可
     self.interactivePopGestureRecognizer.enabled = NO;
     
+    ```
 ####在导航栏下会有一行标题，这个标题是可以左右滑动的，我采取的是UIScrollView，里面利用for循环加添对应数量的Button
 
 
@@ -135,7 +137,7 @@
     self.topView.contentSize = CGSizeMake(count * btnW, 0);
     self.topView.showsHorizontalScrollIndicator = NO;
 	}
-
+```
 
 
 ##各个模块
