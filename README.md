@@ -7,9 +7,9 @@
 #####当你第一时间想仿写一个APP的时候你不要着急去布局去抓取数据，你首先要先观察这个APP的整体结构，整体逻辑，以及各个板块之间的联系和构造，然后再根据你自己的经验去画草图，在草图中简要的标注一下各个界面的实现方式和需要用到的控件。
 #####我们先看下百思的整体结构
 
-<img src="http://ww4.sinaimg.cn/mw690/7306bf8agw1f5i8llx3nsj20ku11247i.jpg" width="30%" height="30%">  
-<img src="http://ww2.sinaimg.cn/mw690/7306bf8agw1f5i8ll1vr1j20ku112tje.jpg" width="30%" height="30%">  
-<img src="http://ww4.sinaimg.cn/mw690/7306bf8agw1f5i8lo2rocj20ku112q9z.jpg" width="30%" height="30%">  
+<img src="http://ww4.sinaimg.cn/mw690/7306bf8agw1f5i8llx3nsj20ku11247i.jpg" width="30%" height="30%">
+<img src="http://ww2.sinaimg.cn/mw690/7306bf8agw1f5i8ll1vr1j20ku112tje.jpg" width="30%" height="30%">
+<img src="http://ww4.sinaimg.cn/mw690/7306bf8agw1f5i8lo2rocj20ku112q9z.jpg" width="30%" height="30%">
 <img src="http://ww2.sinaimg.cn/mw690/7306bf8agw1f5i8lp4j0vj20ku112adf.jpg" width="30%" height="30%">
 
 #####通过各个页面的和对比我们会发现，上部导航栏和底部tabbar是固定的，只是中间部分是不同的。
@@ -165,14 +165,15 @@
 ###精华模块
 #####这里着重说一下像这种不定义等高的cell是如何创建的。我们可以先把每个cell中固定不变的控件通过xib创建出来，然后把那些随即改变的控件通过动态的方式添加上去。我们可以看一下，每个cell中都有的控件如下（除了最热评论）
 
-<img src="http://ww2.sinaimg.cn/mw690/7306bf8agw1f5i8m1q3vqj20le0euwfj.jpg" width="30%" height="30%">
+<img src="http://ww2.sinaimg.cn/mw690/7306bf8agw1f5i8m1q3vqj20le0euwfj.jpg" width="70%" height="70%">
 
 #####其他的控件都是需要通过xib创建然后动态加入到cell中，这个地方我在代码的注释中写的很详细，仔细看一下我代码精华模块中view和model两部分的代码，其实很简单，就是分别把不同的部分用xib先确定下来，然后在模型中设置cell高度的同时添加进去即可。这部分属于该APP中的一个重中之重，这一块需要理解透彻才好。
 
-<img src="http://ww4.sinaimg.cn/mw690/7306bf8agw1f5i8m16usrj20ag0jaacm.jpg" width="70%" height="70%">
+<img src="http://ww4.sinaimg.cn/mw690/7306bf8agw1f5i8m16usrj20ag0jaacm.jpg" width="30%" height="30%">
 
 #####当我们点击cell可以跳转到评论页面，我们观察评论页面顶部的整体cell是从主页面直接传进去的不是通过网络加载的，这个时候我们就需要把主页面的cell的模型整体传过去，然后下面通过自定义cell就可以了。
-##图片
+<img src="http://ww1.sinaimg.cn/mw690/7306bf8ajw1f5iark4awcj20fm0rswmx.jpg" width="30%" height="30%">
+<img src="http://ww2.sinaimg.cn/mw690/7306bf8ajw1f5iarrit5yj20fm0rs42e.jpg" width="30%" height="30%">
 ###最新
 #####最新页面和精华页面的布局基本上是一样的这个时候我们可以把中间的逻辑代码抽取一个基类SYEssenceBaseViewController.h，然后让精华和最新的控制器都继承这个基类，那么效果是一样的，需要做的就是根据不同的界面传入不同的URL。
 ###关注
@@ -354,3 +355,5 @@
 #####3 当点击导航栏顶部的时候cell会返回
 #####剩下的就是一些零散的调整还有一些功能的实现，如果后期有时间会把播放视频的功能和数据库以及分享实现。
 ###请尽请指出不足之处，我欣然接受
+[github地址](https://github.com/sunhaichao-SY/SY-BS-NEWS.git)
+(第一次写文档，太垃圾了，见笑~~)
