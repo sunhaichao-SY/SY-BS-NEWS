@@ -355,5 +355,5 @@
 #####3 当点击导航栏顶部的时候cell会返回
 #####剩下的就是一些零散的调整还有一些功能的实现，如果后期有时间会把播放视频的功能和数据库以及分享实现。
 ###请尽请指出不足之处，我欣然接受
-[github地址](https://github.com/sunhaichao-SY/SY-BS-NEWS.git)
-(第一次写文档，太垃圾了，见笑~~)
+[四爷——仿写百思不得姐(最新版)github地址](https://github.com/sunhaichao-SY/SY-BS-NEWS.git)
+#####(第一次写文档，太垃圾了，见笑~~)
