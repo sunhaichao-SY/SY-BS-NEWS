@@ -152,11 +152,6 @@
                             <constraint firstItem="RFY-cx-Oua" firstAttribute="top" secondItem="gVZ-UP-sOk" secondAttribute="top" id="ylf-2Q-9i5"/>
                         </constraints>
                     </view>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i9t-ek-7S6">
-                        <rect key="frame" x="10" y="50" width="300" height="21"/>
-                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="18"/>
-                        <nil key="highlightedColor"/>
-                    </label>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Profile_AddV_authen" translatesAutoresizingMaskIntoConstraints="NO" id="3eM-Zw-sTk">
                         <rect key="frame" x="30" y="30" width="14" height="14"/>
                         <constraints>
@@ -170,11 +165,15 @@
                         </variation>
                     </imageView>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="R1y-ih-9Zf">
-                        <rect key="frame" x="10" y="107" width="300" height="34"/>
+                        <rect key="frame" x="10" y="97" width="300" height="44"/>
                         <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JdS-24-igS">
+                                <rect key="frame" x="0.0" y="17" width="300" height="27"/>
+                                <color key="backgroundColor" red="0.93725490196078431" green="0.93725490196078431" blue="0.93725490196078431" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="11H-hZ-SGG">
-                                <rect key="frame" x="0.0" y="17" width="300" height="17"/>
-                                <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <rect key="frame" x="5" y="22" width="290" height="17"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <color key="textColor" red="0.43529411759999997" green="0.4431372549" blue="0.47450980390000003" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -190,19 +189,30 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="lyD-yW-2zc" firstAttribute="leading" secondItem="R1y-ih-9Zf" secondAttribute="leading" id="2lQ-Ln-Amz"/>
-                            <constraint firstAttribute="bottom" secondItem="11H-hZ-SGG" secondAttribute="bottom" id="75d-6q-JEi"/>
+                            <constraint firstItem="JdS-24-igS" firstAttribute="leading" secondItem="lyD-yW-2zc" secondAttribute="leading" id="5Kw-ve-Sie"/>
+                            <constraint firstAttribute="bottom" secondItem="11H-hZ-SGG" secondAttribute="bottom" constant="5" id="75d-6q-JEi"/>
+                            <constraint firstItem="JdS-24-igS" firstAttribute="height" secondItem="R1y-ih-9Zf" secondAttribute="height" id="840-jZ-rvn"/>
                             <constraint firstItem="lyD-yW-2zc" firstAttribute="top" secondItem="R1y-ih-9Zf" secondAttribute="top" id="ApZ-ln-207"/>
                             <constraint firstAttribute="trailing" secondItem="lyD-yW-2zc" secondAttribute="leading" constant="201" id="Frd-0w-Yuu"/>
-                            <constraint firstItem="11H-hZ-SGG" firstAttribute="top" secondItem="lyD-yW-2zc" secondAttribute="bottom" id="Zb1-3w-mXM"/>
-                            <constraint firstItem="11H-hZ-SGG" firstAttribute="leading" secondItem="R1y-ih-9Zf" secondAttribute="leading" id="bua-sH-TRR"/>
-                            <constraint firstAttribute="trailing" secondItem="11H-hZ-SGG" secondAttribute="trailing" id="rIy-sH-Mwm"/>
+                            <constraint firstAttribute="trailing" secondItem="JdS-24-igS" secondAttribute="trailing" id="RJ8-9v-Z5L"/>
+                            <constraint firstItem="JdS-24-igS" firstAttribute="top" secondItem="lyD-yW-2zc" secondAttribute="bottom" id="Uxf-dD-CIS"/>
+                            <constraint firstAttribute="bottom" secondItem="JdS-24-igS" secondAttribute="bottom" id="WkV-O6-mcS"/>
+                            <constraint firstItem="11H-hZ-SGG" firstAttribute="top" secondItem="lyD-yW-2zc" secondAttribute="bottom" constant="5" id="Zb1-3w-mXM"/>
+                            <constraint firstItem="11H-hZ-SGG" firstAttribute="leading" secondItem="R1y-ih-9Zf" secondAttribute="leading" constant="5" id="bua-sH-TRR"/>
+                            <constraint firstAttribute="trailing" secondItem="11H-hZ-SGG" secondAttribute="trailing" constant="5" id="rIy-sH-Mwm"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
                                 <exclude reference="Frd-0w-Yuu"/>
+                                <exclude reference="840-jZ-rvn"/>
                             </mask>
                         </variation>
                     </view>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label fd rr" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i9t-ek-7S6" customClass="TTTAttributedLabel">
+                        <rect key="frame" x="10" y="50" width="300" height="21"/>
+                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="18"/>
+                        <nil key="highlightedColor"/>
+                    </label>
                 </subviews>
                 <constraints>
                     <constraint firstItem="QNj-Y6-73c" firstAttribute="leading" secondItem="MET-J4-5De" secondAttribute="leading" id="2uR-Xd-Xp1"/>

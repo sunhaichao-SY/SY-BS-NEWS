@@ -29,6 +29,8 @@
 {
     return @{@"top_comment" : @"top_comment"};
 }
+
+
 - (CGFloat)cellHeight
 {
     if (!_cellHeight) {
@@ -40,7 +42,7 @@
 
         CGSize maxSize = CGSizeMake([UIScreen mainScreen].bounds.size.width - 2 * margin, MAXFLOAT);
         //计算文字的高度
-        CGFloat textH = [self.text boundingRectWithSize:maxSize options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName : [UIFont systemFontOfSize:18]} context:nil].size.height;
+        CGFloat textH = [self.text boundingRectWithSize:maxSize options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName : [UIFont systemFontOfSize:18], } context:nil].size.height;
 
         //cell的高度
         //段子的高度

@@ -94,6 +94,7 @@
 		4EBD1C0F1D24210400F97230 /* SYCommentViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4EBD1C0D1D24210400F97230 /* SYCommentViewController.xib */; };
 		4EC8EFA61D1867BC00F3CDD0 /* SYGIFItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EC8EFA51D1867BC00F3CDD0 /* SYGIFItem.m */; };
 		4ED367081D16F0E8005EEC55 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4ED367071D16F0E8005EEC55 /* QuartzCore.framework */; };
+		4ED49F941D34E25F000FC8C2 /* TTTAttributedLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4ED49F931D34E25F000FC8C2 /* TTTAttributedLabel.m */; };
 		4ED53F271D171A0A00CBB9F7 /* Reveal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E36E6051D1189510044E87F /* Reveal.framework */; };
 		4ED53F2A1D171E5D00CBB9F7 /* ___________UITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4ED53F291D171E5D00CBB9F7 /* ___________UITests.m */; };
 		4EDAC9BF1D27827700B8BF61 /* SYTopClickView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EDAC9BE1D27827700B8BF61 /* SYTopClickView.m */; };
@@ -286,6 +287,8 @@
 		4EC8EFA41D1867BC00F3CDD0 /* SYGIFItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SYGIFItem.h; sourceTree = "<group>"; };
 		4EC8EFA51D1867BC00F3CDD0 /* SYGIFItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SYGIFItem.m; sourceTree = "<group>"; };
 		4ED367071D16F0E8005EEC55 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		4ED49F921D34E25F000FC8C2 /* TTTAttributedLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTTAttributedLabel.h; sourceTree = "<group>"; };
+		4ED49F931D34E25F000FC8C2 /* TTTAttributedLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTTAttributedLabel.m; sourceTree = "<group>"; };
 		4ED53F251D1719E700CBB9F7 /* Reveal 上午2.18.10.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = "Reveal 上午2.18.10.framework"; sourceTree = "<group>"; };
 		4ED53F291D171E5D00CBB9F7 /* ___________UITests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "___________UITests.m"; sourceTree = "<group>"; };
 		4ED53F2B1D171E6600CBB9F7 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -409,6 +412,8 @@
 				4EEFBE7D1D2646940051A9B7 /* SYCommentCell.h */,
 				4EEFBE7E1D2646940051A9B7 /* SYCommentCell.m */,
 				4EEFBE7F1D2646940051A9B7 /* SYCommentCell.xib */,
+				4ED49F921D34E25F000FC8C2 /* TTTAttributedLabel.h */,
+				4ED49F931D34E25F000FC8C2 /* TTTAttributedLabel.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1217,6 +1222,7 @@
 				4EF442481D1E7E5500696FDE /* SYSoundsView.m in Sources */,
 				4E4D51061D294CCD00D2643E /* SYRedStartViewController.m in Sources */,
 				4E7269711D030FD40085A409 /* SYMeItem.m in Sources */,
+				4ED49F941D34E25F000FC8C2 /* TTTAttributedLabel.m in Sources */,
 				4EA435A91D020AAB00EB1403 /* SYQuickLoginButton.m in Sources */,
 				4E461F8E1D09A11A0096D73C /* SYEssenceBaseViewController.m in Sources */,
 				4E4C014F1CF14708003A509A /* SYLoginRegisterTextField.m in Sources */,

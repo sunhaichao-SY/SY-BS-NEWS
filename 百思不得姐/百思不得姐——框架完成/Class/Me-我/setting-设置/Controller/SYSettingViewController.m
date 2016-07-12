@@ -46,7 +46,6 @@
     
     self.navigationItem.title = @"设置";
     self.view.backgroundColor = SYCommonBgColor;
-
     self.tableView.sectionFooterHeight = 0;
     self.tableView.contentInset = UIEdgeInsetsMake(-25, 0, 0, 0);
     
@@ -58,10 +57,17 @@
 }
 
 
+- (void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:YES];
+    
+    
+    
+}
+
+
 //添加第一组，创建对应的模型数据然后直接调用其模型就可以直接创建组
 - (void)setupGroup1
 {
-    
     SYSegmentedSettingItem *titleFond = [SYSegmentedSettingItem itemWithTitle:@"字体大小"];
     
     SYSwitchSettingItem *switchItem = [SYSwitchSettingItem itemWithTitle:@"摇一摇夜间模式"];
@@ -75,10 +81,13 @@
 
 //第二组
 - (void)setupGroup2{
+    
     SYArrowSettingItem *clear = [SYArrowSettingItem itemWithTitle:_saveCaching];
     clear.itemOpertion = ^(NSIndexPath *indexPath){
-        [[SDImageCache sharedImageCache] clearDisk];
-    };
+         [[SDImageCache sharedImageCache] clearDisk];
+         [self.tableView reloadData];
+        
+     };
     SYArrowSettingItem *recommend = [SYArrowSettingItem itemWithTitle:@"推荐给朋友"];
     SYArrowSettingItem *help = [SYArrowSettingItem itemWithTitle:@"帮助"];
     SYArrowSettingItem *versions = [SYArrowSettingItem itemWithTitle:@"当前版本：4.2"];
@@ -106,10 +115,20 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    
     SYSettingCell *cell = [SYSettingCell cellWithTableView:tableView style:UITableViewCellStyleValue1];
-
+//    [self.tableView reloadData];
+    //计算缓存
     CGFloat size = [SDImageCache sharedImageCache].getSize / 1000.0 / 1000;
     _saveCaching = [NSString stringWithFormat:@"清除缓存(已使用%.2fMB)",size];
+    
+    
+    [self.groups removeAllObjects];
+    //添加第一组
+    [self setupGroup1];
+    
+    //添加第二组
+    [self setupGroup2];
     
     //取出哪一组
     SYSettingGroupItem *group = self.groups[indexPath.section];
@@ -145,6 +164,8 @@
         item.itemOpertion(indexPath);
         return;
     }
+    
+    
 }
 
 @end

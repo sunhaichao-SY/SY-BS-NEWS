@@ -16,6 +16,7 @@
 #import "SYGIFItem.h"
 #import "SYTopCommentItem.h"
 #import "SYLoginRegisterViewController.h"
+#import "TTTAttributedLabel.h"
 static CGFloat const margin = 10;
 @interface SYWholeCell()
 //头像
@@ -40,7 +41,7 @@ static CGFloat const margin = 10;
 @property (weak, nonatomic) IBOutlet UIButton *commentView;
 
 //内容
-@property (weak, nonatomic) IBOutlet UILabel *textContent;
+@property (weak, nonatomic) IBOutlet TTTAttributedLabel *textContent;
 
 //vip
 @property (weak, nonatomic) IBOutlet UIImageView *XLVip;
@@ -113,6 +114,8 @@ static CGFloat const margin = 10;
     self.layer.cornerRadius = 10;
     self.layer.masksToBounds = YES;
      */
+    
+    self.textContent.font = [UIFont systemFontOfSize:18];
     
     //头像转变成圆形
     self.iconView.layer.cornerRadius = (self.iconView.sy_width * 0.5);
@@ -227,19 +230,42 @@ static CGFloat const margin = 10;
     }
     [button setTitle:placeholder forState:UIControlStateNormal];
     
-////    /**********用来设置段落的间距**********/
-//  
+//////    /**********用来设置段落的间距**********/
+////  
 //    //创建NSMutableAttributedString实例，并将text传入
-//    NSMutableAttributedString *attStr = [[NSMutableAttributedString alloc]initWithString:_textContent.text];
-//    //创建NSMutableParagraphStyle实例
-//    NSMutableParagraphStyle *style = [[NSMutableParagraphStyle alloc]init];
-//    //设置行距
-//    [style setLineSpacing:12.0f];
-//    
-//    //根据给定长度与style设置attStr式样
-//    [attStr addAttribute:NSParagraphStyleAttributeName value:style range:NSMakeRange(0, _textContent.text.length)];
-//    //Label获取attStr式样
-//    _textContent.attributedText = attStr;
+    NSString *str = @"测试数据测试数据测试数据测试数据测试数据测试数据测试数据测试数据测试数据测试数据测试数据测试数据测试数据测试数据测试数据测试数据测试数据测试数据测试数据测试数据测试数据测试数据测试数据测试数据测试数据测试数据测试数据测试数据测试数据测试数据测试数据测试数据测试数据测试数据测试数据测试数据测试数据测试数据测试数据测试数据测试数据测试数据";
+    
+    _textContent.lineBreakMode = NSLineBreakByCharWrapping;
+    _textContent.lineSpacing =10;//设置行间距
+    _textContent.font = [UIFont systemFontOfSize:18];
+    _textContent.numberOfLines = 0; //设置行数为0
+    [_textContent setText:str];
+    _textContent.textAlignment = NSTextAlignmentLeft;
+    _textContent.backgroundColor = [UIColor redColor];
+    
+    
+    NSMutableAttributedString *attrString = [[NSMutableAttributedString alloc] initWithString:str];
+    //自定义str和TTTAttributedLabel一样的行间距
+    NSMutableParagraphStyle *paragrapStyle = [[NSMutableParagraphStyle alloc] init];
+    [paragrapStyle setLineSpacing:10];
+    //设置行间距
+    [attrString addAttribute:NSParagraphStyleAttributeName value:paragrapStyle range:NSMakeRange(0, str.length)];
+    //设置字体
+    [attrString addAttribute:NSFontAttributeName value:[UIFont systemFontOfSize:18] range:NSMakeRange(0, str.length)];
+    
+    //得到自定义行间距的UILabel的高度
+    CGFloat height = [TTTAttributedLabel sizeThatFitsAttributedString:attrString withConstraints:CGSizeMake(375, MAXFLOAT) limitedToNumberOfLines:0].height;
+    
+    //重新改变tttLabel的frame高度
+    CGRect rect = _textContent.frame;
+    rect.size.height = height;
+    _textContent.frame = rect;
+    
+    [_textContent sizeToFit];
+    
+    
+    //Label获取attStr式样
+     _textContent.attributedText = attrString;
     
 }
 
