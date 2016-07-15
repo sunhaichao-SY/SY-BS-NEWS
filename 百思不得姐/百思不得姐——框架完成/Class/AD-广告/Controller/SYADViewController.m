@@ -97,12 +97,10 @@ static NSString *const SYCode2 = @"phcqnauGuHYkFMRquANhmgN_IauBThfqmgKsUARhIWdGU
         
         if (item.w) {
             h = w / item.w * item.h;
-            
-            if (h >= SYScreenH * 0.7) {
-                h = SYScreenH * 0.85;
-            }
         }
-        
+        if (h > SYScreenH * 0.7) {
+            h = SYScreenH * 0.85;
+        }
        
         adImageView.frame = CGRectMake(0, 0, w, h);
         

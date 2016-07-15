@@ -221,7 +221,7 @@ static NSString *const ID = @"cell";
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     SYTextItem *textItem = self.textItems[indexPath.row];
-    
+    NSLog(@"=======%.2f",textItem.cellHeight);
     return textItem.cellHeight;
 }
 

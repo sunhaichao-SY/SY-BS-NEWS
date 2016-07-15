@@ -14,6 +14,7 @@
 #import "SYAudioItem.h"
 #import "SYTopCommentItem.h"
 #import <MJExtension/MJExtension.h>
+#import "TTTAttributedLabel.h"
 @implementation SYTextItem
 {
     CGFloat _cellHeight;
@@ -39,15 +40,30 @@
         //文字的最大尺寸
         //间距
         NSInteger margin = 10;
-
+        _cellHeight = 40 + 2 * margin;
         CGSize maxSize = CGSizeMake([UIScreen mainScreen].bounds.size.width - 2 * margin, MAXFLOAT);
+        
+        
+        /*主要代码 - begin*/
         //计算文字的高度
-        CGFloat textH = [self.text boundingRectWithSize:maxSize options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName : [UIFont systemFontOfSize:18], } context:nil].size.height;
-
+        UIFont *font = [UIFont systemFontOfSize:14];
+        NSMutableParagraphStyle *paragraphStyle = [[NSMutableParagraphStyle alloc] init];
+        paragraphStyle.lineSpacing = 10;
+        NSDictionary *attributes = @{NSFontAttributeName:font, NSParagraphStyleAttributeName:paragraphStyle.copy};
+        
+        CGFloat textH = [self.text boundingRectWithSize:maxSize
+                                             options:NSStringDrawingUsesLineFragmentOrigin
+                                           attributes:attributes context:nil].size.height;
+        /*主要代码 - end*/
+        
+        
+        
+//        CGFloat textH = [self.text boundingRectWithSize:maxSize options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName : [UIFont systemFontOfSize:14], } context:nil].size.height;
+        
         //cell的高度
         //段子的高度
-        _cellHeight = 40 + 2 * margin + textH;
-
+        _cellHeight += textH;
+        NSLog(@"height=====%.2f======%.2f",_cellHeight,textH);
        /******** 图片的cell ********/
 
         if ([self.type isEqualToString:@"image"]) {//图片帖子
@@ -125,12 +141,13 @@
             //用纯代码计算文字段落的高度
             CGFloat contentH = [content boundingRectWithSize:maxSize options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName:[UIFont systemFontOfSize:14]} context:nil].size.height;
             
-            _cellHeight += 17 + contentH + 10;
+            _cellHeight += 17 + contentH + 20;
         }
         
         //底部工具条
         _cellHeight += 44 + 10;
     }
+    NSLog(@"lastcellheight====%.2f",_cellHeight);
 
     return _cellHeight;
 }

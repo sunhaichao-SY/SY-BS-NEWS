@@ -115,7 +115,7 @@ static CGFloat const margin = 10;
     self.layer.masksToBounds = YES;
      */
     
-    self.textContent.font = [UIFont systemFontOfSize:18];
+    self.textContent.font = [UIFont systemFontOfSize:14];
     
     //头像转变成圆形
     self.iconView.layer.cornerRadius = (self.iconView.sy_width * 0.5);
@@ -147,7 +147,44 @@ static CGFloat const margin = 10;
     self.timeView.text = textItems.passtime;
     
     // 设置帖子的文字内容
-    self.textContent.text = textItems.text;
+//    self.textContent.text = textItems.text;
+    ////    /**********用来设置段落的间距**********/
+    //
+    //创建NSMutableAttributedString实例，并将text传入
+//    NSString *str = @"测试数据测试数据测试数据测试数据测试数据测试数据测试数据测试数据测试数据测试数据测试数据测试数据测试数据测试数据测试数据测试数据测试数据测试数据测试数据测试数据测试数据测试数据测试数据测试数据测试数据测试数据测试数据测试数据测试数据测试数据测试数据测试数据测试数据测试数据测试数据测试数据测试数据测试数据测试数据测试数据测试数据测试数据";
+    
+    _textContent.lineBreakMode = NSLineBreakByCharWrapping;
+    _textContent.lineSpacing =10;//设置行间距
+    _textContent.font = [UIFont systemFontOfSize:14];
+    _textContent.numberOfLines = 0; //设置行数为0
+    [_textContent setText:textItems.text];
+    _textContent.textAlignment = NSTextAlignmentLeft;
+    _textContent.backgroundColor = [UIColor redColor];
+    [_textContent sizeToFit];
+    
+    
+    // 下面的代码效果和上面一样，重复了
+//    NSMutableAttributedString *attrString = [[NSMutableAttributedString alloc] initWithString:textItems.text];
+//    //自定义str和TTTAttributedLabel一样的行间距
+//    NSMutableParagraphStyle *paragrapStyle = [[NSMutableParagraphStyle alloc] init];
+//    [paragrapStyle setLineSpacing:10];
+//    //设置行间距
+//    [attrString addAttribute:NSParagraphStyleAttributeName value:paragrapStyle range:NSMakeRange(0, textItems.text.length)];
+//    //设置字体
+//    [attrString addAttribute:NSFontAttributeName value:[UIFont systemFontOfSize:14] range:NSMakeRange(0, textItems.text.length)];
+//    
+//    //得到自定义行间距的UILabel的高度
+//    
+//    CGFloat height = [TTTAttributedLabel sizeThatFitsAttributedString:attrString withConstraints:CGSizeMake(375, MAXFLOAT) limitedToNumberOfLines:0].height;
+
+    //重新改变tttLabel的frame高度
+//    CGRect rect = _textContent.frame;
+//    rect.size.height = height;
+//    _textContent.frame = rect;
+    
+    //Label获取attStr式样
+//    _textContent.attributedText = attrString;
+
     
     //判断是否是Vip
     if (textItems.u.is_v) {
@@ -229,43 +266,6 @@ static CGFloat const margin = 10;
         placeholder = [NSString stringWithFormat:@"%zd",count];
     }
     [button setTitle:placeholder forState:UIControlStateNormal];
-    
-//////    /**********用来设置段落的间距**********/
-////  
-//    //创建NSMutableAttributedString实例，并将text传入
-    NSString *str = @"测试数据测试数据测试数据测试数据测试数据测试数据测试数据测试数据测试数据测试数据测试数据测试数据测试数据测试数据测试数据测试数据测试数据测试数据测试数据测试数据测试数据测试数据测试数据测试数据测试数据测试数据测试数据测试数据测试数据测试数据测试数据测试数据测试数据测试数据测试数据测试数据测试数据测试数据测试数据测试数据测试数据测试数据";
-    
-    _textContent.lineBreakMode = NSLineBreakByCharWrapping;
-    _textContent.lineSpacing =10;//设置行间距
-    _textContent.font = [UIFont systemFontOfSize:18];
-    _textContent.numberOfLines = 0; //设置行数为0
-    [_textContent setText:str];
-    _textContent.textAlignment = NSTextAlignmentLeft;
-    _textContent.backgroundColor = [UIColor redColor];
-    
-    
-    NSMutableAttributedString *attrString = [[NSMutableAttributedString alloc] initWithString:str];
-    //自定义str和TTTAttributedLabel一样的行间距
-    NSMutableParagraphStyle *paragrapStyle = [[NSMutableParagraphStyle alloc] init];
-    [paragrapStyle setLineSpacing:10];
-    //设置行间距
-    [attrString addAttribute:NSParagraphStyleAttributeName value:paragrapStyle range:NSMakeRange(0, str.length)];
-    //设置字体
-    [attrString addAttribute:NSFontAttributeName value:[UIFont systemFontOfSize:18] range:NSMakeRange(0, str.length)];
-    
-    //得到自定义行间距的UILabel的高度
-    CGFloat height = [TTTAttributedLabel sizeThatFitsAttributedString:attrString withConstraints:CGSizeMake(375, MAXFLOAT) limitedToNumberOfLines:0].height;
-    
-    //重新改变tttLabel的frame高度
-    CGRect rect = _textContent.frame;
-    rect.size.height = height;
-    _textContent.frame = rect;
-    
-    [_textContent sizeToFit];
-    
-    
-    //Label获取attStr式样
-     _textContent.attributedText = attrString;
     
 }
 
