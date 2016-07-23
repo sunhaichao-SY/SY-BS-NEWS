@@ -97,7 +97,6 @@
 		4ED49F941D34E25F000FC8C2 /* TTTAttributedLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4ED49F931D34E25F000FC8C2 /* TTTAttributedLabel.m */; };
 		4ED53F271D171A0A00CBB9F7 /* Reveal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E36E6051D1189510044E87F /* Reveal.framework */; };
 		4ED53F2A1D171E5D00CBB9F7 /* ___________UITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4ED53F291D171E5D00CBB9F7 /* ___________UITests.m */; };
-		4EDAC9BF1D27827700B8BF61 /* SYTopClickView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EDAC9BE1D27827700B8BF61 /* SYTopClickView.m */; };
 		4EDB5E0B1D0D428B00DCF868 /* 输出框打印中文.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EDB5E0A1D0D428B00DCF868 /* 输出框打印中文.m */; };
 		4EDB5E0F1D0D641500DCF868 /* SYCategoryItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EDB5E0E1D0D641500DCF868 /* SYCategoryItem.m */; };
 		4EDB5E111D0D649000DCF868 /* SYRecommendViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4EDB5E101D0D649000DCF868 /* SYRecommendViewController.xib */; };
@@ -292,8 +291,6 @@
 		4ED53F251D1719E700CBB9F7 /* Reveal 上午2.18.10.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = "Reveal 上午2.18.10.framework"; sourceTree = "<group>"; };
 		4ED53F291D171E5D00CBB9F7 /* ___________UITests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "___________UITests.m"; sourceTree = "<group>"; };
 		4ED53F2B1D171E6600CBB9F7 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		4EDAC9BD1D27827700B8BF61 /* SYTopClickView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SYTopClickView.h; sourceTree = "<group>"; };
-		4EDAC9BE1D27827700B8BF61 /* SYTopClickView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SYTopClickView.m; sourceTree = "<group>"; };
 		4EDB5E0A1D0D428B00DCF868 /* 输出框打印中文.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "输出框打印中文.m"; sourceTree = "<group>"; };
 		4EDB5E0D1D0D641500DCF868 /* SYCategoryItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SYCategoryItem.h; sourceTree = "<group>"; };
 		4EDB5E0E1D0D641500DCF868 /* SYCategoryItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SYCategoryItem.m; sourceTree = "<group>"; };
@@ -761,8 +758,6 @@
 				4E9C51231CEA05DB004505C3 /* SYTabBar.m */,
 				4E4C014D1CF14708003A509A /* SYLoginRegisterTextField.h */,
 				4E4C014E1CF14708003A509A /* SYLoginRegisterTextField.m */,
-				4EDAC9BD1D27827700B8BF61 /* SYTopClickView.h */,
-				4EDAC9BE1D27827700B8BF61 /* SYTopClickView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1207,7 +1202,6 @@
 				4E9C51211CEA052C004505C3 /* SYNavigationViewController.m in Sources */,
 				4EEFBE9C1D2670C50051A9B7 /* SYUserItems.m in Sources */,
 				4E9C51181CE9FEB4004505C3 /* SYFollowViewController.m in Sources */,
-				4EDAC9BF1D27827700B8BF61 /* SYTopClickView.m in Sources */,
 				4EB287821D296AD800DE37F4 /* SYHeaderItems.m in Sources */,
 				4E189A401D14569E001E45A1 /* SYProgressView.m in Sources */,
 				4E33F4C61D046FC300988945 /* SYWebViewController.m in Sources */,

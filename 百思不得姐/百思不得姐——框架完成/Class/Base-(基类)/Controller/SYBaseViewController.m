@@ -73,7 +73,7 @@ static NSString *const ID = @"cell";
 {
     //创建顶部标题，因为标题可以滚动所以用UIScrollView创建
     UIScrollView *topView = [[UIScrollView alloc]initWithFrame:CGRectMake(0, 64, SYScreenW, 35)];
-    
+    topView.scrollsToTop = NO;
     //给UIScrollView设置背景图片
     UIImage *image = [UIImage imageNamed:@"navigationbarBackgroundWhite"];
     [topView setBackgroundColor:[UIColor colorWithPatternImage:image]];
@@ -103,6 +103,7 @@ static NSString *const ID = @"cell";
     
     //创建UICollectionView
     UICollectionView *collection = [[UICollectionView alloc]initWithFrame:self.view.bounds collectionViewLayout:flowLayout];
+    collection.scrollsToTop = NO;
     [self.view addSubview:collection];
     
     _collection = collection;
